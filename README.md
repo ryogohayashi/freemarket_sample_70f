@@ -26,3 +26,4 @@ Things you may want to cover:
 nagata
 yoshida
 nagata3
+yoshida2
