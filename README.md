@@ -5,7 +5,7 @@
 |nickname|string|null: false|
 |email|string|null: false, unique, true, index: ture|
 |password|string|null: false|
-|password_confrimation|string|null: false|
+|password_confirmation|string|null: false|
 ### Association
 - has_many  : seller_items, foreign_key: "seller_id", class_name: "items"
 - has_many  : buyer_items, foreign_key: "buyer_id", class_name: "items"
@@ -37,7 +37,7 @@
 |destination_first_name_kana|string|null: false|
 |destination_family_name_kana|string|null: false|
 |post_code|inteder|null: false|
-|prefecture_code|inteder|null: false|
+|prefecture_code|integer|null: false|
 |city|string|null: false|
 |house_number|string|null: false|
 |building_number|string||
