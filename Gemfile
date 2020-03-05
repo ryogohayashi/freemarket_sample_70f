@@ -72,3 +72,4 @@ end
 gem 'haml-rails'
 gem 'unicorn', '5.4.1'
 gem 'fog-aws'
+gem 'carrierwave'
