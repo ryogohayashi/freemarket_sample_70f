@@ -72,7 +72,6 @@
 |prefecture_code|integer| null: false|
 |size_id |integer|null: false, foreign_key: true|
 |preparation_day_id|integer|null: false, foreign_key: true|
-|image_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 |trading_status|enum|null: false|
 |seller_id|integer|null: false, foreign_key: true|
