@@ -151,3 +151,9 @@
 |postage_type|string|null: false|
 ### Association
 - has_many :items
+
+## S3画像アップロード・条件分岐の現状
+⇨https://master.tech-camp.in/curriculums/3967
+ 進捗は上記のカリキュラムの「正しくアップロードできるか確認しよう」の前までは一応完了
+⇨https://qiita.com/15grmr/items/71859caea0414f2e245d
+ 上記は参考記事
