@@ -6,27 +6,21 @@
 |email|string|null: false, unique, true, index: ture|
 |password|string|null: false|
 |password_confirmation|string|null: false|
-### Association
-- has_many  : seller_items, foreign_key: "seller_id", class_name: "items"
-- has_many  : buyer_items, foreign_key: "buyer_id", class_name: "items"
-- has_one   : profile, dependent: :destroy
-- has_one   : destination, dependent: :destory
-- has_one   : credit_card, dependent: :destroy
-
-
-## Profilesテーブル
-|Column|Type|Options|
-|------|----|-------|
 |first_name|string|null: false|
 |family_name|string|null: false|
 |first_name_kana|string|null: false|
 |family_name_kana|string|null: false|
-|birth_year|date|null: false|
-|birth_month|date|null: false|
-|birth_day|date|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|birth_year|integer|null: false|
+|birth_month|integer|null: false|
+|birth_day|integer|null: false|
+
+
 ### Association
-- belongs_to :user
+- has_many  : seller_items, foreign_key: "seller_id", class_name: "items"
+- has_many  : buyer_items, foreign_key: "buyer_id", class_name: "items"
+- has_one   : destination, dependent: :destory
+- has_one   : credit_card, dependent: :destroy
+
 
 
 ## destinationsテーブル

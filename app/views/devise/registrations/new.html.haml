@@ -1,0 +1,57 @@
+%h2 新規登録 （1画面目）甲斐さん御願いします！
+= form_for(@user, url: user_registration_path) do |f|
+  = render "devise/shared/error_messages", resource: @user
+
+  .field
+    = f.label :nickname
+    %br/
+    = f.text_field :nickname
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email"
+  .field
+    = f.label :password
+    - if @minimum_password_length
+      %em
+        (#{@minimum_password_length} characters minimum)
+    %br/
+    = f.password_field :password, autocomplete: "new-password"
+  .field
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "new-password"
+  .field
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name
+  .field
+    = f.label :family_name
+    %br/
+    = f.text_field :family_name
+  .field
+    = f.label :first_name_kana
+    %br/
+    = f.text_field :first_name_kana
+  .field
+    = f.label :family_name_kana
+    %br/
+    = f.text_field :family_name_kana
+  .field
+    = f.label :birth_year
+    %br/
+    = f.text_field :birth_year
+  .field
+    = f.label :birth_month
+    %br/
+    = f.text_field :birth_month
+  .field
+    = f.label :birth_day
+    %br/
+    = f.text_field :birth_day
+  
+  .actions
+    = f.submit "Next"
+
+
+= render "devise/shared/links"
