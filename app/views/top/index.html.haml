@@ -1,9 +1,25 @@
+.body
+  %header.pcHeader 
+    .header.Inner
+      .mainHeader
+        %h1.icon
+          %a{:href => "/"}
+            = image_tag src="/public/logo-white.png", class:'image'
+        .searchBox
+          %form(action="#" method="get" accept-charset="UTF-8" class="searchBox_form")
+            %input.login-input-hidden{:name => "utf8", :type => "hidden", :value => ""}/
+            %input.login-input-text{:name => "key", :placeholder => "キーワードから探す"}/
+            %button{:type => "submit", :class => "button_class"}
+              .serchBox__icon
+                = image_tag src="/public/logo-search 1.png", class:'image2'
+              
+
 %h1 林さん担当ページです。宜しく御願いします。
 %h1 トップページ
 - if user_signed_in?
   %h2 ログインしています
   = link_to "ログアウト", destroy_user_session_path, method: :delete
-  -# = link_to "マイページ", user_path(@user), method: :get
+  = link_to "マイページ", user_path(@user), method: :get
 - else
   %h2 ログインしていません
   = link_to "新規登録", new_user_registration_path
