@@ -10,6 +10,7 @@ class TestsController < ApplicationController
 
   def create
     Test.create(test_params)
+    redirect_to tests_path
   end
 
   private

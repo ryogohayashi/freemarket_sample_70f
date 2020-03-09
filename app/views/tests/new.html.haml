@@ -1,0 +1,4 @@
+= form_for @test do |f|
+  = f.text_field :text, class:'input_word', placeholder: 'type a word'
+  = f.file_field :image, class:'input_image'
+  = f.submit '登録', class:'submit'
