@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find_by(params[:id])
-    @nickname = current_user.nickname
+
+  def index
+    @users = User.all
   end
+
+  def show
+    @@users = User.all
+  end
+
 end
