@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -8,7 +7,7 @@ Rails.application.routes.draw do
     post 'destinations', to: 'users/registrations#create_destination'
   end
   root to: "top#index"
-  resources :users, only: :show
+  resources :users, only: [:show]
 
   resources :tests, only: [:index, :new, :create,]
 end
