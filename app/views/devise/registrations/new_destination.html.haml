@@ -26,6 +26,7 @@
     = f.label :prefecture
     %br/
     = f.text_field :prefecture
+    = f.input :prefecture, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県'
   .field
     = f.label :city
     %br/
