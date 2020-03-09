@@ -34,7 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def destination_params
-    params.require(:destination).permit(:destination_first_name, :destination_family_name, :destination_first_name_kana, :destination_family_name_kana, :post_code, :prefecture, :city, :house_number)
+    params.require(:destination).permit(:destination_family_name,:destination_first_name, :destination_family_name_kana, :destination_first_name_kana,  :post_code, :prefecture_code, :city, :house_number, :building, :phone_number)
   end
 
   def configure_sign_up_params
