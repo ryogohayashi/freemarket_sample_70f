@@ -24,9 +24,9 @@
     %br/
     = f.text_field :post_code
   .field
-    = f.label :prefecture_code
+    = f.label :prefecture_code_name,"都道府県"
     %br/
-    = f.text_field :prefecture_code
+    = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, include_blank: true
   .field
     = f.label :city
     %br/
