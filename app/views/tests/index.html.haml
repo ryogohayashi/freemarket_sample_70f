@@ -1,3 +1,4 @@
-Helloworld!!
-Helloworld!!
-Helloworld!!
+.text_image
+  - @tests.each do |t|
+    = t.text
+    = image_tag t.image.url if @test.image?

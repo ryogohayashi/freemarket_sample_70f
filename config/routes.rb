@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   # resources :users, only: :show
+
+  resources :tests, only: [:index, :new, :create,]
 end
