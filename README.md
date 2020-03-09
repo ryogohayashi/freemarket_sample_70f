@@ -6,10 +6,10 @@
 |email|string|null: false, unique, true, index: ture|
 |password|string|null: false|
 |password_confirmation|string|null: false|
-|first_name|string|null: false|
 |family_name|string|null: false|
-|first_name_kana|string|null: false|
+|first_name|string|null: false|
 |family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
 |birth_year|integer|null: false|
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
@@ -26,16 +26,12 @@
 ## destinationsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|destination_first_name|string|null: false|
-|destination_famliy_name|string|null: false|
-|destination_first_name_kana|string|null: false|
-|destination_family_name_kana|string|null: false|
 |post_code|inteder|null: false|
 |prefecture_code|integer|null: false|
 |city|string|null: false|
 |house_number|string|null: false|
 |building_number|string||
-|phone_number|integer|
+|phone_number|string|
 |user_id|integer|null: false, foreign_key: ture|
 ### Association
 - belongs_to :user

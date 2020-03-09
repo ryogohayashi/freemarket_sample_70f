@@ -1,31 +1,32 @@
 %h2 送付先住所登録（2画面目）甲斐さん御願いします！
+= fields_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  .field
+    = f.label :family_name
+    %br/
+    = f.text_field :family_name, readonly: true, style: "border: none"
+  .field
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name, readonly: true, style: "border: none"
+  .field
+    = f.label :family_name_kana
+    %br/
+    = f.text_field :family_name_kana, readonly: true, style: "border: none"
+  .field
+    = f.label :first_name_kana
+    %br/
+    = f.text_field :first_name_kana, readonly: true, style: "border: none"
 
 = form_for @destination do |f|
   = render "devise/shared/error_messages", resource: @destination
-  .field
-    = f.label :destination_first_name
-    %br/
-    = f.text_field :destination_first_name
-  .field
-    = f.label :destination_family_name
-    %br/
-    = f.text_field :destination_family_name
-  .field
-    = f.label :destination_first_name_kana
-    %br/
-    = f.text_field :destination_first_name_kana
-  .field
-    = f.label :destination_family_name_kana
-    %br/
-    = f.text_field :destination_family_name_kana
   .field
     = f.label :post_code
     %br/
     = f.text_field :post_code
   .field
-    = f.label :prefecture
+    = f.label :prefecture_code
     %br/
-    = f.text_field :prefecture
+    = f.text_field :prefecture_code
   .field
     = f.label :city
     %br/
@@ -45,4 +46,5 @@
 
   .actions
     = f.submit "Sign up"
+
 = render "devise/shared/links"
