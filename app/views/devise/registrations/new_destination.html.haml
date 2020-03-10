@@ -1,3 +1,125 @@
+-# .top
+-#   .header
+-#     .header__logo
+-#       <img src="/assets/logo.png" widt="100" height="50">
+-#     .header__progress-bar
+-#       会員情報
+
+-#   .main
+-#     .identity-information
+-#       本人登録情報
+        
+-#     .writing
+-#       .writing__mozi
+-#         .writing__mozi__1
+-#         お客さまの本人情報をご登録ください。
+-#         .writing__mozi__2
+-#         登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+-#       .writing__mozi2
+-#         本人確認書類のアップロードについて＞
+
+-#     .q
+-#       = fields_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+-#       .q__a
+-#         .q__a__a1
+-#           .q__a__a11
+-#             = f.label :family_name,"お名前（全角）"
+-#             %br/
+-#           .q__a__a12
+-#             = f.text_field :family_name, readonly: true, style: "border: none"
+-#         .q__a__a2
+-#           .q__a__a21
+-#             = f.label :first_name
+-#           .q__a__a22
+-#             = f.text_field :first_name, readonly: true, style: "border: none"
+
+-#       .q__b
+-#         .q__b__b1
+-#           .q__b__b11
+-#             = f.label :family_name_kana
+-#             %br/
+-#           .q__b__b12
+-#             = f.text_field :family_name_kana, readonly: true, style: "border: none"
+-#         .q__b__b2
+-#           .q__b__b21
+-#             = f.label :first_name_kana
+-#             %br/
+-#           .q__b__b22
+-#             = f.text_field :first_name_kana, readonly: true, style: "border: none"
+
+
+
+-#       = form_for @destination do |f|
+-#         = render "devise/shared/error_messages", resource: @destination
+
+-#     .postal-code
+-#       .postal-code__a
+-#         .postal-code__a__a1
+-#           郵便番号
+-#         .postal-code__a__a2
+-#           必須
+-#       .postal-code__b
+-#         例）12345
+
+-#     .prefectures
+-#       .prefectures__c
+-#         .prefectures__c__c1
+-#           都道府県
+-#         .prefectures__c__c2
+-#           必須
+-#       .prefectures__d
+-#         例）宮崎
+
+-#     .municipality
+-#       .municipality__e
+-#         .municipality__e__e1
+-#           市区町村
+-#         .municipality__e__e2
+-#           必須
+-#       .municipality__f
+-#         例）宮崎市
+
+-#     .address
+-#       .address__g
+-#         .address__g__g1
+-#           番地
+-#         .address__g__g2
+-#           必須
+-#       .address__h
+-#         例）1-1-1
+
+-#     .building
+-#       .building__i
+-#         .building__i__i1
+-#           建物名
+-#         .building__i__i2
+-#           必須
+-#       .building__j
+-#         例）miyazaki
+
+-#     .register
+-#       登録する
+
+-#     .personal-information-registration
+-#       本人情報の登録について＞
+
+-#   .footer
+-#     .title
+-#       .title__a
+-#         プライバシーポリシー
+-#       .title__b
+-#         メルカリ利用規約
+-#       .title__c
+-#         特定商取引に関する表記
+-#     .item
+-#       <img src="/assets/logo-white.png" widt="50" height="50">
+-#     .logo
+-#       © FURIMA, Inc.
+      
+      
+      
+      
+      
 %h2 送付先住所登録（2画面目）甲斐さん御願いします！
 = fields_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   .field
@@ -45,6 +167,6 @@
     = f.text_field :phone_number
 
   .actions
-    = f.submit "Sign up"
+    = f.submit "登録する"
 
 = render "devise/shared/links"
