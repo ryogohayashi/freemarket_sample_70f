@@ -9,8 +9,12 @@ class TestsController < ApplicationController
   end
 
   def create
-    Test.create(test_params)
-    redirect_to tests_path
+    @test = Test.new(test_params)
+    if @test.save
+        redirect_to tests_path
+    else
+        render :new
+    end
   end
 
   private

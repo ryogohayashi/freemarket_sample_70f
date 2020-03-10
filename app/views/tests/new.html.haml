@@ -1,4 +1,4 @@
-= form_tag(tests_path, method: :get)  do
-  = text_field_tag :text
-  = file_field_tag :image
-  = submit_tag "追加"
+= form_for @test, url: tests_path do |f|
+  = f.text_field :text
+  = f.file_field :image
+  = f.submit 'Send'
