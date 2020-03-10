@@ -28,21 +28,14 @@ describe Destination do
       expect(destination.errors[:city]).to include("can't be blank")
     end
 
-    # 5. cityが空では登録できないこと
-    it "cityが空白だと登録できない" do
-      destination = build(:destination, city: nil)
-      destination.valid?
-      expect(destination.errors[:city]).to include("can't be blank")
-    end
-
-    # 6. house_numberが空では登録できないこと
+    # 5. house_numberが空では登録できないこと
     it "house_numberが空白だと登録できない" do
       destination = build(:destination, house_number: nil)
       destination.valid?
       expect(destination.errors[:house_number]).to include("can't be blank")
     end
 
-    # 7. post_codeが3桁では登録できないこと
+    # 6. post_codeが3桁では登録できないこと
     it "post_codeが3桁では登録できない" do
       destination = build(:destination, post_code: "333")
       destination.valid?
