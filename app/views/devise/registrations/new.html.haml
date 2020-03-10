@@ -1,57 +1,88 @@
-%h2 新規登録 （1画面目）甲斐さん御願いします！
-= form_for(@user, url: user_registration_path) do |f|
-  = render "devise/shared/error_messages", resource: @user
+.user-register
+  .header
+    .header__logo
+      <img src="/assets/logo.png" widt="100" height="50">
+    .header__progress-bar
+      会員情報
 
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :family_name
-    %br/
-    = f.text_field :family_name
-  .field
-    = f.label :first_name
-    %br/
-    = f.text_field :first_name
-  .field
-    = f.label :family_name_kana
-    %br/
-    = f.text_field :family_name_kana
-  .field
-    = f.label :first_name_kana
-    %br/
-    = f.text_field :first_name_kana
-  .field
-    = f.label :birth_year
-    %br/
-    = f.text_field :birth_year
-  .field
-    = f.label :birth_month
-    %br/
-    = f.text_field :birth_month
-  .field
-    = f.label :birth_day
-    %br/
-    = f.text_field :birth_day
-  
-  .actions
-    = f.submit "Next"
+  .main
+    .title
+      .title__font
+        会員情報入力
+
+    = form_for(@user, url: user_registration_path) do |f|
+      = render "devise/shared/error_messages", resource: @user
+
+      .name-information
+        .item
+          .nicname
+            = f.label :nickname
+            %br/
+            = f.text_field :nickname
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password"
+      .field
+        = f.label :password_confirmation
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password"
+      .field
+        = f.label :family_name
+        %br/
+        = f.text_field :family_name
+      .field
+        = f.label :first_name
+        %br/
+        = f.text_field :first_name
+      .field
+        = f.label :family_name_kana
+        %br/
+        = f.text_field :family_name_kana
+      .field
+        = f.label :first_name_kana
+        %br/
+        = f.text_field :first_name_kana
+      .field
+        = f.label :birth_year
+        %br/
+        = f.text_field :birth_year
+      .field
+        = f.label :birth_month
+        %br/
+        = f.text_field :birth_month
+      .field
+        = f.label :birth_day
+        %br/
+        = f.text_field :birth_day
+      
+      .actions
+        = f.submit "Next"
 
 
-= render "devise/shared/links"
+    = render "devise/shared/links"
+
+
+  .footer
+    .title
+      .title__a
+        プライバシーポリシー
+      .title__b
+        メルカリ利用規約
+      .title__c
+        特定商取引に関する表記
+    .item
+      <img src="/assets/logo-white.png" widt="50" height="50">
+    .logo
+      © FURIMA, Inc.
+
+
+
+-# %h2 新規登録 （1画面目）甲斐さん御願いします！
