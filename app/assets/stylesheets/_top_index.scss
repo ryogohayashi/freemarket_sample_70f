@@ -2,12 +2,13 @@
   height: 100vh;
   width: 100vw;
   .header{
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+    width: 1040px;
+    padding-top: 15px;
     .input{
-      padding: 20px,200px,0,200px;
       display: flex;
-      margin: 0,auto;
+      justify-content: center;
       &__mozi{
         display: flex;
         height: 40px;
@@ -30,10 +31,11 @@
       margin-bottom: 10px;
       width: 1040px;
       margin: 0 auto;
+      padding-bottom: 15px;
       &__choice{
         display: flex;
         &__categories{
-          margin-left:200px;
+
         }
         &__brand{
           padding-left: 30px;
@@ -41,11 +43,8 @@
       }
       &__register{
         display: flex;
+        margin-left: auto;
         &__login{
-          margin-left: 750px;
-        }
-        &__sign-up{
-          padding-left: 30px;
         }
       }
     }

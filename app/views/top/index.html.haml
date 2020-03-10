@@ -17,12 +17,12 @@
       .item__register
         - if user_signed_in?
           .item__register__login 
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-          = link_to "マイページ", "/users/#{current_user.id}", method: :get
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+            = link_to "マイページ", "/users/#{current_user.id}", method: :get
         - else
           .item__register__sign-up 
-          = link_to "新規登録", new_user_registration_path
-          = link_to "ログイン", new_user_session_path
+            = link_to "新規登録", new_user_registration_path
+            = link_to "ログイン", new_user_session_path
   .main
     .photo1
       <img src="/assets/bg-mainVisual-pict_pc.jpg" widt="1000" height="590">
