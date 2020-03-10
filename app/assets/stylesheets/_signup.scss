@@ -25,10 +25,11 @@
     .title{
       height: 90px;
       width: 200px;
-      font-size: 20px;
+      font-size: 22px;
       padding: 30px;
       margin: 0px auto;
       &__font{
+        font-weight: 600;
         margin-left: 30px;
         margin-top: 20px;
         justify-content: center;
@@ -38,9 +39,10 @@
       &__item{
         display: flex;
         padding: 5px;
-        margin-left: 200px;
+        margin-left: 130px;
         &__nicname{
-          font-size: 10px;
+          font-size: 15px;
+          font-weight: 600;
         }
         &__required{
           height: 20px;
@@ -55,7 +57,11 @@
       &__name{
         color: #cccccc;
         font-size: 25px;
-        padding-left: 210px;
+        padding-left: 130px;
+        &__aaaaa{
+          height: 500px;
+          width: 1000px;
+        }
       }
     }
 
@@ -63,10 +69,10 @@
       margin-top: 25px;
       &__information{
         display: flex;
-        padding: 5px;
+        // padding: 5px;
         &__address{
-          color: black;
-          font-size: 16px;
+          font-size: 15px;
+          font-weight: 600;
         }
         &__required{
           height: 20px;
@@ -79,7 +85,6 @@
         }
       }
       &__information{
-        color: #cccccc;
         font-size: 25px;
         padding-left: 210px;
       }
