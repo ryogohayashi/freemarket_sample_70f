@@ -14,15 +14,23 @@
       = render "devise/shared/error_messages", resource: @user
 
       .name-information
-        .item
-          .nicname
-            = f.label :nickname
+        .name-information__item
+          .name-information__item__nicname
+            = f.label :nickname,"ニックネーム"
+          .name-information__item__required
+            必須
             %br/
-            = f.text_field :nickname
-      .field
-        = f.label :email
+        .name-information__name
+          = f.text_field :nickname,class:"aaaaa"
+      .email
+        .email__information
+          .email__information__address
+            = f.label :email,"メールアドレス"
+          .email__information__required
+            必須
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        .email__information
+          = f.email_field :email, autofocus: true, autocomplete: "email"
       .field
         = f.label :password
         - if @minimum_password_length
