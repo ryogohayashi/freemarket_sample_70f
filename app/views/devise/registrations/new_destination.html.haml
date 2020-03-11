@@ -2,8 +2,8 @@
   .header2
     .header2__logo2
       <img src="/assets/logo.png" widt="100" height="50">
-    .header2__progress-bar2
-      会員情報
+    -# .header2__progress-bar2
+    -#   会員情報
 
   .main
     .identity-information
@@ -58,7 +58,7 @@
             .postal-code__a__a2
               必須
           .postal-code__b
-            = f.text_field :post_code,size:10, maxlength:7
+            = f.text_field :post_code,size:30, maxlength:7
 
         .prefectures
           .prefectures__c
@@ -76,7 +76,7 @@
             .municipality__e__e2
               必須
           .municipality__f
-            = f.text_field :city
+            = f.text_field :city,size:30
 
         .address
           .address__g
@@ -85,7 +85,7 @@
             .address__g__g2
               必須
           .address__h
-            = f.text_field :house_number
+            = f.text_field :house_number,size:30
 
         .building
           .building__i
@@ -94,7 +94,7 @@
             .building__i__i2
               任意
           .building__j
-            = f.text_field :building
+            = f.text_field :building,size:30
 
         .phone
           .phone__number1
@@ -103,7 +103,7 @@
             .phone__number1__yy
               任意
           .phone__number2
-            = f.text_field :phone_number,maxlength:11
+            = f.text_field :phone_number,size:30,maxlength:11
 
         .register
           = f.submit "登録する"

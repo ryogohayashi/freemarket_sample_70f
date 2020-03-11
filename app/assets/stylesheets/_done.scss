@@ -5,17 +5,17 @@
   .header3{
     height: 128px;
     width: 500px;
-    margin-left: 500px;
+    margin-left: 450px;
     justify-content: center;
     display: flex;
     &__logo3{
       margin-top: 40px;
     }
-    &__progress-bar3{
-      font-size: 8px;
-      margin-top: 45px;
-      margin-left: 100px;
-    }
+    // &__progress-bar3{
+    //   font-size: 8px;
+    //   margin-top: 45px;
+    //   margin-left: 100px;
+    // }
   }
 
   .main{

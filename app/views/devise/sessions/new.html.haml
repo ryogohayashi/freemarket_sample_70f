@@ -2,8 +2,8 @@
   .header4
     .header4__logo4
       <img src="/assets/logo.png" widt="100" height="50">
-    .header4__progress-bar4
-      会員情報
+    -# .header4__progress-bar4
+    -#   会員情報
 
   .main
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -14,11 +14,13 @@
       .address
         = f.label :email,"メールアドレス"
         .address__a1
-          = f.email_field :email, autofocus: true, autocomplete: "email"
+          .address__a1__777
+            = f.email_field :email, autofocus: true, autocomplete: "email"
       .password
         = f.label :password,"パスワード"
         .password__a2
-          = f.password_field :password, autocomplete: "current-password"
+          .password__a2__555
+            = f.password_field :password, autocomplete: "current-password"
         -# - if devise_mapping.rememberable?
       .path
         .path__a3
@@ -26,7 +28,7 @@
         .path__a4
           = f.label :remember_me
       .login5
-        = f.submit "Log in"
+        = f.submit "ログイン"
       .notes
         = render "devise/shared/links"
 

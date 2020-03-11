@@ -5,21 +5,21 @@
   .header2{
     height: 128px;
     width: 500px;
-    margin-left: 500px;
+    margin-left: 450px;
     justify-content: center;
     display: flex;
     &__logo2{
       margin-top: 40px;
     }
-    &__progress-bar2{
-      font-size: 8px;
-      margin-top: 45px;
-      margin-left: 100px;
-    }
+    // &__progress-bar2{
+    //   font-size: 8px;
+    //   margin-top: 45px;
+    //   margin-left: 100px;
+    // }
   }
 
   .main{
-    height: 1000px;
+    height: 950px;
     width: 700px;
     margin: 0 auto;
     background-color: white;
@@ -47,46 +47,26 @@
     .q{
       &__a{
         display: flex;
-        margin-left: 200px;
+        margin-left: 210px;
         &__a1{
           margin-top: 30px;
-          &__aa1{
-            font-size: 17px;
-          }
-          &__aa2{
-            font-size: 15px;
-          }
+          font-size: 15px;
         }
         &__a2{
           margin-top: 30px;
-          &__aaa1{
-            font-size: 17px;
-          }
-          &__aaa2{
-            font-size: 15px;
-          }
+          font-size: 15px;
         }
       }
       &__b{
         display: flex;
-        margin-left: 200px;
+        margin-left: 210px;
         &__b1{
           margin-top: 20px;
-          &__bb1{
-            font-size: 17px;
-          }
-          &__bb2{
-            font-size: 15px;
-          }
+          font-size: 15px;
         }
         &__b2{
           margin-top: 20px;
-          &__bbb1{
-            font-size: 17px;
-          }
-          &__bbb2{
-            font-size: 15px;
-          }
+          font-size: 15px;
         }
       }
     }
@@ -96,22 +76,23 @@
         margin-top: 30px;
         &__a{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__a1{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__a2{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: white;
             background-color: #ea352d;
           }
         }
         &__b{
-          font-size: 16px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
@@ -119,22 +100,23 @@
         margin-top: 25px;
         &__c{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__c1{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__c2{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: white;
             background-color: #ea352d;
           }
         }
         &__d{
-          font-size: 25px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
@@ -142,22 +124,23 @@
         margin-top: 25px;
         &__e{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__e1{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__e2{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: white;
             background-color: #ea352d;
           }
         }
         &__f{
-          font-size: 25px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
@@ -165,22 +148,23 @@
         margin-top: 25px;
         &__g{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__g1{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__g2{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: white;
             background-color: #ea352d;
           }
         }
         &__h{
-          font-size: 25px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
@@ -188,22 +172,23 @@
         margin-top: 25px;
         &__i{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__i1{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__i2{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: black;
             background-color: #f5f5f5;
           }
         }
         &__j{
-          font-size: 25px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
@@ -211,34 +196,35 @@
         margin-top: 25px;
         &__number1{
           display: flex;
-          padding-left: 200px;
+          padding-left: 210px;
           &__kk{
             width: 70px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
           }
           &__yy{
             height: 20px;
             width: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: black;
             background-color: #f5f5f5;
           }
         }
         &__number2{
-          font-size: 25px;
-          padding-left: 200px;
+          font-size: 15px;
+          padding-left: 210px;
         }
       }
 
       .register{
         margin-top: 25px;
-        margin-left: 200px;
+        margin-left: 210px;
       }
 
       .personal-information-registration{
-        font-size: 13px;
+        font-size: 15px;
         color: #0099FF;
-        padding-left: 500px;
+        padding-left: 360px;
         margin-top: 25px;
       }
     }

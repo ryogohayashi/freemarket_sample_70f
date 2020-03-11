@@ -5,17 +5,17 @@
   .header4{
     height: 128px;
     width: 500px;
-    margin-left: 500px;
+    margin-left: 450px;
     justify-content: center;
     display: flex;
     &__logo4{
       margin-top: 40px;
     }
-    &__progress-bar4{
-      font-size: 8px;
-      margin-top: 45px;
-      margin-left: 100px;
-    }
+    // &__progress-bar4{
+    //   font-size: 8px;
+    //   margin-top: 45px;
+    //   margin-left: 100px;
+    // }
   }
 
   .main{
@@ -37,26 +37,28 @@
     //   margin-left: 150px;
     // }
     .address{
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 600;
       padding-top: 40px;
-      margin-left: 200px;
+      margin-left: 250px;
       &__a1{
         color: #cccccc;
-        font-size: 20px;
+        font-size: 15px;
       }
     }
     .password{
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 600;
       margin-top: 30px;
-      margin-left: 200px;
+      margin-left: 250px;
       &__a2{
         color: #cccccc;
-        font-size: 20px;
+        font-size: 15px;
       }
     }
     .path{
       display: flex;
-      margin-left: 200px;
+      margin-left: 250px;
       margin-top: 30px;
       // &__a3{
       // }
@@ -66,14 +68,14 @@
     }
     .login5{
       margin-top: 30px;
-      font-size: 16px;
+      font-size: 15px;
       padding-left: 100px;
-      margin-left: 200px;
+      margin-left: 250px;
       // padding-top: 20px;
     }
     .notes{
-      font-size: 16px;
-      padding-left: 200px;
+      font-size: 15px;
+      padding-left: 250px;
       padding-top: 30px;
     }
   }
