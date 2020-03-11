@@ -13,4 +13,5 @@ class User < ApplicationRecord
   validates :birth_month, presence: { message: 'は１文字以上入力してください。' }
   validates :birth_day, presence: { message: 'は１文字以上入力してください。' }
   has_one :destination
+  
 end

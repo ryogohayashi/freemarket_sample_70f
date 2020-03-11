@@ -41,7 +41,5 @@ describe Destination do
       destination.valid?
       expect(destination.errors[:post_code]).to include("は7桁、ハイフンなしで入力してください。")
     end
-    
-
   end
 end

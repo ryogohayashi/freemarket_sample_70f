@@ -41,6 +41,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
   end
 
-
-
 end
