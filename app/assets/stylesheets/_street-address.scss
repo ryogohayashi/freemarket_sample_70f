@@ -19,7 +19,7 @@
   }
 
   .main{
-    height: 900px;
+    height: 1000px;
     width: 700px;
     margin: 0 auto;
     background-color: white;
@@ -197,11 +197,34 @@
             height: 20px;
             width: 30px;
             font-size: 14px;
-            color: white;
-            background-color: #ea352d;
+            color: black;
+            background-color: #f5f5f5;
           }
         }
         &__j{
+          font-size: 25px;
+          padding-left: 200px;
+        }
+      }
+
+      .phone{
+        margin-top: 25px;
+        &__number1{
+          display: flex;
+          padding-left: 200px;
+          &__kk{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__yy{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: black;
+            background-color: #f5f5f5;
+          }
+        }
+        &__number2{
           font-size: 25px;
           padding-left: 200px;
         }
@@ -242,12 +265,12 @@
     }
     .item{
       margin-top: 25px;
-      padding-left: 325px;
+      padding-left: 630px;
     }
     .logo{
       font-size: 10px;
       margin-top: 5px;
-      padding-left: 400px;
+      padding-left: 680px;
     }
   }
 }
