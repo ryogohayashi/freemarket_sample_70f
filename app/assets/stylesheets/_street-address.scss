@@ -2,16 +2,16 @@
   height: 100%;
   width: 100vw;
   background-color: #f5f5f5;
-  .header{
+  .header2{
     height: 128px;
     width: 500px;
-    margin-left: 150px;
+    margin-left: 500px;
     justify-content: center;
     display: flex;
-    &__logo{
+    &__logo2{
       margin-top: 40px;
     }
-    &__progress-bar{
+    &__progress-bar2{
       font-size: 8px;
       margin-top: 45px;
       margin-left: 100px;
@@ -19,16 +19,18 @@
   }
 
   .main{
-    height: 1160px;
+    height: 900px;
     width: 700px;
     margin: 0 auto;
     background-color: white;
+
     .identity-information{
       height: 80px;
       font-size: 20px;
       padding: 30px;
       margin-left: 250px;
     }
+
     .writing{
       height: 100px;
       &__mozi{
@@ -42,172 +44,184 @@
       }
     }
 
-    .postal-code{
-      margin-top: 300px;
+    .q{
       &__a{
-        width: 300px;
         display: flex;
-        padding-left: 200px;
+        margin-left: 200px;
         &__a1{
-          color: black;
-          font-size: 16px;
+          margin-top: 30px;
+          &__aa1{
+            font-size: 17px;
+          }
+          &__aa2{
+            font-size: 15px;
+          }
         }
         &__a2{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+          margin-top: 30px;
+          &__aaa1{
+            font-size: 17px;
+          }
+          &__aaa2{
+            font-size: 15px;
+          }
         }
       }
       &__b{
-        color: #cccccc;
-        font-size: 25px;
-        border: 4px;
-        border-color: black;
-        padding-left: 210px;
-      }
-    }
-
-    .prefectures{
-      margin-top: 25px;
-      &__c{
-        width: 300px;
         display: flex;
-        padding-left: 200px;
-        &__c1{
-          color: black;
+        margin-left: 200px;
+        &__b1{
+          margin-top: 20px;
+          &__bb1{
+            font-size: 17px;
+          }
+          &__bb2{
+            font-size: 15px;
+          }
+        }
+        &__b2{
+          margin-top: 20px;
+          &__bbb1{
+            font-size: 17px;
+          }
+          &__bbb2{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .opi{
+      .postal-code{
+        margin-top: 30px;
+        &__a{
+          display: flex;
+          padding-left: 200px;
+          &__a1{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__a2{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #ea352d;
+          }
+        }
+        &__b{
           font-size: 16px;
-        }
-        &__c2{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+          padding-left: 200px;
         }
       }
-      &__d{
-        color: #cccccc;
-        font-size: 25px;
-        border: 4px;
-        border-color: black;
-        padding-left: 210px;
-      }
-    }
 
-    .municipality{
-      margin-top: 25px;
-      &__e{
-        width: 300px;
-        display: flex;
-        padding-left: 200px;
-        &__e1{
-          color: black;
-          font-size: 16px;
+      .prefectures{
+        margin-top: 25px;
+        &__c{
+          display: flex;
+          padding-left: 200px;
+          &__c1{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__c2{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #ea352d;
+          }
         }
-        &__e2{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+        &__d{
+          font-size: 25px;
+          padding-left: 200px;
         }
       }
-      &__f{
-        color: #cccccc;
-        font-size: 25px;
-        border: 4px;
-        border-color: black;
-        padding-left: 210px;
-      }
-    }
 
-    .address{
-      margin-top: 25px;
-      &__g{
-        width: 300px;
-        display: flex;
-        padding-left: 200px;
-        &__g1{
-          color: black;
-          font-size: 16px;
+      .municipality{
+        margin-top: 25px;
+        &__e{
+          display: flex;
+          padding-left: 200px;
+          &__e1{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__e2{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #ea352d;
+          }
         }
-        &__g2{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+        &__f{
+          font-size: 25px;
+          padding-left: 200px;
         }
       }
-      &__h{
-        color: #cccccc;
-        font-size: 25px;
-        border: 4px;
-        border-color: black;
-        padding-left: 210px;
-      }
-    }
 
-    .building{
-      margin-top: 25px;
-      &__i{
-        width: 300px;
-        display: flex;
-        padding-left: 200px;
-        &__i1{
-          color: black;
-          font-size: 16px;
+      .address{
+        margin-top: 25px;
+        &__g{
+          display: flex;
+          padding-left: 200px;
+          &__g1{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__g2{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #ea352d;
+          }
         }
-        &__i2{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+        &__h{
+          font-size: 25px;
+          padding-left: 200px;
         }
       }
-      &__j{
-        color: #cccccc;
-        font-size: 25px;
-        border: 4px;
-        border-color: black;
-        padding-left: 210px;
+
+      .building{
+        margin-top: 25px;
+        &__i{
+          display: flex;
+          padding-left: 200px;
+          &__i1{
+            width: 70px;
+            font-size: 16px;
+          }
+          &__i2{
+            height: 20px;
+            width: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #ea352d;
+          }
+        }
+        &__j{
+          font-size: 25px;
+          padding-left: 200px;
+        }
       }
-    }
 
-    .register{
-      margin-top: 25px;
-      height: 50px;
-      width: 200px;
-      font-size: 16px;
-      padding-left: 100px;
-      color: white;
-      background-color: #ea352d;
-      margin-left: 200px;
-      padding-top: 20px;
-    }
+      .register{
+        margin-top: 25px;
+        margin-left: 200px;
+      }
 
-    .personal-information-registration{
-      font-size: 13px;
-      color: #0099FF;
-      padding-left: 500px;
-      margin-top: 25px;
+      .personal-information-registration{
+        font-size: 13px;
+        color: #0099FF;
+        padding-left: 500px;
+        margin-top: 25px;
+      }
     }
   }
 
-  .footer{
+  .footer2{
     height: 200px;
     width: 100vw;
     margin-top: 25px;
