@@ -10,8 +10,4 @@ class Destination < ApplicationRecord
   # validates :building
   # validates :phone_number, format: {with: /A\d{10}z|A\d{11}z/, message: 'はハイフンなしで入力してください'}
 
- 
-
-  
-
 end

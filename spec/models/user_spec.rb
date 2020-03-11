@@ -100,6 +100,7 @@ describe User do
     end
   end
 
+
   describe '#katakana' do
     # 15. family_name_kanaが全角カタカナでないと登録できないこと
     it 'family_name_kanaがローマ字ではなく、全角カタカナでないと登録できない' do
@@ -142,6 +143,7 @@ describe User do
     end
   end
 
+  
   describe '#zenkaku' do
     # 15. family_nameが全角日本語でないと登録できないこと
     it 'family_nameがローマ字ではなく、全角日本語でないと登録できない' do
