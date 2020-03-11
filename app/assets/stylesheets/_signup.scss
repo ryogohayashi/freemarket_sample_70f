@@ -58,10 +58,6 @@
         color: #cccccc;
         font-size: 25px;
         padding-left: 200px;
-        &__aaaaa{
-          height: 500px;
-          width: 1000px;
-        }
       }
     }
 
@@ -124,21 +120,8 @@
       }
     }
 
-    .Identification{
-      padding-left: 200px;
-      &__mozi{
-        font-weight: 600;
-        font-size: 16px;
-      }
-      &__description{
-        width: 323px;
-        font-size: 13px;
-      }
-    }
-
     .re-enter{
       padding-left: 200px;
-      margin-top: 25px;
       &__item{
         &__pass{
           font-weight: 600;
@@ -150,6 +133,19 @@
           font-size: 13px;
           color: #cccccc;
         }
+      }
+    }
+
+    .Identification{
+      padding-left: 200px;
+      margin-top: 25px;
+      &__mozi{
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &__description{
+        width: 323px;
+        font-size: 13px;
       }
     }
 
@@ -224,7 +220,10 @@
         &__a{
           display: flex;
           &__1{
-            width: 50px;
+            &__a5{
+              height: 500px;
+              width: 500px;
+            }
           }
           &__year{
             font-size: 16px;
@@ -268,7 +267,7 @@
       &__btm{
         font-size: 16px;
         padding-left: 100px;
-        margin-top: 5px;
+        margin-top: 15px;
       }
       &__register{
         padding-left: 150px;
