@@ -11,35 +11,35 @@ describe Destination do
     it "post_codeが空白だと登録できない" do
       destination = build(:destination, post_code: nil)
       destination.valid?
-      expect(destination.errors[:post_code]).to include("can't be blank")
+      expect(destination.errors[:post_code]).to include("を入力してください", "は7桁、ハイフンなしで入力してください。")
     end
 
     # 3. prefecture_codeが空では登録できないこと
     it "prefecture_codeが空白だと登録できない" do
       destination = build(:destination, prefecture_code: nil)
       destination.valid?
-      expect(destination.errors[:prefecture_code]).to include("can't be blank")
+      expect(destination.errors[:prefecture_code]).to include("は都道府県を選択してください。")
     end
 
     # 4. cityが空では登録できないこと
     it "cityが空白だと登録できない" do
       destination = build(:destination, city: nil)
       destination.valid?
-      expect(destination.errors[:city]).to include("can't be blank")
+      expect(destination.errors[:city]).to include("は入力してください。")
     end
 
     # 5. house_numberが空では登録できないこと
     it "house_numberが空白だと登録できない" do
       destination = build(:destination, house_number: nil)
       destination.valid?
-      expect(destination.errors[:house_number]).to include("can't be blank")
+      expect(destination.errors[:house_number]).to include("は入力してください。")
     end
 
     # 6. post_codeが3桁では登録できないこと
     it "post_codeが3桁では登録できない" do
       destination = build(:destination, post_code: "333")
       destination.valid?
-      expect(destination.errors[:post_code]).to include("は7桁、ハイフンなしで入力してください")
+      expect(destination.errors[:post_code]).to include("は7桁、ハイフンなしで入力してください。")
     end
     
 
