@@ -18,13 +18,13 @@
     }
   }
   .main{
-    height: 1200px;
+    height: 1100px;
     width: 700px;
     margin: 0 auto;
     background-color: white;
     .title{
       height: 90px;
-      width: 200px;
+      width: 250px;
       font-size: 22px;
       padding: 30px;
       margin: 0px auto;
@@ -39,7 +39,7 @@
       &__item{
         display: flex;
         padding: 5px;
-        margin-left: 130px;
+        margin-left: 200px;
         &__nicname{
           font-size: 15px;
           font-weight: 600;
@@ -57,7 +57,7 @@
       &__name{
         color: #cccccc;
         font-size: 25px;
-        padding-left: 130px;
+        padding-left: 200px;
         &__aaaaa{
           height: 500px;
           width: 1000px;
@@ -69,7 +69,6 @@
       margin-top: 25px;
       &__information{
         display: flex;
-        // padding: 5px;
         &__address{
           font-size: 15px;
           font-weight: 600;
@@ -86,18 +85,18 @@
       }
       &__information{
         font-size: 25px;
-        padding-left: 210px;
+        padding-left: 200px;
       }
     }
 
     .password{
-      padding-left: 210px;
+      padding-left: 200px;
       margin-top: 25px;
       &__item{
         display: flex;
         padding: 5px;
         &__pass{
-          color: black;
+          font-weight: 600;
           font-size: 16px;
         }
         &__required{
@@ -109,6 +108,10 @@
           margin-left: 10px;
           padding-left: 2px;
         }
+        &__note{
+          font-weight: 600;
+          margin-left: 10px;
+        }
       }
       &__input{
         color: #cccccc;
@@ -119,22 +122,12 @@
         font-size: 13px;
         color: #cccccc;
       }
-      &__display{
-        display: flex;
-        margin-top: 10px;
-        &__box{
-          font-size: 16px;
-        }
-        &__mozi{
-          font-size: 16px;
-        }
-      }
     }
 
     .Identification{
-      padding-left: 210px;
-      margin-top: 25px;
+      padding-left: 200px;
       &__mozi{
+        font-weight: 600;
         font-size: 16px;
       }
       &__description{
@@ -143,79 +136,77 @@
       }
     }
 
-    .Identification-name{
-      padding-left: 210px;
+    .re-enter{
+      padding-left: 200px;
       margin-top: 25px;
-      &__box{
-        display: flex;
-        &__mozi{
+      &__item{
+        &__pass{
+          font-weight: 600;
           font-size: 16px;
         }
-        &__hissu{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
+        &__itempass{
+          height: 50px;
+          width: 300px;
+          font-size: 13px;
+          color: #cccccc;
+        }
+      }
+    }
+
+    .Identification-name{
+      padding-left: 200px;
+      margin-top: 25px;
+      display: flex;
+      &__box{
+        &__mozi{
+          font-weight: 600;
+          font-size: 16px;
+        }
+        &__nameinput{
         }
       }
       &__boxs{
-        display: flex;
-        margin-top: 10px;
+        margin-left: 10px;
         &__a1{
-          font-size: 25px;
-          color: #cccccc;
+          font-weight: 600;
+          font-size: 16px;
         }
         &__a2{
-          font-size: 25px;
-          color: #cccccc;
-          margin-left: 10px;
         }
       }
     }
 
     .Identification-name-kana{
-      padding-left: 210px;
+      padding-left: 200px;
       margin-top: 25px;
+      display: flex;
       &__box{
-        display: flex;
         &__mozi{
+          font-weight: 600;
           font-size: 16px;
         }
         &__hissu{
-          height: 20px;
-          width: 30px;
-          font-size: 14px;
-          color: white;
-          background-color: #ea352d;
-          margin-left: 10px;
-          padding-left: 2px;
         }
       }
       &__boxs{
-        margin-top: 10px;
-        display: flex;
+        margin-left: 10px;
         &__b1{
-          font-size: 25px;
-          color: #cccccc;
+          font-weight: 600;
+          font-size: 16px;
         }
         &__b2{
-          font-size: 25px;
-          color: #cccccc;
-          margin-left: 10px;
         }
       }
     }
 
     .Birthday{
-      padding-left: 210px;
+      padding-left: 200px;
       margin-top: 25px;
       &__box1{
         display: flex;
         &__mozi{
           font-size: 16px;
+          font-weight: 600;
         }
         &__hissu{
           height: 20px;
@@ -233,9 +224,7 @@
         &__a{
           display: flex;
           &__1{
-            height: 50px;
-            width: 60px;
-            margin-left: 10px;
+            width: 50px;
           }
           &__year{
             font-size: 16px;
@@ -245,9 +234,6 @@
         &__b{
           display: flex;
           &__2{
-            height: 50px;
-            width: 60px;
-            margin-left: 10px;
           }
           &__month{
             font-size: 16px;
@@ -257,12 +243,9 @@
         &__c{
           display: flex;
           &__3{
-            height: 50px;
-            width: 60px;
-            margin-left: 10px;
           }
           &__day{
-            font-size: 15px;
+            font-size: 16px;
             margin-left: 10px;
           }
         }
@@ -271,26 +254,21 @@
         width: 325px;
         font-size: 13px;
         color: #cccccc;
+        margin-top: 10px;
       }
     }
 
     .terms-of-service{
-      padding-left: 210px;
+      padding-left: 200px;
       margin-top: 35px;
       &__mozi{
         width: 350px;
         font-size: 13px;
       }
       &__btm{
-        height: 30px;
-        width: 200px;
         font-size: 16px;
         padding-left: 100px;
-        color: white;
-        background-color: #ea352d;
-        padding-top: 10px;
-        margin-left: 10px;
-        margin-top: 20px;
+        margin-top: 5px;
       }
       &__register{
         padding-left: 150px;
@@ -331,7 +309,7 @@
     .logo{
       font-size: 10px;
       margin-top: 5px;
-      padding-left: 400px;
+      padding-left: 680px;
     }
   }
 }
