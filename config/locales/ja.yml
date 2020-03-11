@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      destination: 送付先住所
     attributes:
       user:
         nickname: ニックネーム
@@ -15,5 +16,11 @@ ja:
         birth_year: 年
         birth_month: 月
         birth_day: 日
-
+      destination: 
+        post_code: 郵便番号
+        prefecture_code: 都道府県
+        city: 市区町村
+        house_number: 番地
+        building: 建物名
+        phone_number: 電話
         

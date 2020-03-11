@@ -11,14 +11,14 @@ describe User do
     it "nicknameが空白だと登録できない" do
       user = build(:user, nickname: nil)
       user.valid?
-      expect(user.errors[:nickname]).to include("can't be blank")
+      expect(user.errors[:nickname]).to include("は１文字以上入力してください。")
     end
 
     # 3. emailが空では登録できないこと
     it "emailが空白だと登録できない" do
       user = build(:user, email: nil)
       user.valid?
-      expect(user.errors[:email]).to include("can't be blank")
+      expect(user.errors[:email]).to include("が入力されていません。")
     end
     
     # 4. 重複したemailが存在する場合登録できないこと
@@ -26,7 +26,7 @@ describe User do
       user = create(:user)
       another_user = build(:user, email: user.email)
       another_user.valid?
-      expect(another_user.errors[:email]).to include("has already been taken")
+      expect(another_user.errors[:email]).to include("は既に使用されています。")
     end
 
     # 5. passwordが7文字以上であれば登録できること
@@ -40,63 +40,63 @@ describe User do
     it "passwordが6文字以下だと登録できない " do
       user = build(:user, password: "000000", password_confirmation: "000000")
       user.valid?
-      expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
+      expect(user.errors[:password]).to include("は7文字以上に設定して下さい。")
     end
 
     # 7. passwordが存在してもpassword_confirmationが空では登録できないこと
     it "確認用passwordが空白だと登録できない" do
       user = build(:user, password_confirmation: "")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+      expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません")
     end
 
     # 8. family_nameが空では登録できないこと
     it "family_nameが空白だと登録できない" do
       user = build(:user, family_name: "")
       user.valid?
-      expect(user.errors[:family_name]).to include("can't be blank")
+      expect(user.errors[:family_name]).to include("を入力してください")
     end
 
     # 9. first_nameが空では登録できないこと
     it "first_nameが空白だと登録できない" do
       user = build(:user, first_name: nil)
       user.valid?
-      expect(user.errors[:first_name]).to include("can't be blank")
+      expect(user.errors[:first_name]).to include("を入力してください")
     end
 
     # 10. family_name_kanaが空では登録できないこと
     it "family_name_kanaが空白だと登録できない" do
       user = build(:user, family_name_kana: nil)
       user.valid?
-      expect(user.errors[:family_name_kana]).to include("can't be blank")
+      expect(user.errors[:family_name_kana]).to include("を入力してください")
     end
 
     # 11. first_name_kanaが空では登録できないこと
     it "first_name_kanaが空白だと登録できない" do
       user = build(:user, first_name_kana: nil)
       user.valid?
-      expect(user.errors[:first_name_kana]).to include("can't be blank")
+      expect(user.errors[:first_name_kana]).to include("を入力してください")
     end
 
     # 12. birth_yearが空では登録できないこと
     it "birth_yearが空白だと登録できない" do
       user = build(:user, birth_year: nil)
       user.valid?
-      expect(user.errors[:birth_year]).to include("can't be blank")
+      expect(user.errors[:birth_year]).to include("は１文字以上入力してください。")
     end
 
     # 13. birth_monthが空では登録できないこと
     it "birth_mnthが空白だと登録できない" do
       user = build(:user, birth_month: nil)
       user.valid?
-      expect(user.errors[:birth_month]).to include("can't be blank")
+      expect(user.errors[:birth_month]).to include("は１文字以上入力してください。")
     end
 
     # 14. birth_dayが空では登録できないこと
     it "birth_dayが空白だと登録できない" do
       user = build(:user, birth_day: nil)
       user.valid?
-      expect(user.errors[:birth_day]).to include("can't be blank")
+      expect(user.errors[:birth_day]).to include("は１文字以上入力してください。")
     end
   end
 
