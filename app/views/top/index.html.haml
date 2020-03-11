@@ -1,202 +1,217 @@
-.top
-  .header
-    .input
-      .iput__icon
-        <img src="/assets/logo.png" widt="100" height="40">
-      .input__mozi
-        .input__mozi__a1
-          キーワードから探す
-        .input__mozi__b1
-          <img src="/assets/icon-search-1.png" widt="100" height="30">
-    .item
-      .item__choice
-        .item__choice__categories
-          カテゴリー
-        .item__choice__brand
-          ブランド
-      .item__register
-        - if user_signed_in?
-          .item__register__login 
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
-            = link_to "マイページ", "/users/#{current_user.id}", method: :get
-        - else
-          .item__register__sign-up 
-            = link_to "新規登録", new_user_registration_path
-            = link_to "ログイン", new_user_session_path
-  .main
-    .photo1
-      <img src="/assets/bg-mainVisual-pict_pc.jpg" widt="1000" height="590">
-      .photo1__board
-        人生を変えるフリマアプリ
+
+.header
+  .input
+    .iput__icon
+      <img src="/assets/logo.png" width="100%" height="40">
+    .input__mozi
+      .input__mozi__a1
+        キーワードから探す
+      .input__mozi__b1
+        <img src="/assets/icon-search-1.png" width="100%" height="30">
+  .item
+    .item__choice
+      .item__choice__categories
+        カテゴリー
+      .item__choice__brand
+        ブランド
+    .item__register
+      - if user_signed_in?
+        .item__register__login 
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          = link_to "マイページ", "/users/#{current_user.id}", method: :get
+      - else
+        .item__register__sign-up 
+          = link_to "新規登録", new_user_registration_path
+          = link_to "ログイン", new_user_session_path
+.main
+  .photo1
+    <img src="/assets/bg-mainVisual-pict_pc.jpg" width="100%" height="560">
+    .photo1__board
+      人生を変えるフリマアプリ
+  .mozidai
     .mozi1
       FURIMAが選ばれる3つの理由
     .image1
       .image1__a
         .image1__a__ab1
-          <img src="/assets/pict-reason-01.jpg" widt="1000" height="300">
+          <img src="/assets/pict-reason-01.jpg" width="100%" height="100%">
+        %span{"class"=>"bango"} 1
         .image1__a__ab2
-          ３分ですぐに出品
-        .image1__a__ab3
+          %span{"class"=>"image1__a__ab3"} 3分
+          ですぐに出品
+        .image1__a__ab4
           スマホで入力するだけで簡単に出品できる！
       .image1__b
         .image1__b__bc1
-          <img src="/assets/pict-reason-02.jpg" widt="1000" height="300">
+          <img src="/assets/pict-reason-02.jpg" width="100%" height="100%">
+        %span{"class"=>"bango"} 2
         .image1__b__bc2
-          シンプルで使いやすい
-        .image1__b__bc3
+          %span{"class"=>"image1__b__bc3"} シンプル
+          で使いやすい
+        .image1__b__bc4
           めんどくさい入力は必要なく、検索も購入もスムーズ！
       .image1__c
         .image1__c__cd1
-          <img src="/assets/pict-reason-03.jpg" widt="1000" height="300">
+          <img src="/assets/pict-reason-03.jpg" width="100%" height="282px">
+        %span{"class"=>"bango"} 3
         .image1__c__cd2
-          手数料 業界最安
-        .image1__c__cd3
+          手数料
+          %span{"class"=>"image1__c__cd3"} 業界最安
+        .image1__c__cd4
           最大3%でお得に出品&購入！
-    .photo2
-      <img src="/assets/bg-topMiddleDl-pict.jpg" widt="1000" height="630">
-    .mozi2
+  .photo2
+    .photo__title
+      %h1{"class"=>"title"} 会員数日本一位
+      %p{"class"=>"sentence"}
+        %br FURIMAは、フリマアプリで最も人気。
+        %br 出品・購入回数も業界最多です！
+        %br ほしかったあの商品に出会えるかもしれません。
+      .photo__title__btn
+        <img src="/assets/app-store.svg" width="180px" height="53.33px">
+        <img src="/assets/google-play.svg" width="180px" height="53.33px">
+  .middle
+    %h2{"class"=>"mozi2"}
       FURIMAの特徴
+      .mozi2__empty
     .image2
       .image2__d
         .image2__d__de1
-          <img src="/assets/icon-01.png" widt="1000" height="350">
-        .image2__d__de2
-          簡単に売り買いできる
-        .image2__d__de3
-          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+          <img src="/assets/icon-01.png" width="100%">
+        %h3{"class"=>"image2__d__de2"} 簡単に売り買いできる
+        %p{"class"=>"image2__d__de3"} スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
       .image2__e
         .image2__e__ef1
-          <img src="/assets/icon-03.png" widt="1000" height="350">
-        .image2__e__ef2
-          売上金は即日振込みに対応
-        .image2__e__ef3
-          午前9時までに振込を依頼いただけれ     ば、翌日に指定の口座に入金いたします!
+          <img src="/assets/icon-03.png" width="100%">
+        %h4{"class"=>"image2__e__ef2"} 売上金は即日振込みに対応
+        %p{"class"=>"image2__e__ef3"} 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
       .image2__f
         .image2__f__fg1
-          <img src="/assets/icon-04.png" widt="1000" height="350">
-        .image2__f__fg2
-          様々な支払いに対応
-        .image2__f__fg3
-          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
-    .pick-up
-      .pick-up__q
-        .pick-up__q__123
-          ピックアップカテゴリー
-        .pick-up__q__456
-          新規投稿商品
-        .pick-up__q__categories2
-          .pick-up__q__categories2__g
-            .pick-up__q__categories2__g__gg1
-              <img src="/assets/チキン南蛮.png" widt="1000" height="130">
-            .pick-up__q__categories2__g__gg2
-              チキン南蛮
-            .pick-up__q__categories2__g__gg3
-              .pick-up__q__categories2__g__gg3__ggg1
-                800円
-              .pick-up__q__categories2__g__gg3__ggg2
-                ★ 0
-            .pick-up__q__categories2__g__gg4
-              （税込）
-          .pick-up__Q__categories2__h
-            .pick-up__Q__categories2__hh1
-              <img src="/assets/餃子.png" widt="1000" height="130">
-            .pick-up__Q__categories2__hh2
-              餃子
-            .pick-up__Q__categories2__hh3
-              .pick-up__Q__categories2__hh3__hhh1
-                350円
-              .pick-up__Q__categories2__hh3__hhh2
-                ★ 0
-            .pick-up__Q__categories2__hh4
-              （税込）
-          .pick-up__q__categories2__i
-            .pick-up__q__categories2__i__ii1
-              <img src="/assets/カレー.png" widt="1000" height="130">
-            .pick-up__q__categories2__i__ii2
-              カレー
-            .pick-up__q__categories2__i__ii3
-              .pick-up__q__categories2__i__ii3__iii1
-                600円
-              .pick-up__q__categories2__i__ii3__iii2
-                ★ 0
-            .pick-up__q__categories2__i__ii4
-              （税込）
-      .pick-up__w
-        .pick-up__w__55
-          ピックアップブランド
-        .pick-up__w__77
-          アーカイバ
-        .pick-up__w__brand2
-          .pick-up__w__brand2__j
-            .pick-up__w__brand2__j__jj1
-              <img src="/assets/チキン南蛮.png" widt="1000" height="130">
-            .pick-up__w__brand2__j__jj2
-            チキン南蛮
-            .pick-up__w__brand2__j__jj3
-              .pick-up__w__brand2__j__jj3__jjj1
-                800円
-              .pick-up__w__brand2__j__jj3__jjj2
-                ★ 0
+          <img src="/assets/icon-04.png" width="100%">
+        %h5{"class"=>"image2__f__fg2"} 様々な支払いに対応
+        %p{"class"=>"image2__f__fg3"} お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+  .pick-up
+    %h2{"class"=>"pick-up__q__123"} ピックアップカテゴリー
+    .pick-up__q__456
+      .pick-up__q__789
+        %h3{"class"=>"pick-up__q__101112"}  新規投稿商品
+      .pick-up__q__categories2
+        .pick-up__q__categories2__g
+          .pick-up__q__categories2__g__gg1
+            <img src="/assets/チキン南蛮.png" width="100%" height="130">
+          .pick-up__q__categories2__g__gg2
+            %h3{"class"=>"name1"}  product3
+            .detail
+              %ul
+                %li<> 3000円
+                %li
+                  %i{"class"=>"fa fa-ster likeIcon"}
+        .pick-up__q__categories2__g__gg3
+          .pick-up__q__categories2__g__gg4
+            <img src="/assets/餃子.png" width="100%" height="130">
+          .pick-up__q__categories2__g__gg3__ggg1
+          %h3{"class"=>"name2"}  product2
+          .detail
+            %ul
+              %li<> 2000円
+              %li
+                %i{"class"=>"fa fa-ster likeIcon"}
+        .pick-up__Q__categories2__h
+          .pick-up__Q__categories2__hh1
+            <img src="/assets/カレー.png" widt="100%" height="130">
+          .pick-up__Q__categories2__hh2
+          %h3{"class"=>"name3"}  product1
+          .detail
+            %ul
+              %li<> 10000円
+              %li
+                %i{"class"=>"fa fa-ster likeIcon"}
+              %p{"class"=>"pick-up__Q__categories2__hh4"}（税込）
+      .pick-up__q__categories2__i
+        .pick-up__q__categories2__i__ii1
+          
+        .pick-up__q__categories2__i__ii2
+          カレー
+        .pick-up__q__categories2__i__ii3
+          .pick-up__q__categories2__i__ii3__iii1
+            600円
+          .pick-up__q__categories2__i__ii3__iii2
+            ★ 0
+        .pick-up__q__categories2__i__ii4
+          （税込）
+  .pick-up__w
+    %h2{"class"=>"pick-up__w__55"} ピックアップブランド
+    .pick-up__w__brand2
+      .pick-up__w__brand2__j
+        %h3{"class"=>"pick-up__w__brand2__j__jj1"} アーカイバ
+      .pick-up__w__brand2__j__jj2
+        .pick-up__w__brand2__j__jj3
+          %a{href: '/products/3'} 
+            %figure{"class"=>"pick-up__w__brand2__j__jj3__jjj2"} 
+              <img src="/assets/チキン南蛮.png" width="100%" height="130">
             .pick-up__w__brand2__j__jj4
-              （税込）
-          .pick-up__w__brand2__k
-            .pick-up__w__brand2__k__kk1
-              <img src="/assets/餃子.png" widt="1000" height="130">
-            .pick-up__w__brand2__k__kk2
-              餃子
-            .pick-up__w__brand2__k__kk3
-              .pick-up__w__brand2__k__kk3__kkk1
-                350円
-              .pick-up__w__brand2__k__kk3__kkk2
-                ★ 0
-            .pick-up__w__brand2__k__kk4
-              （税込）
-          .pick-up__w__brand2__l
-            .pick-up__w__brand2__l__ll1
-              <img src="/assets/カレー.png" widt="1000" height="130">
-            .pick-up__w__brand2__l__ll2
-              カレー
-            .pick-up__w__brand2__l__ll3
-              .pick-up__w__brand2__l__ll3__lll1
-                600円
-              .pick-up__w__brand2__l__ll3__lll2
-                ★ 0
-            .pick-up__w__brand2__l__ll4
-              （税込）
-    .photo3
-      <img src="/assets/bg-appBanner-pict.jpg" widt="1000" height="612">
-  .footer
-    .topic
-      .topic__aa
-        .topic__aa__aa1
-          .topic__aa__aa1__aaa1
-            FURIMAについて
-          .topic__aa__aa1__aaa2
-            会社概要（運営会社）
-          .topic__aa__aa1__aaa3
-            プライバシーポリシー
-          .topic__aa__aa1__aaa4
-            FURIMA利用規約
-          .topic__aa__aa1__aaa5
-            ポイントに関する特約
-        .topic__aa__aa2
-          .topic__aa__aa2__aa21
-            FURIMAを見る
-          .topic__aa__aa2__aa22
-            カテゴリー一覧
-          .topic__aa__aa2__aa23
-            ブランド一覧
-        .topic__aa__aa3
-          .topic__aa__aa3__aa31
-            ヘルプ＆ガイド
-          .topic__aa__aa3__aa32
-            FURIMAガイド
-          .topic__aa__aa3__aa33
-            FURIMAロゴ利用ガイドライン
-          .topic__aa__aa3__aa34
-            お知らせ
-      .topic__bb
-        <img src="/assets/logo-white.png" widt="50" height="50">
-      .topic__cc
-        © FURIMA, Inc.
+              %h3{"class"=>"name4"}  product3
+              .detail
+                %ul
+                  %li<> 30000円
+                  %li 
+                    %i{"class"=>"fa fa-ster likeIcon"} 
+                    0
+                %p{"class"=>"pick-up__w__brand2__k"}
+        .pick-up__w__brand2__k__kk1
+          %a{href: '/products/2'}
+            %figure{"class"=>"pick-up__w__brand2__k__kk2"}
+              <img src="/assets/餃子.png" width="100%" height="130">
+          .pick-up__w__brand2__k__kk3
+            %h3{"class"=>"name5"}  product2
+            .detail
+          .pick-up__w__brand2__k__kk4
+            （税込）
+        .pick-up__w__brand2__l
+          .pick-up__w__brand2__l__ll1
+            <img src="/assets/カレー.png" width="100%" height="130">
+          .pick-up__w__brand2__l__ll2
+            カレー
+          .pick-up__w__brand2__l__ll3
+            .pick-up__w__brand2__l__ll3__lll1
+              600円
+            .pick-up__w__brand2__l__ll3__lll2
+              ★ 0
+          .pick-up__w__brand2__l__ll4
+            （税込）
+  .photo3
+    <img src="/assets/bg-appBanner-pict.jpg" width="100%" height="612">
+.footer
+  .topic
+    .topic__aa
+      .topic__aa__aa1
+        .topic__aa__aa1__aaa1
+          FURIMAについて
+        .topic__aa__aa1__aaa2
+          会社概要（運営会社）
+        .topic__aa__aa1__aaa3
+          プライバシーポリシー
+        .topic__aa__aa1__aaa4
+          FURIMA利用規約
+        .topic__aa__aa1__aaa5
+          ポイントに関する特約
+      .topic__aa__aa2
+        .topic__aa__aa2__aa21
+          FURIMAを見る
+        .topic__aa__aa2__aa22
+          カテゴリー一覧
+        .topic__aa__aa2__aa23
+          ブランド一覧
+      .topic__aa__aa3
+        .topic__aa__aa3__aa31
+          ヘルプ＆ガイド
+        .topic__aa__aa3__aa32
+          FURIMAガイド
+        .topic__aa__aa3__aa33
+          FURIMAロゴ利用ガイドライン
+        .topic__aa__aa3__aa34
+          お知らせ
+    .topic__bb
+      <img src="/assets/logo-white.png" width="50%" height="50">
+    .topic__cc
+      © FURIMA, Inc.
 
