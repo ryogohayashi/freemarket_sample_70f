@@ -36,13 +36,11 @@
         .password__item
           .password__item__pass
             = f.label :password,"パスワード"
-          .password__item__required
-            必須
           .password__item__note
             - if @minimum_password_length
-              %em
               (#{@minimum_password_length} 文字以上必要です)
-              %br/
+          .password__item__required
+            必須
         .password__input
         .password__description
           = f.password_field :password, autocomplete: "new-password", size:26
@@ -51,7 +49,7 @@
         .re-enter__item
           .re-enter__item__pass
             = f.label :password_confirmation,"確認用パスワード "
-            %br/
+          .re-enter__item__repuired
           .re-enter__itempass
             = f.password_field :password_confirmation, autocomplete: "new-password"
 

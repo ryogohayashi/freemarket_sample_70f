@@ -92,9 +92,18 @@
             .building__i__i1
               = f.label :building,"建物名"
             .building__i__i2
-              必須
+              任意
           .building__j
             = f.text_field :building
+
+        .phone
+          .phone__number1
+            .phone__number1__kk
+              = f.label :phone_number,"電話番号"
+            .phone__number1__yy
+              任意
+          .phone__number2
+            = f.text_field :phone_number,maxlength:11
 
         .register
           = f.submit "登録する"
