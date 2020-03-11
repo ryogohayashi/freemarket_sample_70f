@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :tests, only: [:index, :new, :create,]
+
+  get "logout" => "users#logout"
+  get "ncard" => "users#ncard"
+  get "scard" => "users#scard"
 end

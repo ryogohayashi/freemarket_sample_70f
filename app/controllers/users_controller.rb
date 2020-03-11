@@ -8,4 +8,14 @@ class UsersController < ApplicationController
     @@users = User.all
   end
 
+  def logout
+  end
+
+  def ncard
+  end
+
+  def scard
+  end
+  
+
 end
