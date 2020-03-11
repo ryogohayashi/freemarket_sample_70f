@@ -5,17 +5,17 @@
   .header{
     height: 128px;
     width: 500px;
-    margin-left: 500px;
+    margin-left: 450px;
     justify-content: center;
     display: flex;
     &__logo{
       margin-top: 40px;
     }
-    &__progress-bar{
-      font-size: 8px;
-      margin-top: 45px;
-      margin-left: 100px;
-    }
+    // &__progress-bar{
+    //   font-size: 8px;
+    //   margin-top: 45px;
+    //   margin-left: 100px;
+    // }
   }
   .main{
     height: 1100px;
@@ -46,8 +46,8 @@
         }
         &__required{
           height: 20px;
-          width: 30px;
-          font-size: 14px;
+          width: 35px;
+          font-size: 15px;
           color: white;
           background-color: #ea352d;
           margin-left: 10px;
@@ -56,7 +56,7 @@
       }
       &__name{
         color: #cccccc;
-        font-size: 25px;
+        font-size: 15px;
         padding-left: 200px;
       }
     }
@@ -71,8 +71,8 @@
         }
         &__required{
           height: 20px;
-          width: 30px;
-          font-size: 14px;
+          width: 35px;
+          font-size: 15px;
           color: white;
           background-color: #ea352d;
           margin-left: 10px;
@@ -80,7 +80,7 @@
         }
       }
       &__information{
-        font-size: 25px;
+        font-size: 15px;
         padding-left: 200px;
       }
     }
@@ -90,15 +90,14 @@
       margin-top: 25px;
       &__item{
         display: flex;
-        padding: 5px;
         &__pass{
           font-weight: 600;
           font-size: 16px;
         }
         &__required{
           height: 20px;
-          width: 30px;
-          font-size: 14px;
+          width: 35px;
+          font-size: 15px;
           color: white;
           background-color: #ea352d;
           margin-left: 10px;
@@ -106,7 +105,6 @@
         }
         &__note{
           font-weight: 600;
-          margin-left: 10px;
         }
       }
       &__input{
@@ -115,7 +113,7 @@
       &__description{
         height: 50px;
         width: 300px;
-        font-size: 13px;
+        font-size: 15px;
         color: #cccccc;
       }
     }
@@ -123,38 +121,39 @@
     .re-enter{
       padding-left: 200px;
       &__item{
+        display: flex;
         &__pass{
           font-weight: 600;
           font-size: 16px;
         }
-        &__itempass{
-          height: 50px;
-          width: 300px;
-          font-size: 13px;
-          color: #cccccc;
-        }
         &__repuired{
           height: 20px;
-          width: 30px;
-          font-size: 14px;
+          width: 35px;
+          font-size: 15px;
           color: white;
           background-color: #ea352d;
           margin-left: 10px;
           padding-left: 2px;
         }
       }
+      &__itempass{
+        height: 50px;
+        width: 300px;
+        font-size: 15px;
+        color: #cccccc;
+      }
     }
 
     .Identification{
       padding-left: 200px;
-      margin-top: 25px;
+      margin-top: 10px;
       &__mozi{
         font-weight: 600;
         font-size: 16px;
       }
       &__description{
         width: 323px;
-        font-size: 13px;
+        font-size: 15px;
       }
     }
 
@@ -164,19 +163,45 @@
       display: flex;
       &__box{
         &__mozi{
+          display: flex;
+          &__oo{
           font-weight: 600;
           font-size: 16px;
+          }
+          &__tt{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            margin-left: 5px;
+            padding-left: 2px;
+          }
         }
         &__nameinput{
+          font-size: 15px;
         }
       }
       &__boxs{
         margin-left: 10px;
         &__a1{
+          display: flex;
+          &__nn{
           font-weight: 600;
           font-size: 16px;
+          }
+          &__mm{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            margin-left: 5px;
+            padding-left: 2px;
+          }
         }
         &__a2{
+          font-size: 15px;
         }
       }
     }
@@ -187,19 +212,43 @@
       display: flex;
       &__box{
         &__mozi{
+          display: flex;
+          &__kiss{
           font-weight: 600;
           font-size: 16px;
+          }
+          &__pen{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            padding-left: 2px;
+          }
         }
         &__hissu{
+          font-size: 15px;
         }
       }
       &__boxs{
-        margin-left: 10px;
+        margin-left: 5px;
         &__b1{
+          display: flex;
+          &__pc{
           font-weight: 600;
           font-size: 16px;
+          }
+          &__ice{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            padding-left: 2px;
+          }
         }
         &__b2{
+          font-size: 15px;
         }
       }
     }
@@ -215,8 +264,8 @@
         }
         &__hissu{
           height: 20px;
-          width: 30px;
-          font-size: 14px;
+          width: 35px;
+          font-size: 15px;
           color: white;
           background-color: #ea352d;
           margin-left: 10px;
@@ -274,7 +323,7 @@
         font-size: 13px;
       }
       &__btm{
-        font-size: 16px;
+        font-size: 15px;
         padding-left: 100px;
         margin-top: 15px;
       }

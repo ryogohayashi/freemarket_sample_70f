@@ -2,8 +2,8 @@
   .header
     .header__logo
       <img src="/assets/logo.png" widt="100" height="50">
-    .header__progress-bar
-      会員情報
+    -# .header__progress-bar
+    -#   会員情報
 
   .main
     .title
@@ -19,18 +19,16 @@
             = f.label :nickname,"ニックネーム"
           .name-information__item__required
             必須
-            %br/
         .name-information__name
-          = f.text_field :nickname
+          = f.text_field :nickname,size:26
       .email
         .email__information
           .email__information__address
             = f.label :email,"メールアドレス"
           .email__information__required
             必須
-        %br/
         .email__information
-          = f.email_field :email, autofocus: true, autocomplete: "email"
+          = f.email_field :email, autofocus: true, autocomplete: "email",size:26
 
       .password
         .password__item
@@ -50,8 +48,9 @@
           .re-enter__item__pass
             = f.label :password_confirmation,"確認用パスワード "
           .re-enter__item__repuired
-          .re-enter__itempass
-            = f.password_field :password_confirmation, autocomplete: "new-password"
+            必須
+        .re-enter__itempass
+          = f.password_field :password_confirmation, autocomplete: "new-password",size:26
 
       .Identification
         .Identification__mozi
@@ -62,28 +61,36 @@
       .Identification-name
         .Identification-name__box
           .Identification-name__box__mozi
-            = f.label :family_name,"お名前（姓）"
-            %br/
+            .Identification-name__box__mozi__oo
+              = f.label :family_name,"お名前（姓）"
+            .Identification-name__box__mozi__tt
+              必須
           .Identification-name__box__nameinput
             = f.text_field :family_name, size:15
         .Identification-name__boxs
           .Identification-name__boxs__a1
-            = f.label :first_name,"お名前（名）"
-            %br/
+            .Identification-name__boxs__a1__nn
+              = f.label :first_name,"お名前（名）"
+            .Identification-name__boxs__a1__mm
+              必須
           .Identification-name__boxs__a2
             = f.text_field :first_name, size:15
 
       .Identification-name-kana
         .Identification-name-kana__box
           .Identification-name-kana__box__mozi
-            = f.label :family_name_kana,"お名前（セイ）"
-            %br/
+            .Identification-name-kana__box__mozi__kiss
+              = f.label :family_name_kana,"お名前（セイ）"
+            .Identification-name-kana__box__mozi__pen
+              必須
           .Identification-name-kana__box__hissu
             = f.text_field :family_name_kana, size:15
         .Identification-name-kana__boxs
           .Identification-name-kana__boxs__b1
-            = f.label :first_name_kana,"お名前（メイ）"
-            %br/
+            .Identification-name-kana__boxs__b1__pc
+              = f.label :first_name_kana,"お名前（メイ）"
+            .Identification-name-kana__boxs__b1__ice
+              必須
           .Identification-name-kana__boxs__b2
             = f.text_field :first_name_kana, size:15
 
@@ -97,7 +104,6 @@
           .Birthday__box2__a
             .Birthday__box2__a__1
               = f.text_field :birth_year, size:8, maxlength:4
-              %dr/
             .Birthday__box2__a__year
               = f.label :birth_year,"年"
           .Birthday__box2__b
