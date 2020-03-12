@@ -14,19 +14,19 @@
                 %ul.signup-main__has-error-text{ id: 'card-no-error-wrapper' }      
                 %ul.signup-main__card-list
                   %li
-                    <img src="/assets/card/visa.png" width="49" height="20"> 
+                    = image_tag asset_path('visa.png'), size: "49x20"
                   %li
-                    <img src="/assets/card/master.png" width="34" height="20">
+                    = image_tag asset_path('master.png'), size: "34x20"
                   %li
-                    <img src="/assets/card/saison.png" width="32" height="20">
+                    = image_tag asset_path('saison.png'), size: "32x20"
                   %li
-                    <img src="/assets/card/jcb.png" width="34" height="20">
+                    = image_tag asset_path('jcb.png'), size: "34x20"
                   %li
-                    <img src="/assets/card/american.png" width="21" height="20">
+                    = image_tag asset_path('american.png'), size: "21x20"
                   %li
-                    <img src="/assets/card/diners.png" width="32" height="20">
+                    = image_tag asset_path('diners.png'), size: "32x20"
                   %li
-                    <img src="/assets/card/discover.png" width="32" height="20">
+                    = image_tag asset_path('discover.png'), size: "32x20"
               .signup-main__form-group.signup-main__form-expire
                 %label{ for: 'payment_card_expire' } 有効期限
                 %span.signup-main__form-require 必須
@@ -76,3 +76,4 @@
                     カード裏面の番号とは？
                 %p.signup-main__has-error-text{ id: 'primary-error' }
                   = submit_tag "追加する" , id:"token_submit", class: "signup-main__btn-default signup-main__btn-red" 
+                  

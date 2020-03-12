@@ -2,7 +2,7 @@
   %section.mypage-content__user-icon
     = link_to '#' do
       %figure
-        <img src="/assets/member_photo_noimage_thumb.png" width="60" height="60">
+        = image_tag asset_path('member_photo_noimage_thumb.png'), size: "60"
       %h2.mypage-content__user-name.bold
         隆雄
         -# = current_user.nickname
@@ -30,7 +30,7 @@
         %li
           = link_to '#', class: 'mypage-content__item-link' do
             %figure
-              <img src="/assets/furima.png" width="48" height="48">
+              = image_tag asset_path('furima.png')
             .mypage-content__item-body
               .mypage-content__item-text
                 《フリペイはじめよう》
@@ -42,7 +42,7 @@
         %li
           = link_to '#', class: 'mypage-content__item-link' do
             %figure
-              <img src="/assets/furima.png" width="48" height="48">
+              = image_tag asset_path('furima.png')
             .mypage-content__item-body
               .mypage-content__item-text
                 有効期限が切れます
@@ -54,7 +54,7 @@
         %li
           = link_to '#', class: 'mypage-content__item-link' do
             %figure
-              <img src="/assets/furima.png" width="48" height="48">
+              = image_tag asset_path('furima.png')
             .mypage-content__item-body
               .mypage-content__item-text
                 事務局からメッセージ
@@ -66,7 +66,7 @@
         %li
           = link_to '#', class: 'mypage-content__item-link' do
             %figure
-              <img src="/assets/furima.png" width="48" height="48">
+              = image_tag asset_path('furima.png')
             .mypage-content__item-body
               .mypage-content__item-text
                 《お得がいっぱい♪》まずは参加ボタンをタップ！
@@ -78,7 +78,7 @@
         %li
           = link_to '#', class: 'mypage-content__item-link' do
             %figure
-              <img src="/assets/furima.png" width="48" height="48">
+              = image_tag asset_path('furima.png')
             .mypage-content__item-body
               .mypage-content__item-text
                 ３日後、ポンイトの有効期限が切れます
@@ -106,4 +106,5 @@
       %ul.mypage-content__item-list.mypage-content__item-list--active{ id: 'mypage-content__item-list-transaction-now' }
         %li.mypage-content__item-not-found
           取引中の商品がありません
+     
      
