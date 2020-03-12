@@ -1,1 +1,372 @@
+.user-register{
+  height: 100%;
+  width: 100vw;
+  background-color: #f5f5f5;
+  .header{
+    height: 128px;
+    width: 500px;
+    margin-left: 450px;
+    justify-content: center;
+    display: flex;
+    &__logo{
+      margin-top: 40px;
+    }
+    // &__progress-bar{
+    //   font-size: 8px;
+    //   margin-top: 45px;
+    //   margin-left: 100px;
+    // }
+  }
+  .main{
+    height: 1100px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    .title{
+      height: 90px;
+      width: 250px;
+      font-size: 22px;
+      padding: 30px;
+      margin: 0px auto;
+      &__font{
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+    }
+    .name-information{
+      &__item{
+        display: flex;
+        padding: 5px;
+        margin-left: 200px;
+        &__nicname{
+          font-size: 15px;
+          font-weight: 600;
+        }
+        &__required{
+          height: 20px;
+          width: 35px;
+          font-size: 15px;
+          color: white;
+          background-color: #ea352d;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__name{
+        color: #cccccc;
+        font-size: 15px;
+        padding-left: 200px;
+      }
+    }
 
+    .email{
+      margin-top: 25px;
+      &__information{
+        display: flex;
+        &__address{
+          font-size: 15px;
+          font-weight: 600;
+        }
+        &__required{
+          height: 20px;
+          width: 35px;
+          font-size: 15px;
+          color: white;
+          background-color: #ea352d;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__information{
+        font-size: 15px;
+        padding-left: 200px;
+      }
+    }
+
+    .password{
+      padding-left: 200px;
+      margin-top: 25px;
+      &__item{
+        display: flex;
+        &__pass{
+          font-weight: 600;
+          font-size: 16px;
+        }
+        &__required{
+          height: 20px;
+          width: 35px;
+          font-size: 15px;
+          color: white;
+          background-color: #ea352d;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+        &__note{
+          font-weight: 600;
+        }
+      }
+      &__input{
+        color: #cccccc;
+      }
+      &__description{
+        height: 50px;
+        width: 300px;
+        font-size: 15px;
+        color: #cccccc;
+      }
+    }
+
+    .re-enter{
+      padding-left: 200px;
+      &__item{
+        display: flex;
+        &__pass{
+          font-weight: 600;
+          font-size: 16px;
+        }
+        &__repuired{
+          height: 20px;
+          width: 35px;
+          font-size: 15px;
+          color: white;
+          background-color: #ea352d;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__itempass{
+        height: 50px;
+        width: 300px;
+        font-size: 15px;
+        color: #cccccc;
+      }
+    }
+
+    .Identification{
+      padding-left: 200px;
+      margin-top: 10px;
+      &__mozi{
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &__description{
+        width: 323px;
+        font-size: 15px;
+      }
+    }
+
+    .Identification-name{
+      padding-left: 200px;
+      margin-top: 25px;
+      display: flex;
+      &__box{
+        &__mozi{
+          display: flex;
+          &__oo{
+          font-weight: 600;
+          font-size: 16px;
+          }
+          &__tt{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            margin-left: 5px;
+            padding-left: 2px;
+          }
+        }
+        &__nameinput{
+          font-size: 15px;
+        }
+      }
+      &__boxs{
+        margin-left: 10px;
+        &__a1{
+          display: flex;
+          &__nn{
+          font-weight: 600;
+          font-size: 16px;
+          }
+          &__mm{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            margin-left: 5px;
+            padding-left: 2px;
+          }
+        }
+        &__a2{
+          font-size: 15px;
+        }
+      }
+    }
+
+    .Identification-name-kana{
+      padding-left: 200px;
+      margin-top: 25px;
+      display: flex;
+      &__box{
+        &__mozi{
+          display: flex;
+          &__kiss{
+          font-weight: 600;
+          font-size: 16px;
+          }
+          &__pen{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            padding-left: 2px;
+          }
+        }
+        &__hissu{
+          font-size: 15px;
+        }
+      }
+      &__boxs{
+        margin-left: 5px;
+        &__b1{
+          display: flex;
+          &__pc{
+          font-weight: 600;
+          font-size: 16px;
+          }
+          &__ice{
+            height: 20px;
+            width: 35px;
+            font-size: 15px;
+            color: white;
+            background-color: #ea352d;
+            padding-left: 2px;
+          }
+        }
+        &__b2{
+          font-size: 15px;
+        }
+      }
+    }
+
+    .Birthday{
+      padding-left: 200px;
+      margin-top: 25px;
+      &__box1{
+        display: flex;
+        &__mozi{
+          font-size: 16px;
+          font-weight: 600;
+        }
+        &__hissu{
+          height: 20px;
+          width: 35px;
+          font-size: 15px;
+          color: white;
+          background-color: #ea352d;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__box2{
+        margin-top: 10px;
+        display: flex;
+        &__a{
+          display: flex;
+          &__1{
+            &__a5{
+              height: 500px;
+              width: 500px;
+            }
+          }
+          &__year{
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+        &__b{
+          display: flex;
+          &__2{
+          }
+          &__month{
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+        &__c{
+          display: flex;
+          &__3{
+          }
+          &__day{
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+      }
+      &__box3{
+        width: 325px;
+        font-size: 13px;
+        color: #cccccc;
+        margin-top: 10px;
+      }
+    }
+
+    .terms-of-service{
+      padding-left: 200px;
+      margin-top: 35px;
+      &__mozi{
+        width: 350px;
+        font-size: 13px;
+      }
+      &__btm{
+        font-size: 15px;
+        padding-left: 100px;
+        margin-top: 15px;
+      }
+      &__register{
+        padding-left: 150px;
+        font-size: 13px;
+        color: #0099e8;
+        margin-top: 20px;
+      }
+      &__english{
+        width: 290px;
+        background-color: #f5f5f5;
+        font-size: 8px;
+        margin-top: 20px;
+        padding: 10px;
+      }
+    }
+  }
+  .footer{
+    height: 200px;
+    width: 100vw;
+    margin-top: 25px;
+    .title{
+      height: 20px;
+      justify-content: center;
+      display: flex;
+      font-size: 15px;
+      margin-bottom: 25px;
+      &__b{
+        padding-left: 15px;
+      }
+      &__c{
+        padding-left: 15px;
+      }
+    }
+    .item{
+      width: 200px;
+      margin: 0 auto;
+    }
+    .logo{
+      font-size: 10px;
+      margin-top: 5px;
+      padding-left: 680px;
+    }
+  }
+}
