@@ -1,0 +1,18 @@
+-# %h1 永田さん御願い致します。
+-# =  link_to "ログアウト", destroy_user_session_path, method: :delete 
+
+-# %p
+-#   Welcome to Index Page
+-# = render 'menu'
+
+
+%body
+  .wrapper
+    .l-container.clearfix
+      = render 'users/side'
+      .mypage-content
+        .mypage-content__chapter-container
+          .signup-main__inner
+            .signup-main__content
+              = link_to "#", class: 'signup-main__btn-default signup-main__btn-red' do
+                ログアウト
