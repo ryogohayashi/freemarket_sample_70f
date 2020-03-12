@@ -7,7 +7,15 @@ Rails.application.routes.draw do
     post 'destinations', to: 'users/registrations#create_destination'
   end
   root to: "top#index"
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :credit_card, only: [:new, :show, :index, :edit] do
+      collection do
+        post 'pay', to: 'credit_card#pay'
+        post 'delete', to: 'credit_card#delete'
+        post 'buy/:id', to: 'credit_card#buy'
+      end
+    end
+  end
 
   resources :tests, only: [:index, :new, :create,]
 
