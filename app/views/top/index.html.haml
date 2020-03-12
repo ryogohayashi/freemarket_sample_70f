@@ -89,11 +89,11 @@
           <img src="/assets/icon-04.png" width="100%">
         %h5{"class"=>"image2__f__fg2"} 様々な支払いに対応
         %p{"class"=>"image2__f__fg3"} お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
-  .pick-up
-    %h2{"class"=>"pick-up__q__123"} ピックアップカテゴリー
-    .pick-up__q__456
-      .pick-up__q__789
-        %h3{"class"=>"pick-up__q__101112"}  新規投稿商品
+  .pickupbox
+    %h2{"class"=>"pickupbox__title"} ピックアップカテゴリー
+    .pickupbox__category
+      .pickupbox__category__head
+        %h3{"class"=>"pickupbox__category__head__title"}  新規投稿商品
       .pick-up__q__categories2
         .pick-up__q__categories2__g
           .pick-up__q__categories2__g__gg1
@@ -154,9 +154,9 @@
                 %ul
                   %li<> 30000円
                   %li 
-                    %i{"class"=>"fa fa-ster likeIcon"} 
+                    %i{"class"=>"fa fa-ster likeIcon"} （税込）
                     0
-                %p{"class"=>"pick-up__w__brand2__k"}
+                %p{"class"=>"pick-up__w__brand2__k"} 
         .pick-up__w__brand2__k__kk1
           %a{href: '/products/2'}
             %figure{"class"=>"pick-up__w__brand2__k__kk2"}
@@ -164,20 +164,25 @@
           .pick-up__w__brand2__k__kk3
             %h3{"class"=>"name5"}  product2
             .detail
-          .pick-up__w__brand2__k__kk4
-            （税込）
-        .pick-up__w__brand2__l
-          .pick-up__w__brand2__l__ll1
-            <img src="/assets/カレー.png" width="100%" height="130">
-          .pick-up__w__brand2__l__ll2
-            カレー
-          .pick-up__w__brand2__l__ll3
-            .pick-up__w__brand2__l__ll3__lll1
-              600円
-            .pick-up__w__brand2__l__ll3__lll2
-              ★ 0
-          .pick-up__w__brand2__l__ll4
-            （税込）
+              %ul
+                  %li<> 20000円
+                  %li 
+                    %i{"class"=>"fa fa-ster likeIcon"} 
+                    0
+                %p{"class"=>"pick-up__w__brand2__k"} （税込）
+        .pick-up__w__brand2__j__jj3
+          %a{href: '/products/3'} 
+            %figure{"class"=>"pick-up__w__brand2__j__jj3__jjj2"} 
+              <img src="/assets/チキン南蛮.png" width="100%" height="130">
+            .pick-up__w__brand2__j__jj4
+              %h3{"class"=>"name4"}  product3
+              .detail
+                %ul
+                  %li<> 30000円
+                  %li 
+                    %i{"class"=>"fa fa-ster likeIcon"} （税込）
+                    0
+                %p{"class"=>"pick-up__w__brand2__k"}
   .photo3
     <img src="/assets/bg-appBanner-pict.jpg" width="100%" height="612">
 .footer
