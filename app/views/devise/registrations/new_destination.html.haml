@@ -1,7 +1,7 @@
 .top
   .header2
     .header2__logo2
-      <img src="/assets/logo.png" widt="100" height="50">
+      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
     -# .header2__progress-bar2
     -#   会員情報
 
@@ -120,7 +120,7 @@
       .title__c
         特定商取引に関する表記
     .item
-      <img src="/assets/logo-white.png" widt="50" height="50">
+      = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
     .logo
       © FURIMA, Inc.
       
