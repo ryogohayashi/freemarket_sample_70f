@@ -1,1 +1,145 @@
+.user-register
+  .header
+    .header__logo
+      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
+    -# .header__progress-bar
+    -#   会員情報
 
+  .main
+    .title
+      .title__font
+        会員情報入力
+
+    = form_for(@user, url: user_registration_path) do |f|
+      = render "devise/shared/error_messages", resource: @user
+
+      .name-information
+        .name-information__item
+          .name-information__item__nicname
+            = f.label :nickname,"ニックネーム"
+          .name-information__item__required
+            必須
+        .name-information__name
+          = f.text_field :nickname,size:26
+      .email
+        .email__information
+          .email__information__address
+            = f.label :email,"メールアドレス"
+          .email__information__required
+            必須
+        .email__information
+          = f.email_field :email, autofocus: true, autocomplete: "email",size:26
+
+      .password
+        .password__item
+          .password__item__pass
+            = f.label :password,"パスワード"
+          .password__item__note
+            - if @minimum_password_length
+              (#{@minimum_password_length} 文字以上必要です)
+          .password__item__required
+            必須
+        .password__input
+        .password__description
+          = f.password_field :password, autocomplete: "new-password", size:26
+
+      .re-enter
+        .re-enter__item
+          .re-enter__item__pass
+            = f.label :password_confirmation,"確認用パスワード "
+          .re-enter__item__repuired
+            必須
+        .re-enter__itempass
+          = f.password_field :password_confirmation, autocomplete: "new-password",size:26
+
+      .Identification
+        .Identification__mozi
+          本人確認
+        .Identification__description
+          安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+
+      .Identification-name
+        .Identification-name__box
+          .Identification-name__box__mozi
+            .Identification-name__box__mozi__oo
+              = f.label :family_name,"お名前（姓）"
+            .Identification-name__box__mozi__tt
+              必須
+          .Identification-name__box__nameinput
+            = f.text_field :family_name, size:15
+        .Identification-name__boxs
+          .Identification-name__boxs__a1
+            .Identification-name__boxs__a1__nn
+              = f.label :first_name,"お名前（名）"
+            .Identification-name__boxs__a1__mm
+              必須
+          .Identification-name__boxs__a2
+            = f.text_field :first_name, size:15
+
+      .Identification-name-kana
+        .Identification-name-kana__box
+          .Identification-name-kana__box__mozi
+            .Identification-name-kana__box__mozi__kiss
+              = f.label :family_name_kana,"お名前（セイ）"
+            .Identification-name-kana__box__mozi__pen
+              必須
+          .Identification-name-kana__box__hissu
+            = f.text_field :family_name_kana, size:15
+        .Identification-name-kana__boxs
+          .Identification-name-kana__boxs__b1
+            .Identification-name-kana__boxs__b1__pc
+              = f.label :first_name_kana,"お名前（メイ）"
+            .Identification-name-kana__boxs__b1__ice
+              必須
+          .Identification-name-kana__boxs__b2
+            = f.text_field :first_name_kana, size:15
+
+      .Birthday
+        .Birthday__box1
+          .Birthday__box1__mozi
+            生年月日
+          .Birthday__box1__hissu
+            必須
+        .Birthday__box2
+          .Birthday__box2__a
+            .Birthday__box2__a__1
+              = f.text_field :birth_year, size:8, maxlength:4
+            .Birthday__box2__a__year
+              = f.label :birth_year,"年"
+          .Birthday__box2__b
+            .Birthday__box2__b__2
+              = f.text_field :birth_month, size:7, maxlength:2
+            .Birthday__box2__b__month
+              = f.label :birth_month,"月"
+          .Birthday__box2__c
+            .Birthday__box2__c__3
+              = f.text_field :birth_day, size:7, maxlength:2
+            .Birthday__box2__c__day
+              = f.label :birth_day,"日"
+        .Birthday__box3
+          ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+
+      .terms-of-service
+        .terms-of-service__mozi
+          「次へ進む」のボタンを押すことにより、利用規約に
+          　　　　　　同意したものとみなします
+        .terms-of-service__btm
+          = f.submit "次へ進む"
+        .terms-of-service__register
+          本人情報の登録について>
+        .terms-of-service__english
+          This site is protected by reCAPTCHA and the Google PrivacyPolicy and Terms of Service apply.
+
+  .footer
+    .title
+      .title__a
+        プライバシーポリシー
+      .title__b
+        メルカリ利用規約
+      .title__c
+        特定商取引に関する表記
+    .item
+      = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
+    .logo
+      © FURIMA, Inc.
+      
