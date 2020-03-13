@@ -1,0 +1,124 @@
+.exhibition
+  .header
+    .header__logo
+      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
+
+  .main
+    .photo
+      .photo__title
+        .photo__title__mozi
+          出品画像
+        .photo__title__hissu
+          必須
+      .photo__mozimozi
+        最大10枚までアップロードできます
+      .photo__image
+
+    .border
+    
+    .details
+      .details__title2
+        .details__title2__mozi2
+          商品名
+        .details__title2__hissu2
+          必須
+      .details__type
+      .details__description
+        .details__description__mozi3
+          商品の説明
+        .details__description__hissu3
+          必須
+      .details__description-input
+
+    .border
+
+    .product-details
+      .product-details__mozi4
+        商品の詳細
+      .product-details__categories
+        .product-details__categories__mozi5
+          カテゴリー
+        .product-details__categories__hissu4
+          必須
+      .product-details__categories-input
+      .product-details__brand
+        .product-details__brand__mozi6
+          ブランド
+        .product-details__brand__nini
+          任意
+      .product-details__brand-input
+      .product-details__status
+        .product-details__status__mozi7
+          商品の状態
+        .product-details__status__hissu5
+          必須
+      .product-details__status-input
+
+    .border
+
+    .shipping
+      .shipping__mozi8
+        配送について
+      .shipping__burden
+        .shipping__burden__mozi9
+          配送料の負担
+        .shipping__burden__hissu6
+          必須
+      .shipping__burden-input
+      .shipping__area
+        .shipping__area__mozi10
+          発送元の地域
+        .shipping__area__hissu7
+          必須
+      .shipping__area-input
+      .shipping__days
+        .shipping__days__mozi11
+          発送までの日数
+        .shipping__days__hissu8
+          必須
+      .shipping__days-input
+
+    .border
+
+    .price
+      .price__mozi12
+        価格（¥300〜9,999,999）
+      .price__selling-price
+        .price__selling-price__mozi13
+          販売価格
+        .price__selling-price__hissu9
+          必須
+        .price__selling-price__circle
+          ￥
+        .price__selling-price__price-input
+      .price__commission
+        .price__commission__mozi14
+          販売手数料（10%）
+        .price__commission__display
+          ー
+      .price__border
+      .price__profit
+        .price__profit__mozi15
+          販売利益
+        .price__profit__display2
+          ー
+      .price__red-mozi
+        出品する
+      .price__return
+        もどる
+      .price__notes
+        禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
+
+  .footer
+    .title
+      .title__a
+        プライバシーポリシー
+      .title__b
+        メルカリ利用規約
+      .title__c
+        特定商取引に関する表記
+    .item
+      = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
+    .logo
+      © FURIMA, Inc.
+      

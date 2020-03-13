@@ -1,0 +1,387 @@
+.exhibition{
+  height: 100%;
+  width: 100vw;
+  background-color: #f5f5f5;
+  .header{
+    height: 128px;
+    width: 500px;
+    margin-left: 450px;
+    justify-content: center;
+    display: flex;
+    &__logo{
+      margin-top: 40px;
+    }
+  }
+
+  .main{
+    height: 2050px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    .photo{
+      padding: 40px;
+      &__title{
+        display: flex;
+        &__mozi{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__mozimozi{
+        font-size: 14px;
+        margin: 15px 0;
+      }
+      &__image{
+        height: 150px;
+        width: 615px;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .border{
+      border: 1px solid;
+      border-color: #f5f5f5;
+    }
+  
+    .details{
+      padding: 40px;
+      &__title2{
+        display: flex;
+        &__mozi2{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu2{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__type{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin: 15px 0;
+      }
+      &__description{
+        display: flex;
+        &__mozi3{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu3{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__description-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+    }
+    
+    .product-details{
+      padding: 40px;
+      &__mozi4{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        color: #888888;
+      }
+      &__categories{
+        display: flex;
+        &__mozi5{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu4{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__categories-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+      &__brand{
+        display: flex;
+        &__mozi6{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__nini{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #bfbfbf;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__brand-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+      &__status{
+        display: flex;
+        &__mozi7{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu5{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__status-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+    }
+
+    .shipping{
+      padding: 40px;
+      &__mozi8{
+        font-size: 14px;
+        font-weight: 600;
+        color: #888888;
+        margin-bottom: 35px;
+
+      }
+      &__burden{
+        display: flex;
+        &__mozi9{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu6{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__burden-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+      &__area{
+        display: flex;
+        &__mozi10{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu7{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__area-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+      &__days{
+        display: flex;
+        &__mozi11{
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &__hissu8{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+        }
+      }
+      &__days-input{
+        height: 50px;
+        width: 615px;
+        border: 1px solid rgba(44, 1, 1, 0.3);
+        margin: 15px 0;
+      }
+    }
+
+    .price{
+      padding: 40px;
+      &__mozi12{
+        font-size: 14px;
+        font-weight: 600;
+        color: #888888;
+      }
+      &__selling-price{
+        margin: 40px 0;
+        display: flex;
+        &__mozi13{
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 20px;
+        }
+        &__hissu9{
+          height: 17px;
+          width: 30px;
+          font-size: 12px;
+          font-weight: 600;
+          color: white;
+          background-color: #ff0211;
+          margin-left: 10px;
+          padding-left: 2px;
+          margin-top: 20px;
+        }
+        &__circle{
+          font-size: 14px;
+          margin-left: 218px;
+          margin-top: 20px;
+        }
+        &__price-input{
+          height: 50px;
+          width: 280px;
+          border: 1px solid rgba(44, 1, 1, 0.3);
+          font-size: 14px;
+          margin-left: 3px;
+        }
+      }
+      &__commission{
+        display: flex;
+        &__mozi14{
+          font-size: 14px;
+        }
+        &__display{
+          margin-left: 450px;
+        }
+      }
+      &__border{
+        width: 630px;
+        border: 1px solid;
+        border-color: #f5f5f5;
+        margin: 30px auto;
+      }
+      &__profit{
+        display: flex;
+        margin: 40px 0;
+        &__mozi15{
+          font-size: 14px;
+        }
+        &__display2{
+          margin-left: 522px;
+        }
+      }
+      &__red-mozi{
+        height: 40px;
+        width: 230px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        background-color: #ea352e;
+        margin-left: 180px;
+        padding-left: 80px;
+        padding-top: 5px;
+      }
+      &__return{
+        height: 40px;
+        width: 228px;
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        background-color: #cccccc;
+        margin-top: 25px;
+        margin-left: 180px;
+        padding-left: 87px;
+        padding-top: 5px;
+      }
+      &__notes{
+        font-size: 12px;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .footer{
+    height: 200px;
+    width: 100vw;
+    margin-top: 25px;
+    .title{
+      height: 20px;
+      justify-content: center;
+      display: flex;
+      font-size: 15px;
+      margin-bottom: 25px;
+      &__b{
+        padding-left: 15px;
+      }
+      &__c{
+        padding-left: 15px;
+      }
+    }
+    .item{
+      width: 200px;
+      margin: 0 auto;
+    }
+    .logo{
+      font-size: 10px;
+      margin-top: 5px;
+      padding-left: 680px;
+    }
+  }
+}
