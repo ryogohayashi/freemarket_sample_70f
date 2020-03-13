@@ -15,7 +15,8 @@
     .mav
       %ul.boardleft
         %li.boardleft__item--first
-          = link_to 'カテゴリー' '/' do
+          = link_to url="#" do 
+            カテゴリー
             -# .forestdiplaynote　以下今後使いますよ。
             -# %ul{"class"=>"categoryforest"}
             -#   %li{"class"=>"categoryforest--item"}<
@@ -45,7 +46,8 @@
             -#   %li{"class"=>"categoryforest--item"}<
             -#     %a{:href => '#', :id => '13'} その他
         %li.boardleft__item
-          = link_to 'ブランド' '/' do
+          = link_to url="#" do 
+            ブランド
             %ul.branddiplaynote
       %ul.boardright
         - if user_signed_in?
