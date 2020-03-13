@@ -2,7 +2,7 @@
   .topheaderinner
     .middleheader
       %h1.picture
-        %link{rel: "#"}
+        = link_to root_path do
           = image_tag "/assets/furima.svg",height:'40.55',width:'130'
       .kensakubox
         %form{action: '/', method: 'get'}
@@ -15,38 +15,38 @@
     .mav
       %ul.boardleft
         %li.boardleft__item--first
-          %link{rel: '#', id: 'smallbtn'} カテゴリー
-          -# .forestdiplaynote　以下今後使いますよ。
-          -# %ul{"class"=>"categoryforest"}
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '1'} レディース
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '2'} メンズ
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '3'} ベビー・キッズ
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '4'} インテリア・住まい・小物
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '5'} 本・音楽・ゲーム
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '6'} おもちゃ・ホビー・グッズ
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '7'} コスメ・香水・美容
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '8'} 家電・スマホ・カメラ
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '9'} スポーツ・レジャー
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '10'} ハンドメイド
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '11'} チケット
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '12'} 自動車・オートバイ
-          -#   %li{"class"=>"categoryforest--item"}<
-          -#     %a{:href => '#', :id => '13'} その他
+          = link_to 'カテゴリー' '/' do
+            -# .forestdiplaynote　以下今後使いますよ。
+            -# %ul{"class"=>"categoryforest"}
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '1'} レディース
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '2'} メンズ
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '3'} ベビー・キッズ
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '4'} インテリア・住まい・小物
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '5'} 本・音楽・ゲーム
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '6'} おもちゃ・ホビー・グッズ
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '7'} コスメ・香水・美容
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '8'} 家電・スマホ・カメラ
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '9'} スポーツ・レジャー
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '10'} ハンドメイド
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '11'} チケット
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '12'} 自動車・オートバイ
+            -#   %li{"class"=>"categoryforest--item"}<
+            -#     %a{:href => '#', :id => '13'} その他
         %li.boardleft__item
-          %link{rel: '#', id: 'smallbtn'} ブランド
-          %ul.branddiplaynote
+          = link_to 'ブランド' '/' do
+            %ul.branddiplaynote
       %ul.boardright
         - if user_signed_in?
           %li.boardright__item--first
@@ -138,11 +138,11 @@
     %h2.pickupbox--title ピックアップカテゴリー
     .pickupbox__category
       .pickupbox__category__head
-        %link{rel: '#'}
+        = link_to root_path do
           %h3.pickupbox__category__head--title  新規投稿商品
       .pickupbox__category__lists
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products3.png"
             .pickupbox__category__list--text
@@ -155,7 +155,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products2.png"
             .pickupbox__category__list--text
@@ -168,7 +168,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products1.png"
             .pickupbox__category__list--text
@@ -184,11 +184,11 @@
     %h2.pickupbox--title ピックアップブランド
     .pickupbox__category
       .pickupbox__category__head
-        %link{rel: '#'}
+        = link_to root_path do
           %h3.pickupbox__category__head--title アーカイバ
       .pickupbox__category__lists
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products3.png"
             .pickupbox__category__list--text
@@ -201,7 +201,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products2.png"
             .pickupbox__category__list--text
@@ -214,7 +214,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %link{rel: "/products/3"}
+          = link_to '/products/3' do
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products1.png"
             .pickupbox__category__list--text
@@ -241,34 +241,43 @@
       %h2.nakami__head FURIMAについて
       %ul
         %li<
-          %link{rel: "#"} 会社概要(運営会社)
+          = link_to url="#" do
+            会社概要(運営会社)
         %li<
-          %link{rel: "#"} プライバシーポリシー
+          = link_to url="#" do
+            プライバシーポリシー
         %li<
-          %link{rel: "#"} FURIMA利用規約
+          = link_to url="#" do
+            FURIMA利用規約
         %li<
-          %link{rel: "#"} ポイントに関する特約
+          = link_to url="#" do
+            ポイントに関する特約
     %li.nakami
       %h2.nakami__head FURIMAを見る
       %ul
         %li<
-          %link{rel: "#"} カテゴリー一覧
+          = link_to url="#" do 
+            カテゴリー一覧
         %li<
-          %link{rel: "#"} ブランド一覧
+          = link_to url="#" do 
+            ブランド一覧
     %li.nakami
       %h2.nakami__head ヘルプ&ガイド
       %ul
         %li<
-          %link{rel: "#"} FURIMAガイド
+          = link_to url="#" do 
+            FURIMAガイド
         %li<
-          %link{rel: "#"} FURIMAロゴ利用ガイドライン
+          = link_to url="#" do 
+            FURIMAロゴ利用ガイドライン
         %li<
-          %link{rel: "#"} お知らせ
+          = link_to url="#" do 
+            お知らせ
   .footer__lg
-    %link{rel: "#"}
+    = link_to url="#" do
       = image_tag "/assets/logo-white.png"
     %p ©︎FURIMA
-%link{rel: "#"}
+= link_to url="#" do
   .buybtn
     %span.buybtn__text 出品する
     = image_tag "/assets/icon_camera.png", class:"buybtn__icon"
