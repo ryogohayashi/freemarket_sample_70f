@@ -1,26 +1,176 @@
-%body
-  .wrapper
-    .l-container.clearfix
-      = render 'users/side'
-      .mypage-content
-        %section.mypage-content__chapter-container
-          %h2.signup-main__chapter-head
-            支払い方法
-          .mypage__notification.mypage__notification--success
-          .signup-main__inner
-            %section.setting-add__card
-              .signup-main__content
-                %h3.signup-main__chapter-sub-head
-                  クレジットカード一覧
-              %ul.mypage-content__payment-list
-                %li
-                  .signup-main__content
-              .signup-main__content
-                = link_to "#", class: 'signup-main__btn-default signup-main__btn-red signup-main__submit_button' do
-                  = icon 'far', 'credit-card'
-                  クレジットカードを追加する
-            .mypage-content__not-regist
-              = link_to '#', target: '_blank' do
-                %span 支払い方法について
-                = icon 'fas', 'chevron-right'
-                
+.header
+  -# マークアップのためコメントアウト
+  -# = "ヘッダー"
+  .input
+    .iput__icon
+      = image_tag asset_path("logo.png"), size: "135x43", alt: "test"
+    .input__mozi
+      .input__mozi__a1
+        キーワードから探す
+      .input__mozi__b1
+        = image_tag asset_path("icon-search 1.png"), size: "35x30", alt: "test"
+  .item2
+    .item2__choice
+      .item2__choice__categories
+        カテゴリー
+      .item2__choice__brand
+        ブランド
+    .item2__register
+      .item2__register__login
+        ログイン
+      .item2__register__sign-up
+        新規会員登録
+
+  .border
+  
+  .katrgori
+    .katrgori__1
+      FURIMA
+    .katrgori__ku
+      >
+    .katrgori__2
+      ベビー・キッズベビー服(男女兼用)
+    .katrgori__ku
+      >
+    .katrgori__3
+      〜95cmアウター
+    .katrgori__ku
+      >
+    .katrgori__4
+      product3
+
+.item
+  .item__box
+    .item__box__name
+      = "product3"
+    .item__box__main
+      .item__box__main__image
+        -# マークアップのためコメントアウト
+        -# = image_tag asset_path(""), size: "600x400", alt: "test"
+      .item__box__main__sub
+        -# マークアップのためコメントアウト
+        -# = image_tag asset_path(""), size: "150x120", alt: "test"
+        -# = image_tag asset_path(""), size: "150x120", alt: "test"
+        -# = image_tag asset_path(""), size: "150x120", alt: "test"
+        .item__box__main__sub__test1
+        .item__box__main__sub__test2
+        .item__box__main__sub__test3
+    .item__box__price
+      .item__box__price__include
+        = "¥20000"
+      .item__box__price__fee
+        .item__box__price__fee__tax
+          (税込)
+        .item__box__price__fee__postage
+          送料込み
+    .item__box__method
+      .item__box__method__introduction
+        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰
+    .item__box__information
+      .item__box__information__table
+        %table
+          %tbody
+            %tr
+              %th 出品者
+              %td 
+                = "吉田"
+            %tr
+              %th カテゴリー
+              %td 
+                = "ベビー・キッズベビー服(男女兼用)"
+            %tr
+              %th ブランド
+              %td 
+                = ""
+            %tr
+              %th 商品のサイズ
+              %td 
+                = ""
+            %tr
+              %th 商品の状態
+              %td  
+                = "未使用に近い"
+            %tr
+              %th 配送料の負担
+              %td  
+                = "送料込み（出品者負担）"
+            %tr
+              %th 発送元の地域
+              %td 
+                = "福岡県"
+            %tr
+              %th 発送日の目安
+              %td 
+                = "1-2日で発送"
+    .item__box__okiniiri
+      %btn.aaa
+        ★ お気に入り 0
+        -# = link_to("★ お気に入り 0")
+    .item__box__spam
+      %btn.bbb
+        🏴 不適切な商品の通報
+        -# = link_to('🏴 不適切な商品の通報')
+
+  .item__comment__box
+    .item__comment__box__body
+      %input
+    .item__comment__box__rule
+      相手のことを考え丁寧なコメントを心がけましょう。
+      %br/
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    .item__comment__box__submit
+      %btn.ccc
+        = link_to('コメントする')
+
+  .item__link
+    .item__link__a
+      < 前の商品
+    .item__link__b
+      後ろの商品 >
+
+  .item__more
+    ベビー・キッズをもっと見る
+
+.banner
+  .banner__inner
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
+    .banner__inner__icon
+      -# <img src="/assets/app-store.svg" width="180px" height="53.33px">
+      = image_tag asset_path(""), size: "180x53.33", alt: "test"
+      -# <img src="/assets/google-play.svg" width="180px" height="53.33px">
+      = image_tag asset_path(""), size: "180x53.33", alt: "test"
+
+.footer
+  %ul.nakamis
+    %li.nakami
+      %h2.nakami__head FURIMAについて
+      %ul
+        %li<
+          %a{href: "#"} 会社概要(運営会社)
+        %li<
+          %a{href: "#"} プライバシーポリシー
+        %li<
+          %a{href: "#"} FURIMA利用規約
+        %li<
+          %a{href: "#"} ポイントに関する特約
+    %li.nakami
+      %h2.nakami__head FURIMAを見る
+      %ul
+        %li<
+          %a{href: "#"} カテゴリー一覧
+        %li<
+          %a{href: "#"} ブランド一覧
+    %li.nakami
+      %h2.nakami__head ヘルプ&ガイド
+      %ul
+        %li<
+          %a{href: "#"} FURIMAガイド
+        %li<
+          %a{href: "#"} FURIMAロゴ利用ガイドライン
+        %li<
+          %a{href: "#"} お知らせ
+  .footer__lg
+    %a{href: "#"}
+      = image_tag "/assets/logo-white.png"
+    %p ©︎FURIMA
