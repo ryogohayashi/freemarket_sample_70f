@@ -1,22 +1,22 @@
 .topheader
   .topheaderinner
     .middleheader
-      %h1{"class"=>"picture"}
-        %a{:href => "#"}
+      %h1.picture
+        %a{href: "#"}
           = image_tag "/assets/furima.svg"
       .kensakubox
-        %form{:action=>"#", :accept-charset=> "UTF-8", :method=> "get"}
-          %input{:name=>"utf8", :type=>"hidden", :value=>"✔︎"}
-          %input{:class=>"kensakubox--input", :id=>"kensakuinput", :name=>"key", :placeholder=>"キーワードから探す"}
-          %button{:type=>"submit", :value=>""}
+        %form{action: '/', method: 'get'}
+          %input{name: "utf8", type: "hidden", value: "✔︎"}
+          %input{class: "kensakubox--input", id: "kensakuinput", name: "key", placeholder: "キーワードから探す"}
+          %button{type: "submit", value: ""}
             .kensakubox__icon
               = image_tag "/assets/icon-search.png"
-        %ul{"class"=>"outcome"}
+        %ul.outcome
     .mav
-      %ul{"class"=>"boardleft"}
-        %li{"class"=>"boardleft__item--first"}
-          %a{:href => '#', :id => 'smallbtn'} カテゴリー
-          -# .forestdiplaynote
+      %ul.boardleft
+        %li.boardleft__item--first
+          %a{href: '#', id: 'smallbtn'} カテゴリー
+          -# .forestdiplaynote　以下今後使いますよ。
           -# %ul{"class"=>"categoryforest"}
           -#   %li{"class"=>"categoryforest--item"}<
           -#     %a{:href => '#', :id => '1'} レディース
@@ -44,231 +44,231 @@
           -#     %a{:href => '#', :id => '12'} 自動車・オートバイ
           -#   %li{"class"=>"categoryforest--item"}<
           -#     %a{:href => '#', :id => '13'} その他
-        %li{"class"=>"boardleft__item"}
-          %a{:href => '#', :id => 'smallbtn'} ブランド
-          %ul{"class"=>"branddiplaynote"}
-      %ul{"class"=>"boardright"}
+        %li.boardleft__item
+          %a{href: '#', id: 'smallbtn'} ブランド
+          %ul.branddiplaynote
+      %ul.boardright
         - if user_signed_in?
-          %li{"class"=>"boardright__item--first"}
+          %li.boardright__item--first
             = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
-          %li{"class"=>"boardright__item"}
+          %li.boardright__item
             = link_to "マイページ", "/users/#{current_user.id}", method: :get
         - else
-          %li{"class"=>"boardright__item--first"}
+          %li.boardright__item--first
             = link_to "新規登録", new_user_registration_path
-          %li{"class"=>"boardright__item"}
+          %li.boardright__item
             = link_to "ログイン", new_user_session_path
 
 .main
-  %section{"class"=>"mainvs"}
+  %section.mainvs
     .naiyo
-      %h2{"class"=>"naiyo__title"}
+      %h2.naiyo__title
         %br 人生を変えるフリマアプリ
-      %p{"class"=>"naiyo__text"} 
+      %p.naiyo__text 
         FURIMAはだれでもかんたんに出品・購入できる
         %br フリマアプリです
       .naiyo__btn
-        %a{"class"=>"applebtn"}
+        %a.applebtn
           = image_tag "/assets/app-store.svg"
-        %a{"class"=>"googlebtn"}
+        %a.googlebtn
           = image_tag "/assets/google-play.svg"
     .gazo
-  %section{"class"=>"topsyokai"}
-    %h2{"class"=>"toptitle"} 
+  %section.topsyokai
+    %h2.toptitle 
       FURIMAが選ばれる3つの理由
       .topcontent
-    %ul{"class"=>"toplists"}
-      %li{"class"=>"list"}
+    %ul.toplists
+      %li.list
         .list__gazo
-          %span{"class"=>"number"} 1
+          %span.number 1
           = image_tag "/assets/pict-reason-01.jpg"
-        %h3{"class"=>"list__sub"}
+        %h3.list__sub
           %span 3分
           ですぐに出品
-        %p{"class"=>"list__explain"} スマホで入力するだけで簡単に出品できる！
-      %li{"class"=>"list"}
+        %p.list__explain スマホで入力するだけで簡単に出品できる！
+      %li.list
         .list__gazo
-          %span{"class"=>"number"} 2
+          %span.number 2
           = image_tag "/assets/pict-reason-02.jpg"
-        %h3{"class"=>"list__sub"}
+        %h3.list__sub
           %span シンプル
           で使いやすい
-        %p{"class"=>"list__explain"} めんどくさい入力は必要なく、検索も購入もスムーズ！
-      %li{"class"=>"list--last"}
+        %p.list__explain めんどくさい入力は必要なく、検索も購入もスムーズ！
+      %li.list--last
         .list__gazo
-          %span{"class"=>"number"} 3
+          %span.number 3
           = image_tag "/assets/pict-reason-03.jpg"
-        %h3{"class"=>"list__sub"}
+        %h3.list__sub
           手数料
           %span 業界最安
-        %p{"class"=>"list__explain"} 最大3%でお得に出品&購入！
-  %section{"class"=>"topcenter"}
+        %p.list__explain 最大3%でお得に出品&購入！
+  %section.topcenter
     .topcenter__inner
-      %h2{"class"=>"bgtitle"} 会員数日本一位
-      %p{"class"=>"toptext"}
+      %h2.bgtitle 会員数日本一位
+      %p.toptext
         FURIMAは、フリマアプリで最も人気。
         %br 出品・購入回数も業界最多です！
         ほしかったあの商品に出会えるかもしれません。
       .topbtn
-        %a{:href => '#'}
+        %a{href: '#'}
           = image_tag "/assets/app-store.svg"
-        %a{:href => '#'}
+        %a{href: '#'}
           = image_tag "/assets/google-play.svg"
-  %section{"class"=>"toptrait"}
-    %h2{"class"=>"tophead"}
+  %section.toptrait
+    %h2.tophead
       FURIMAの特徴
       .topcontent2
     .topitems
-      %section{"class"=>"topitem"}
-        %figure{"class"=>"topitem__img"}
+      %section.topitem
+        %figure.topitem__img
           = image_tag "/assets/icon-01.png"
-        %h3{"class"=>"topitem__subtitle"} 簡単に売り買いできる
-        %p{"class"=>"topitem__detail"} スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
-      %section{"class"=>"topitem"}
-        %figure{"class"=>"topitem__img"}
+        %h3.topitem__subtitle 簡単に売り買いできる
+        %p.topitem__detail スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+      %section.topitem
+        %figure.topitem__img
           = image_tag "/assets/icon-03.png"
-        %h3{"class"=>"topitem__subtitle"} 売上金は即日振込みに対応 
-        %p{"class"=>"topitem__detail"} 午前9時までに振込を依頼頂ければ、翌日に指定の口座に入金いたします！
-      %section{"class"=>"topitem"}
-        %figure{"class"=>"topitem__img"}
+        %h3.topitem__subtitle 売上金は即日振込みに対応 
+        %p.topitem__detail 午前9時までに振込を依頼頂ければ、翌日に指定の口座に入金いたします！
+      %section.topitem
+        %figure.topitem__img
           = image_tag "/assets/icon-04.png"
-        %h3{"class"=>"topitem__subtitle"} 様々な支払いに対応
-        %p{"class"=>"topitem__detail"} お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法がありますあります。
-  %section{"class"=>"pickupbox"} 
-    %h2{"class"=>"pickupbox--title"} ピックアップカテゴリー
+        %h3.topitem__subtitle 様々な支払いに対応
+        %p.topitem__detail お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法がありますあります。
+  %section.pickupbox 
+    %h2.pickupbox--title ピックアップカテゴリー
     .pickupbox__category
       .pickupbox__category__head
-        %a{:href => '#'}
-          %h3{"class"=>"pickupbox__category__head--title"}  新規投稿商品
+        %a{href: '#'}
+          %h3.pickupbox__category__head--title  新規投稿商品
       .pickupbox__category__lists
         .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
               = image_tag "/assets/products3.png"
             .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product3
+              %h3.name product3
               .syosai
                 %ul
                   %li<> 30000円
                   %li
-                    %i{"class"=>"fa fa-ster likeIcon"} 
+                    %i.fa  
                     ★0
-                %p{"class"=>"zeikomi"} (税込)
+                %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
               = image_tag "/assets/products2.png"
             .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product2
+              %h3.name product2
+              .syosai
+                %ul
+                  %li<> 20000円
+                  %li
+                    %i.fa 
+                    ★0
+                %p.zeikomi (税込)
+        .pickupbox__category__list
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
+              = image_tag "/assets/products1.png"
+            .pickupbox__category__list--text
+              %h3.name product1
+              .syosai
+                %ul
+                  %li<> 10000円
+                  %li
+                    %i.fa  
+                    ★0
+                %p.zeikomi (税込)
+  %section.pickupbox 
+    %h2.pickupbox--title ピックアップブランド
+    .pickupbox__category
+      .pickupbox__category__head
+        %a{href: '#'}
+          %h3.pickupbox__category__head--title アーカイバ
+      .pickupbox__category__lists
+        .pickupbox__category__list
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
+              = image_tag "/assets/products3.png"
+            .pickupbox__category__list--text
+              %h3.name product3
+              .syosai
+                %ul
+                  %li<> 30000円
+                  %li
+                    %i.fa  
+                    ★0
+                %p.zeikomi (税込)
+        .pickupbox__category__list
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
+              = image_tag "/assets/products2.png"
+            .pickupbox__category__list--text
+              %h3.name product2
               .syosai
                 %ul
                   %li<> 20000円
                   %li
                     %i{"class"=>"fa fa-ster likeIcon"} 
                     ★0
-                %p{"class"=>"zeikomi"} (税込)
+                %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
+          %a{href: "/products/3"}
+            %figure.pickupbox__category__lists--image
               = image_tag "/assets/products1.png"
             .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product1
+              %h3.name product1
               .syosai
                 %ul
                   %li<> 10000円
                   %li
-                    %i{"class"=>"fa fa-ster likeIcon"} 
+                    %i.fa 
                     ★0
-                %p{"class"=>"zeikomi"} (税込)
-  %section{"class"=>"pickupbox"} 
-    %h2{"class"=>"pickupbox--title"} ピックアップブランド
-    .pickupbox__category
-      .pickupbox__category__head
-        %a{:href => '#'}
-          %h3{"class"=>"pickupbox__category__head--title"}  アーカイバ
-      .pickupbox__category__lists
-        .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
-              = image_tag "/assets/products3.png"
-            .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product3
-              .syosai
-                %ul
-                  %li<> 30000円
-                  %li
-                    %i{"class"=>"fa fa-ster likeIcon"} 
-                    ★0
-                %p{"class"=>"zeikomi"} (税込)
-        .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
-              = image_tag "/assets/products2.png"
-            .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product2
-              .syosai
-                %ul
-                  %li<> 20000円
-                  %li
-                    %i{"class"=>"fa fa-ster likeIcon"} 
-                    ★0
-                %p{"class"=>"zeikomi"} (税込)
-        .pickupbox__category__list
-          %a{:href => "/products/3"}
-            %figure{"class"=>"pickupbox__category__lists--image"}
-              = image_tag "/assets/products1.png"
-            .pickupbox__category__list--text
-              %h3{"class"=>"name"}  product1
-              .syosai
-                %ul
-                  %li<> 10000円
-                  %li
-                    %i{"class"=>"fa fa-ster likeIcon"} 
-                    ★0
-                %p{"class"=>"zeikomi"} (税込)
-  %section{"class"=>"pickupboxcontainer"}
+                %p.zeikomi (税込)
+  %section.pickupboxcontainer
 .banner
   .banner__inner
-    %h2{"class"=>"banner__inner__title"}  だれでもかんたん、人生を変えるフリマアプリ
-    %p{"class"=>"banner__inner__text"}  今すぐ無料ダウンロード！
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
     .banner__inner__icon
       <img src="/assets/app-store.svg" width="180px" height="53.33px">
       <img src="/assets/google-play.svg" width="180px" height="53.33px">
       
 .footer
-  %ul{"class"=>"nakamis"}
-    %li{"class"=>"nakami"}
-      %h2{"class"=>"nakami__head"} FURIMAについて
+  %ul.nakamis
+    %li.nakami
+      %h2.nakami__head FURIMAについて
       %ul
         %li<
-          %a{:href => "#"} 会社概要(運営会社)
+          %a{href: "#"} 会社概要(運営会社)
         %li<
-          %a{:href => "#"} プライバシーポリシー
+          %a{href: "#"} プライバシーポリシー
         %li<
-          %a{:href => "#"} FURIMA利用規約
+          %a{href: "#"} FURIMA利用規約
         %li<
-          %a{:href => "#"} ポイントに関する特約
-    %li{"class"=>"nakami"}
-      %h2{"class"=>"nakami__head"} FURIMAを見る
+          %a{href: "#"} ポイントに関する特約
+    %li.nakami
+      %h2.nakami__head FURIMAを見る
       %ul
         %li<
-          %a{:href => "#"} カテゴリー一覧
+          %a{href: "#"} カテゴリー一覧
         %li<
-          %a{:href => "#"} ブランド一覧
-    %li{"class"=>"nakami"}
-      %h2{"class"=>"nakami__head"} ヘルプ&ガイド
+          %a{href: "#"} ブランド一覧
+    %li.nakami
+      %h2.nakami__head ヘルプ&ガイド
       %ul
         %li<
-          %a{:href => "#"} FURIMAガイド
+          %a{href: "#"} FURIMAガイド
         %li<
-          %a{:href => "#"} FURIMAロゴ利用ガイドライン
+          %a{href: "#"} FURIMAロゴ利用ガイドライン
         %li<
-          %a{:href => "#"} お知らせ
+          %a{href: "#"} お知らせ
   .footer__lg
-    %a{:href => "#"}
+    %a{href: "#"}
       = image_tag "/assets/logo-white.png"
     %p ©︎FURIMA
-%a{:href => "#"}
+%a{href: "#"}
   .buybtn
-    %span{"class"=>"buybtn__text"} 出品する
+    %span.buybtn__text 出品する
     = image_tag "/assets/icon_camera.png", class:"buybtn__icon"
