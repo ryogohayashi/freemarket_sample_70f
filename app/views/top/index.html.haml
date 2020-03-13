@@ -2,8 +2,8 @@
   .topheaderinner
     .middleheader
       %h1.picture
-        %a{href: "#"}
-          = image_tag "/assets/furima.svg"
+        %link{rel: "#"}
+          = image_tag "/assets/furima.svg",height:'40.55',width:'130'
       .kensakubox
         %form{action: '/', method: 'get'}
           %input{name: "utf8", type: "hidden", value: "✔︎"}
@@ -15,7 +15,7 @@
     .mav
       %ul.boardleft
         %li.boardleft__item--first
-          %a{href: '#', id: 'smallbtn'} カテゴリー
+          %link{rel: '#', id: 'smallbtn'} カテゴリー
           -# .forestdiplaynote　以下今後使いますよ。
           -# %ul{"class"=>"categoryforest"}
           -#   %li{"class"=>"categoryforest--item"}<
@@ -45,7 +45,7 @@
           -#   %li{"class"=>"categoryforest--item"}<
           -#     %a{:href => '#', :id => '13'} その他
         %li.boardleft__item
-          %a{href: '#', id: 'smallbtn'} ブランド
+          %link{rel: '#', id: 'smallbtn'} ブランド
           %ul.branddiplaynote
       %ul.boardright
         - if user_signed_in?
@@ -68,9 +68,9 @@
         FURIMAはだれでもかんたんに出品・購入できる
         %br フリマアプリです
       .naiyo__btn
-        %a.applebtn
+        .applebtn
           = image_tag "/assets/app-store.svg"
-        %a.googlebtn
+        .googlebtn
           = image_tag "/assets/google-play.svg"
     .gazo
   %section.topsyokai
@@ -110,9 +110,9 @@
         %br 出品・購入回数も業界最多です！
         ほしかったあの商品に出会えるかもしれません。
       .topbtn
-        %a{href: '#'}
+        .applebtn
           = image_tag "/assets/app-store.svg"
-        %a{href: '#'}
+        .googlebtn
           = image_tag "/assets/google-play.svg"
   %section.toptrait
     %h2.tophead
@@ -138,11 +138,11 @@
     %h2.pickupbox--title ピックアップカテゴリー
     .pickupbox__category
       .pickupbox__category__head
-        %a{href: '#'}
+        %link{rel: '#'}
           %h3.pickupbox__category__head--title  新規投稿商品
       .pickupbox__category__lists
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products3.png"
             .pickupbox__category__list--text
@@ -155,7 +155,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products2.png"
             .pickupbox__category__list--text
@@ -168,7 +168,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products1.png"
             .pickupbox__category__list--text
@@ -184,11 +184,11 @@
     %h2.pickupbox--title ピックアップブランド
     .pickupbox__category
       .pickupbox__category__head
-        %a{href: '#'}
+        %link{rel: '#'}
           %h3.pickupbox__category__head--title アーカイバ
       .pickupbox__category__lists
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products3.png"
             .pickupbox__category__list--text
@@ -201,7 +201,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products2.png"
             .pickupbox__category__list--text
@@ -214,7 +214,7 @@
                     ★0
                 %p.zeikomi (税込)
         .pickupbox__category__list
-          %a{href: "/products/3"}
+          %link{rel: "/products/3"}
             %figure.pickupbox__category__lists--image
               = image_tag "/assets/products1.png"
             .pickupbox__category__list--text
@@ -241,34 +241,34 @@
       %h2.nakami__head FURIMAについて
       %ul
         %li<
-          %a{href: "#"} 会社概要(運営会社)
+          %link{rel: "#"} 会社概要(運営会社)
         %li<
-          %a{href: "#"} プライバシーポリシー
+          %link{rel: "#"} プライバシーポリシー
         %li<
-          %a{href: "#"} FURIMA利用規約
+          %link{rel: "#"} FURIMA利用規約
         %li<
-          %a{href: "#"} ポイントに関する特約
+          %link{rel: "#"} ポイントに関する特約
     %li.nakami
       %h2.nakami__head FURIMAを見る
       %ul
         %li<
-          %a{href: "#"} カテゴリー一覧
+          %link{rel: "#"} カテゴリー一覧
         %li<
-          %a{href: "#"} ブランド一覧
+          %link{rel: "#"} ブランド一覧
     %li.nakami
       %h2.nakami__head ヘルプ&ガイド
       %ul
         %li<
-          %a{href: "#"} FURIMAガイド
+          %link{rel: "#"} FURIMAガイド
         %li<
-          %a{href: "#"} FURIMAロゴ利用ガイドライン
+          %link{rel: "#"} FURIMAロゴ利用ガイドライン
         %li<
-          %a{href: "#"} お知らせ
+          %link{rel: "#"} お知らせ
   .footer__lg
-    %a{href: "#"}
+    %link{rel: "#"}
       = image_tag "/assets/logo-white.png"
     %p ©︎FURIMA
-%a{href: "#"}
+%link{rel: "#"}
   .buybtn
     %span.buybtn__text 出品する
     = image_tag "/assets/icon_camera.png", class:"buybtn__icon"
