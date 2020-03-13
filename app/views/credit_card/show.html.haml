@@ -1,0 +1,24 @@
+-# 追加実装予定です。
+
+-# - - if @group.present?
+-#   %header.header2
+-#     %nav.nav2
+-#       %ul.header_menu2
+-#         %li.nav-link
+-#           = @group.name
+-#         %ul.header_menu2_inner2
+-#           %li= link_to "Create Group Tasks", new_group_task_path(@group), class: "nav-link listNew2", method: :get
+-#           %li= link_to "Edit Group",edit_group_path(@group), class: "nav-link listNew3", method: :get
+-#   .tasknewPage
+-#     .container
+-#       = form_with model: @task, url: { action: :create }, class: "new_task", local: true do |f|
+-#         = f.label :"Group task title"
+-#         = f.text_field :title, autofocus: true, class: "form-control taskName", placeholder: "タスク名を入力してください。  Markdownで記入できます。"
+-#         .text-center= f.submit "Create", class: "submitBtn"
+-#       - else
+-#         .tasknewPage2
+-#           .container
+-#             = form_with model: @task, url: { action: :create }, class: "new_task2", local: true do |f|
+-#               = f.label :"Your Task Title"
+-#               = f.text_field :title, autofocus: true, class: "form-control taskName", placeholder: "タスク名を入力してください。  Markdownで記入できます。"
+-#               .text-center= f.submit "Create", class: "submitBtn"
