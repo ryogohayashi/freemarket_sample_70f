@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
-  end
+  # def index
+  #   @user = User.find_by(params[:user_id])
+  # end
 
   def show
-    @@users = User.all
+    @user = User.where(active: true)
   end
 
   def logout
@@ -17,5 +17,9 @@ class UsersController < ApplicationController
   def scard
   end
   
+  # private
+  #   def user_params
+  #     params.require(:user).permit(:title, :memo, :task_id, :order)
+  #   end
 
 end
