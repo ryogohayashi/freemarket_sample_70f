@@ -1,0 +1,219 @@
+.user-register{
+  height: 100%;
+  width: 100vw;
+  background-color: #f5f5f5;
+  .header{
+    height: 128px;
+    width: 500px;
+    margin-left: 450px;
+    justify-content: center;
+    display: flex;
+    &__logo{
+      margin-top: 40px;
+    }
+  }
+  .buy-content {
+    height: 80px;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 32px 16px;
+    &__inner {
+      max-width: 343px;
+      margin: 0 auto;
+      padding: 30px 0;
+      border-bottom: 1px solid #f5f5f5;
+      .buy-item__box {
+        display: flex;
+        .buy-item__detail{
+          margin-left: 16px;
+         p{
+          font-size:14px;
+          line-height: 1.5;
+          padding: 0 0 8px;
+          text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .buy-content-item {
+    padding: 32px 16px 46px 16px;
+    width: 670px;
+    .buy-price__table{
+      width: 100%;
+      display: table;
+      li{
+        display: flex;
+        .buy-price__label{
+          margin-right: 150px;
+          font-weight: 600;
+        }
+        .buy-price__label__sell{
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .buydetails-mein{
+    display: block;
+  }
+  .buydetails-content{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-width: 0;
+    &__head{
+      padding: 32px;
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      border-style: solid;
+      border-width: 0;
+      font-weight: bold;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    &__item{
+      padding: 24px 12.5% 0;
+      border-top: 1px solid #f5f5f5;
+    }
+    &__info{
+      padding: 24px 12.5% 0;
+      border-top: 1px solid #f5f5f5;
+    }
+    &__inner{
+      max-width: 320px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      h3{
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    &__item-name{
+      width: calc(100% - 80px);
+      margin: 0 0 0 16px;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    &__form{
+      width: 100%;
+      display: block;
+      text-align: center;
+      p{
+        margin: 8px 0 0;
+        line-height: 1.5;
+        font-size: 22px;
+        font-weight: 600;
+        span{
+          margin: 0 0 0 8px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+    &__accordion{
+      background: #ccc;
+      margin: 16px 0 0;
+      padding: 17px;
+    }
+    &__table{
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+      li{
+        font-size: 18px;
+      }
+    }
+    &__pricecell{
+      text-align: left;
+      display: table-cell;
+      padding: 16px 0;
+      font-weight: 600;
+      span{
+        font-size: 20px;
+        text-align: right;
+        padding-left: 100px;
+      }
+    }
+    &__text{
+      color: #ea352d;
+      line-height: 1.5;
+      font-size: 14px;
+      margin-top: 70px;
+    }
+    &__btn{
+      background: #ea352d;
+      margin: 16px 0 0;
+      padding: 17px;
+      width: 100%;
+      color: white;
+    }
+    &__info{
+      margin: 40px 0 0;
+      padding: 24px 12.5% 0;
+      border-top: 1px solid #f5f5f5;
+      padding-bottom: 50px
+    }
+    &__user{
+      width: 100%;
+      display: block;
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    &__fix{
+      display: block;
+      text-align: right;
+      color: #0099e8;
+      width: 100%;
+      a{
+        text-decoration: none;
+      }
+    }
+    &__infotext{
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.4;
+      width: 100%;
+      display: block;
+    }
+    &__bt {
+      color: #0099e8;
+      text-decoration: none;
+    }
+  }
+  #buydetails-bottom{
+    padding-bottom:40px;
+  }
+  .footer{
+    height: 200px;
+    width: 100vw;
+    margin-top: 25px;
+    .title{
+      height: 20px;
+      justify-content: center;
+      display: flex;
+      font-size: 15px;
+      margin-bottom: 25px;
+      &__b{
+        padding-left: 15px;
+      }
+      &__c{
+        padding-left: 15px;
+      }
+    }
+    .item{
+      width: 200px;
+      margin: 0 auto;
+    }
+    .logo{
+      font-size: 10px;
+      margin-top: 5px;
+      padding-left: 680px;
+    }
+  }
+}
