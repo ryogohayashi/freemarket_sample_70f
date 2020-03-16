@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   resources :users, only: [:show] do
+    get "logout" => "users#logout"
     resources :credit_card, only: [:new, :show, :index, :edit] do
       collection do
         post 'pay', to: 'credit_card#pay'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :tests, only: [:index, :new, :create,]
 
-  get "logout" => "users#logout"
+  
   get "ncard" => "users#ncard"
   get "scard" => "users#scard"
 end
