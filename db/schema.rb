@@ -54,27 +54,27 @@ ActiveRecord::Schema.define(version: 2020_03_16_090520) do
     t.string "name"
     t.text "introduction"
     t.integer "price"
-    t.bigint "brand_id_id"
-    t.bigint "condition_id_id"
-    t.bigint "postage_payer_id_id"
+    t.bigint "brand_id"
+    t.bigint "condition_id"
+    t.bigint "postage_payer_id"
     t.string "prefecture_code"
-    t.bigint "size_id_id"
-    t.bigint "preparation_day_id_id"
-    t.bigint "category_id_id"
+    t.bigint "size_id"
+    t.bigint "preparation_day_id"
+    t.bigint "category_id"
     t.boolean "trading_status"
     t.bigint "user_id"
-    t.bigint "seller_id_id"
-    t.bigint "buyer_id_id"
+    t.bigint "seller_id"
+    t.bigint "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id_id"], name: "index_items_on_brand_id_id"
-    t.index ["buyer_id_id"], name: "index_items_on_buyer_id_id"
-    t.index ["category_id_id"], name: "index_items_on_category_id_id"
-    t.index ["condition_id_id"], name: "index_items_on_condition_id_id"
-    t.index ["postage_payer_id_id"], name: "index_items_on_postage_payer_id_id"
-    t.index ["preparation_day_id_id"], name: "index_items_on_preparation_day_id_id"
-    t.index ["seller_id_id"], name: "index_items_on_seller_id_id"
-    t.index ["size_id_id"], name: "index_items_on_size_id_id"
+    t.index ["brand_id"], name: "index_items_on_brand_id"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["condition_id"], name: "index_items_on_condition_id"
+    t.index ["postage_payer_id"], name: "index_items_on_postage_payer_id"
+    t.index ["preparation_day_id"], name: "index_items_on_preparation_day_id"
+    t.index ["seller_id"], name: "index_items_on_seller_id"
+    t.index ["size_id"], name: "index_items_on_size_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -87,10 +87,10 @@ ActiveRecord::Schema.define(version: 2020_03_16_090520) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
-    t.string "family_name", null: false
     t.string "first_name", null: false
-    t.string "family_name_kana", null: false
+    t.string "family_name", null: false
     t.string "first_name_kana", null: false
+    t.string "family_name_kana", null: false
     t.integer "birth_year", null: false
     t.integer "birth_month", null: false
     t.integer "birth_day", null: false
