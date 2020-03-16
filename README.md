@@ -41,10 +41,8 @@
 # credit_cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|card_number|integer|null: false, unique: true|
-|expiration_month|integer|null: false|
-|expiration_year|integer|null: false|
-|security_code|integer|null: false|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -58,25 +56,24 @@
 |brand_id|inteder|null: false, foreign_key: ture|
 |condition_id|integer|null: false, foreign_key: ture|
 |postage_payer_id|integer|null: false, foreign_key: true|
-|postage_type_id|integer|null: false, foreign_key: true|
+<!-- |postage_type_id|integer|null: false, foreign_key: true| -->
 |prefecture_code|integer| null: false|
-|size_id |integer|null: false, foreign_key: true|
 |preparation_day_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 |trading_status|enum|null: false|
+|user_id|integer|null: false, foreign_key: true|
 |seller_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|foreign_key: true) 
-|deal_closed_date|timestamp||
+<!-- |deal_closed_date|timestamp|| -->
 
 
 ### Association
 - has_many   :images, dependent: :destroy
 - belongs_to :category
 - belongs_to :brand
-- belongs_to :active_hash :size
 - belongs_to :active_hash :condition
 - belongs_to :active_hash :postage_payer
-- belongs_to :active_hash :postage_type
+<!-- - belongs_to :active_hash :postage_type -->
 - belongs_to :active_hash :preparation_day
 - belongs_to :seller, class_name: "User"
 - belongs_to :buyer, class_name: "User"
