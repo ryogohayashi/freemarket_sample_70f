@@ -3,7 +3,7 @@
     .middleheader
       %h1.picture
         = link_to root_path do
-          = image_tag "furima.svg",height:'40.55',width:'130'
+          = image_tag asset_path('furima.svg'),height:'40.55',width:'130'
       .kensakubox
         %form{action: '/', method: 'get'}
           %input{name: "utf8", type: "hidden", value: "✔︎"}
