@@ -94,7 +94,7 @@
           電話番号の確認
           = icon 'fas', 'chevron-right', class:'list--icon'
       %li
-        = link_to "#" , class:"user_edit__side--list--list" do
+        = link_to "/users/#{current_user.id}/logout" , class:"user_edit__side--list--list" do
           ログアウト
           = icon 'fas', 'chevron-right', class:'list--icon'
           
