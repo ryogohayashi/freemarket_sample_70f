@@ -357,16 +357,16 @@
     }
   }
 
-  .footer{
+  .footer8{
     height: 200px;
     width: 100vw;
     margin-top: 25px;
-    .title{
+    .title8{
       height: 20px;
       justify-content: center;
       display: flex;
       font-size: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       &__b{
         padding-left: 15px;
       }
@@ -374,14 +374,12 @@
         padding-left: 15px;
       }
     }
-    .item{
-      width: 200px;
-      margin: 0 auto;
+    .item8{
+      margin-left: 600px;
     }
-    .logo{
+    .logo8{
       font-size: 10px;
-      margin-top: 5px;
-      padding-left: 680px;
+      padding-left: 660px;
     }
   }
 }
