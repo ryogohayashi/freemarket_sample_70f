@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'items/new', to: 'items#new'
+  post 'items', to: 'items#create'
+
   resources :tests, only: [:index, :new, :create,]
 
   
