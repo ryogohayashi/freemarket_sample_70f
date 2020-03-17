@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   resources :users, only: [:show] do
+    resources :items, only: [:new, :create]
     get "logout" => "users#logout"
     resources :credit_card, only: [:new, :show, :index, :edit] do
       collection do
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items, only: [:new, :create,]
+
 
   resources :tests, only: [:index, :new, :create,]
 
