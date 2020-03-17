@@ -52,7 +52,7 @@
       %ul.boardright
         - if user_signed_in?
           %li.boardright__item--first
-            = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
+            -# = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
           %li.boardright__item
             = link_to "マイページ", "/users/#{current_user.id}", method: :get
         - else
