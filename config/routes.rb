@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   resources :users, only: [:show] do
-    resources :items, only: [:new, :create]
+    resources :items, only: [:new, :create] do
+      collection do
+        get 'get_category_children', defaults: { format: 'json' }
+        get 'get_category_grandchildren', defaults: { format: 'json' }
+      end
+    end
     get "logout" => "users#logout"
     resources :credit_card, only: [:new, :show, :index, :edit] do
       collection do
@@ -22,6 +27,7 @@ Rails.application.routes.draw do
 
 
   resources :tests, only: [:index, :new, :create,]
+  resources :categories, only: [:new, :show, :index]
 
   
   get "ncard" => "users#ncard"
