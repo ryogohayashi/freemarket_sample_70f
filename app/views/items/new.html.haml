@@ -54,6 +54,9 @@
           .product-details__categories__hissu4
             必須
         .product-details__categories-input
+        = f.select :category, @category_parent_array, {}, {class: 'product-details__categories-input--select', id: 'parent_category'}
+        .product-details__categories-children
+
         .product-details__brand
           .product-details__brand__mozi6
             ブランド
