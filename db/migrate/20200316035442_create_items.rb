@@ -5,11 +5,11 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :introduction
       t.integer :price
       t.references :brand
-      t.references :condition
-      t.references :postage_payer
+      t.integer :condition_id
+      t.integer :postage_payer_id
       t.string :prefecture_code
-      t.references :size
-      t.references :preparation_day
+      t.integer :size_id
+      t.integer :preparation_day_id
       t.references :category
       t.boolean :trading_status
       t.references :user

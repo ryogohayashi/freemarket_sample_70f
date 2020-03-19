@@ -1,113 +1,131 @@
 .exhibition
   .header
     .header__logo
-      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
+      = image_tag asset_path("logo.png"), size: "200x50"
 
   .main
-    .photo
-      .photo__title
-        .photo__title__mozi
-          出品画像
-        .photo__title__hissu
-          必須
-      .photo__mozimozi
-        最大10枚までアップロードできます
-      .photo__image
-        
-    .border
-    
-    .details
-      .details__title2
-        .details__title2__mozi2
-          商品名
-        .details__title2__hissu2
-          必須
-      .details__type
-      .details__description
-        .details__description__mozi3
-          商品の説明
-        .details__description__hissu3
-          必須
-      .details__description-input
+    %section.main__block
+    = form_with model:@item, url:user_items_path , local:true do |f|
+      .sell__block__form
+        .sell__block__form__upload
+          %h3.sell__block__form__upload__head
+            出品画像
+            %span.require 必須
+            .kai
+              最大5枚までアップロードできます
+          .post__drop__box__container
+            .prev-content
+            .label-content
+              %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = f.fields_for :images do |i|
+                = i.file_field :image, class: "hidden-field"
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
+      .border
+      
+      .details
+        .details__title2
+          .details__title2__mozi2
+            商品名
+          .details__title2__hissu2
+            必須
+        .details__type
+          = f.text_field :name, placeholder:"商品名（必須 40文字まで)",size:67,maxlength:40
+        .details__description
+          .details__description__mozi3
+            商品の説明
+          .details__description__hissu3
+            必須
+        .details__description-input
+          = f.text_field :introduction, placeholder:"商品の説明（必須 1000文字まで)",size:67,maxlength:1000
 
-    .border
+      .border
 
-    .product-details
-      .product-details__mozi4
-        商品の詳細
-      .product-details__categories
-        .product-details__categories__mozi5
-          カテゴリー
-        .product-details__categories__hissu4
-          必須
-      .product-details__categories-input
-      .product-details__brand
-        .product-details__brand__mozi6
-          ブランド
-        .product-details__brand__nini
-          任意
-      .product-details__brand-input
-      .product-details__status
-        .product-details__status__mozi7
-          商品の状態
-        .product-details__status__hissu5
-          必須
-      .product-details__status-input
+      .product-details
+        .product-details__mozi4
+          商品の詳細
+        .product-details__categories
+          .product-details__categories__mozi5
+            カテゴリー
+          .product-details__categories__hissu4
+            必須
+        .product-details__categories-input
+        .product-details__brand
+          .product-details__brand__mozi6
+            ブランド
+          .product-details__brand__nini
+            任意
+        .product-details__brand-input
+          = f.text_field :brand, placeholder:"任意",size:67
+        .product-details__status
+          .product-details__status__mozi7
+            商品の状態
+          .product-details__status__hissu5
+            必須
+        .product-details__status-input
+          = f.collection_select :condition_id, Condition.all, :id, :value, {prompt:'--'}
+      .border
 
-    .border
+      .shipping
+        .shipping__mozi8
+          配送について
+        .shipping__burden
+          .shipping__burden__mozi9
+            配送料の負担
+          .shipping__burden__hissu6
+            必須
+        .shipping__burden-input
+          = f.collection_select :postage_payer_id, PostagePayer.all, :id, :value, {prompt:'--'}
+        .shipping__area
+          .shipping__area__mozi10
+            発送元の地域
+          .shipping__area__hissu7
+            必須
+        .shipping__area-input
+          = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, include_blank: true
+        .shipping__days
+          .shipping__days__mozi11
+            発送までの日数
+          .shipping__days__hissu8
+            必須
+        .shipping__days-input
+          = f.collection_select :preparation_day_id, PreparationDay.all, :id, :value, {prompt:'--'}
 
-    .shipping
-      .shipping__mozi8
-        配送について
-      .shipping__burden
-        .shipping__burden__mozi9
-          配送料の負担
-        .shipping__burden__hissu6
-          必須
-      .shipping__burden-input
-      .shipping__area
-        .shipping__area__mozi10
-          発送元の地域
-        .shipping__area__hissu7
-          必須
-      .shipping__area-input
-      .shipping__days
-        .shipping__days__mozi11
-          発送までの日数
-        .shipping__days__hissu8
-          必須
-      .shipping__days-input
+      .border
 
-    .border
-
-    .price
-      .price__mozi12
-        価格（¥300〜9,999,999）
-      .price__selling-price
-        .price__selling-price__mozi13
-          販売価格
-        .price__selling-price__hissu9
-          必須
-        .price__selling-price__circle
-          ￥
-        .price__selling-price__price-input
-      .price__commission
-        .price__commission__mozi14
-          販売手数料（10%）
-        .price__commission__display
-          ー
-      .price__border
-      .price__profit
-        .price__profit__mozi15
-          販売利益
-        .price__profit__display2
-          ー
-      .price__red-mozi
-        出品する
-      .price__return
-        もどる
-      .price__notes
-        禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
+      .price
+        .price__mozi12
+          価格（¥300〜9,999,999）
+        .price__selling-price
+          .price__selling-price__mozi13
+            販売価格
+          .price__selling-price__hissu9
+            必須
+          .price__selling-price__circle
+            ￥
+          .price__selling-price__price-input
+            = f.text_field :price, placeholder:"                                     0",size:23
+        .price__commission
+          .price__commission__mozi14
+            販売手数料（10%）
+          .price__commission__display
+            ー
+        .price__border
+        .price__profit
+          .price__profit__mozi15
+            販売利益
+          .price__profit__display2
+            ー
+        .price__red-mozi
+          = f.submit "出品する"
+        -# .price__return
+        -#   = f.submit "もどる"
+        .price__notes
+          禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
 
   .footer8
     .title8
@@ -118,7 +136,6 @@
       .title8__c
         特定商取引に関する表記
     .item8
-      = image_tag "logo-white.png", size: "200x60", alt: "test"
+      = image_tag "logo-white.png", size: "200x60"
     .logo8
       © FURIMA, Inc.
-      
