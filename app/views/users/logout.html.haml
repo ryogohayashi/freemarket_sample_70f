@@ -8,6 +8,7 @@
 
 %body
   .wrapper
+    = render 'top/header'
     .l-container.clearfix
       = render 'users/side'
       .mypage-content
@@ -16,8 +17,14 @@
             .signup-main__content
               = link_to destroy_user_session_path, method: :delete, class: 'signup-main__btn-default signup-main__btn-red' do
                 ログアウト
-      
-
+.banner
+  .banner__inner
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
+    .banner__inner__icon
+      = image_tag 'app-store.svg'
+      = image_tag 'google-play.svg'
+= render 'top/footer.htlm.haml'
 
 
 
