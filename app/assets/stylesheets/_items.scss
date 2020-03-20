@@ -135,8 +135,6 @@
       .lproduct-details__categories-input--select {
         width: 100%;
         height: 35px;
-        margin-top: 5px;
-
       }
       &__brand{
         display: flex;
@@ -176,6 +174,10 @@
           padding-left: 2px;
         }
       }
+      .product-details__status-input-1 {
+        width: 100%;
+        height: 35px;
+      }
     }
 
     .shipping{
@@ -206,6 +208,10 @@
           padding-left: 2px;
         }
       }
+      .shipping__burden-input-1{
+        width:94%;
+        height: 35px;
+      }
       &__area{
         display: flex;
         margin-top: 20px;
@@ -224,6 +230,10 @@
           margin-left: 10px;
           padding-left: 2px;
         }
+      }
+      .shipping__area-input-1 {
+        width:94%;
+        height: 35px;
       }
       &__days{
         display: flex;
@@ -246,6 +256,10 @@
       }
       &__days-input{
         margin-bottom: 20px;
+      }
+      .shipping__days-input-1 {
+        width:94%;
+        height: 35px;
       }
     }
 

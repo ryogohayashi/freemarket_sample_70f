@@ -56,7 +56,6 @@
         .product-details__categories-input
         = f.select :category, @category_parent_array, {}, {class: 'product-details__categories-input--select', id: 'parent_category'}
         .product-details__categories-children
-
         .product-details__brand
           .product-details__brand__mozi6
             ブランド
@@ -70,7 +69,7 @@
           .product-details__status__hissu5
             必須
         .product-details__status-input
-          = f.collection_select :condition_id, Condition.all, :id, :value, {prompt:'--'}
+          = f.collection_select :condition_id, Condition.all, :id, :value, {prompt:'--'}, class: 'product-details__status-input-1'
       .border
 
       .shipping
@@ -82,21 +81,22 @@
           .shipping__burden__hissu6
             必須
         .shipping__burden-input
-          = f.collection_select :postage_payer_id, PostagePayer.all, :id, :value, {prompt:'--'}
+          = f.collection_select :postage_payer_id, PostagePayer.all, :id, :value, {prompt:'--'}, class: 'shipping__burden-input-1'
         .shipping__area
           .shipping__area__mozi10
             発送元の地域
           .shipping__area__hissu7
             必須
         .shipping__area-input
-          = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, include_blank: true
+          = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, {prompt:'--'}, {class: "shipping__area-input-1"}
+          
         .shipping__days
           .shipping__days__mozi11
             発送までの日数
           .shipping__days__hissu8
             必須
         .shipping__days-input
-          = f.collection_select :preparation_day_id, PreparationDay.all, :id, :value, {prompt:'--'}
+          = f.collection_select :preparation_day_id, PreparationDay.all, :id, :value, {prompt:'--'}, class: 'shipping__days-input-1'
 
       .border
 

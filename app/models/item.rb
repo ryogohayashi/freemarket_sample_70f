@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :images, dependent: :destroy
+  belongs_to :category
   # 未実装の為コメントアウト
-  # belongs_to :category
   # belongs_to :brand
   belongs_to_active_hash :condition
   belongs_to_active_hash :postage_payer
@@ -17,7 +17,7 @@ class Item < ApplicationRecord
   # validates :images, presence: true { message: 'は投稿してください。'}
   # validates :name, presence: true { message: 'は入力してください。'}
   # validates :introduction, presence: true { message: 'は入力してください。'}
-  # validates :category, presence: true { message: 'を選択してください。'}
+  validates :category_id, presence: true, on: :create 
   # validates :brand, presence: true, allow_blank: true
   # validates :condition, presence: true { message: 'を選択してください。'}
   # validates :postage_payer, presence: true { message: 'を選択してください。'}
