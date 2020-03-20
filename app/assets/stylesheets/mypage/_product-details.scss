@@ -63,11 +63,6 @@
       object-fit: cover;
       width: 100%;
       &__image{
-        // width: 560px;
-        // height: 400px;
-        // margin-left: 37px;
-        // margin-top: 10px;
-        // background-color: #f3f3f3;
         text-align: center;
         img{
           width: 560px;
@@ -75,9 +70,6 @@
         }
       }
       &__sub{
-        // マークアップのためコメントアウト
-        // text-align: center;
-        // background-color: #f3f3f3;
         display: flex;
         justify-content: center;
         margin-top: 10px;
