@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   resources :users, only: [:show] do
-    resources :items, only: [:new, :create] do
+    resources :items, only: [:new, :create, :show] do
       collection do
         get 'get_category_children', defaults: { format: 'json' }
         get 'get_category_grandchildren', defaults: { format: 'json' }
@@ -32,5 +32,4 @@ Rails.application.routes.draw do
 
   
   get "ncard" => "users#ncard"
-  get "scard" => "users#scard"
 end

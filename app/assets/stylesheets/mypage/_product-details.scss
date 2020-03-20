@@ -1,60 +1,42 @@
-.header{
-  .input{
-    padding: 20px 200px;
-    display: flex;
-    &__mozi{
-      display: flex;
-      height: 40px;
-      &__a1{
-        color: #888888;
-        border: solid;
-        border-color: #f5f5f5;
-        width: 840px;
-        margin-left: 30px;
-        padding: 3px;
-      }
-      &__b1{
-        background-color:#3CCACE;
-        margin: auto;
-      }
+.kategori{
+  width: 100%;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  position: relative;
+  padding: 0 60px;
+  height: 55px;
+  &__kategori2{
+    padding: 17px 0 16px;
+    width: 100%;
+    max-width: 1040px;
+    font-size: 14px;
+    margin: 0 auto;
+    &__1{
+      padding: 0 10px 0 0;
+      float: left;
     }
-  }
-  .item2{
-    font-size: 13px;
-    display: flex;
-    margin-bottom: 20px;
-    &__choice{
-      display: flex;
-      &__categories{
-        margin-left:200px;
-      }
-      &__brand{
-        padding-left: 30px;
-      }
-    }
-    &__register{
-      display: flex;
-      &__login{
-        margin-left: 750px;
-      }
-      &__sign-up{
-        padding-left: 30px;
-      }
-    }
-  }
-  .border{
-    border: 1px solid;
-    border-color: #f5f5f5;
-  }
-  .katrgori{
-    font-size: 13px;
-    display: flex;
-    margin: 20px 0 20px 200px;
     &__ku{
-      padding: 0 10px;
+      padding: 0 10px 0 0;
+      float: left;
+    }
+    &__2{
+      padding: 0 10px 0 0;
+      float: left;
+    }
+    &__3{
+      padding: 0 10px 0 0;
+      float: left;
+    }
+    &__4{
+      padding: 0 10px 0 0;
+      float: left;
+      font-weight: bold;
     }
   }
 }
+
+
+
 .item{
   background-color: #f8f8f8;
   padding: 40px;
@@ -64,7 +46,7 @@
       background-color: #fff;
       padding: 40px;
       margin: 0 auto;
-      height: 100%;
+      height: 1300px;
       width: 700px;
       display: block;
     &__name{
@@ -79,37 +61,38 @@
     }
     &__main{
       object-fit: cover;
-      width: 100vw;
+      width: 100%;
       &__image{
-        width: 560px;
-        height: 400px;
-        margin-left: 37px;
-        margin-top: 10px;
-        background-color: #f3f3f3;
+        text-align: center;
+        img{
+          width: 560px;
+          height: 346px;
+        }
       }
       &__sub{
-        // マークアップのためコメントアウト
-        // text-align: center;
-        // background-color: #f3f3f3;
         display: flex;
+        justify-content: center;
         margin-top: 10px;
         &__test1{
-          height: 150px;
-          width: 150px;
           background-color: #f3f3f3;
-          margin-left: 85px;
+          img{
+            width: 140px;
+            height: 87px;
+          }
         }
         &__test2{
-          height: 150px;
-          width: 150px;
           background-color: #f3f3f3;
-          margin-left: 5px;
+          img{
+            width: 140px;
+            height: 87px;
+          }
         }
         &__test3{
-          height: 150px;
-          width: 150px;
           background-color: #f3f3f3;
-          margin-left: 5px;
+          img{
+            width: 140px;
+            height: 87px;
+          }
         }
       }
     }
@@ -245,6 +228,60 @@
     font-size: 22px;
     width:700px;
     margin: 0 auto;
+  }
+  &__affix{
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px auto;
+    text-align: center;
+    width: 700px;
+    &__edit{
+      line-height: 48px;
+      background: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+      margin: 20px auto 5px;
+    }
+    &__stop{
+      line-height: 48px;
+      background: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+      margin: 20px auto 5px;
+    }
+    &__delete{
+      line-height: 48px;
+      background: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+      margin: 20px auto 5px;  
+    }
+  }
+  &__affix2{
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px auto;
+    text-align: center;
+    width: 700px;
+    &__buy{
+      line-height: 48px;
+      background: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+      margin: 20px auto 5px;
+    }
   }
 }
 ​

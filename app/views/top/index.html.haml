@@ -165,68 +165,38 @@
                     %p.zeikomi (税込)
             -else
               .pickupbox__category__list
-                = link_to top_path(item.id) do
-                  %figure.pickupbox__category__lists--image
-                    = image_tag ("#{item.images[0][:image]}")
-                  .pickupbox__category__list--text
-                    %h3.name 
-                      = item.name
-                    .syosai
-                      %ul
-                        %li<> 
-                          = item.price 
-                          円
-                        %li
-                          %i.fa  
-                          ★0
-                      %p.zeikomi (税込)
-  -# %section.pickupbox 
-  -#   %h2.pickupbox--title ピックアップブランド
-  -#   .pickupbox__category
-  -#     .pickupbox__category__head
-  -#       = link_to root_path do
-  -#         %h3.pickupbox__category__head--title アーカイバ
-  -#     .pickupbox__category__lists
-  -#       .pickupbox__category__list
-  -#         = link_to '/products/3' do
-  -#           %figure.pickupbox__category__lists--image
-  -#             = image_tag "/assets/products3.png"
-  -#           .pickupbox__category__list--text
-  -#             %h3.name product3
-  -#             .syosai
-  -#               %ul
-  -#                 %li<> 30000円
-  -#                 %li
-  -#                   %i.fa  
-  -#                   ★0
-  -#               %p.zeikomi (税込)
-  -#       .pickupbox__category__list
-  -#         = link_to '/products/3' do
-  -#           %figure.pickupbox__category__lists--image
-  -#             = image_tag "/assets/products2.png"
-  -#           .pickupbox__category__list--text
-  -#             %h3.name product2
-  -#             .syosai
-  -#               %ul
-  -#                 %li<> 20000円
-  -#                 %li
-  -#                   %i{"class"=>"fa fa-ster likeIcon"} 
-  -#                   ★0
-  -#               %p.zeikomi (税込)
-  -#       .pickupbox__category__list
-  -#         = link_to '/products/3' do
-  -#           %figure.pickupbox__category__lists--image
-  -#             = image_tag "/assets/products1.png"
-  -#           .pickupbox__category__list--text
-  -#             %h3.name product1
-  -#             .syosai
-  -#               %ul
-  -#                 %li<> 10000円
-  -#                 %li
-  -#                   %i.fa 
-  -#                   ★0
-  -#               %p.zeikomi (税込)
-  -# %section.pickupboxcontainer
+                - if user_signed_in?
+                  = link_to user_item_path(item.user_id,item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag ("#{item.images[0][:image]}")
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
+                - else
+                  = link_to top_path(item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag ("#{item.images[0][:image]}")
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
 .banner
   .banner__inner
     %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
