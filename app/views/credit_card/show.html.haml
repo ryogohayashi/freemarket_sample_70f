@@ -1,24 +1,51 @@
--# 追加実装予定です。
-
--# - - if @group.present?
--#   %header.header2
--#     %nav.nav2
--#       %ul.header_menu2
--#         %li.nav-link
--#           = @group.name
--#         %ul.header_menu2_inner2
--#           %li= link_to "Create Group Tasks", new_group_task_path(@group), class: "nav-link listNew2", method: :get
--#           %li= link_to "Edit Group",edit_group_path(@group), class: "nav-link listNew3", method: :get
--#   .tasknewPage
--#     .container
--#       = form_with model: @task, url: { action: :create }, class: "new_task", local: true do |f|
--#         = f.label :"Group task title"
--#         = f.text_field :title, autofocus: true, class: "form-control taskName", placeholder: "タスク名を入力してください。  Markdownで記入できます。"
--#         .text-center= f.submit "Create", class: "submitBtn"
--#       - else
--#         .tasknewPage2
--#           .container
--#             = form_with model: @task, url: { action: :create }, class: "new_task2", local: true do |f|
--#               = f.label :"Your Task Title"
--#               = f.text_field :title, autofocus: true, class: "form-control taskName", placeholder: "タスク名を入力してください。  Markdownで記入できます。"
--#               .text-center= f.submit "Create", class: "submitBtn"
+.user-register
+  .header
+    .header__logo
+      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
+  .buydetails-mein.clearfix
+    %section.buydetails-content
+      %h2.buydetails-content__head aaa購入内容の確認
+      .buy-content__inner
+        .buy-item__box
+          %h3.buy-item-image
+            = image_tag "#{@item.images[0].image}", class:"buy-image"
+          .buy-item__detail
+            %p.buy-item__name NIKE スニーカー
+            %p.buy-item__price 
+              %span ¥10,000（税込）
+              %span.buy-item__send 送料込み
+      %section.buy-content-item
+        .buy-content__inner
+          .buy-form
+            %ul.buy-price__table
+              %li.buy-price
+                .buy-price__label 支払い金額
+                .buy-price__label__sell
+                  %span.deta-by-pay ¥10,000
+      %section.buydetails-content__info{ id: 'buydetails-bottom' }
+        .buydetails-content__inner
+          %h3 支払方法
+          %p.buydetails-content__infotext
+            =link_to "#", class:"buydetails-content__bt" do
+              %span ＋  登録してください
+      %section.buydetails-content__info
+        .buydetails-content__inner
+          %h3 配送先
+          %address.buydetails-content__user
+            =link_to "#", class:"buydetails-content__bt" do
+              %span +  登録してください
+        .buydetails-content__text
+          %button.buydetails-content__btn 
+            購入する
+  .footer
+    .title
+      .title__a
+        プライバシーポリシー
+      .title__b
+        メルカリ利用規約
+      .title__c
+        特定商取引に関する表記
+    .item
+      = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
+    .logo
+      © FURIMA, Inc.

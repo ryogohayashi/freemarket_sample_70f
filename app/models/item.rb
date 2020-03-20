@@ -14,15 +14,15 @@ class Item < ApplicationRecord
   # , allow_destroy: true
 
   # バリデーション未実装の為コメントアウト
-  # validates :images, presence: true { message: 'は投稿してください。'}
-  # validates :name, presence: true { message: 'は入力してください。'}
-  # validates :introduction, presence: true { message: 'は入力してください。'}
+  validates :images, presence: { message: 'は投稿してください。'}
+  validates :name, presence: { message: 'は入力してください。'}
+  validates :introduction, presence: { message: 'は入力してください。'}
   validates :category_id, presence: true, on: :create 
   # validates :brand, presence: true, allow_blank: true
-  # validates :condition, presence: true { message: 'を選択してください。'}
-  # validates :postage_payer, presence: true { message: 'を選択してください。'}
-  # validates :prefecture_code, presence: true { message: 'は都道府県を選択してください。'}
-  # validates :preparation_day, presence: true { message: 'を選択してください。'}
-  # validates :price, numericality: true { message: 'は入力してください。'}
+  validates :condition, presence: { message: 'を選択してください。'}
+  validates :postage_payer, presence: { message: 'を選択してください。'}
+  validates :prefecture_code, presence: { message: 'は都道府県を選択してください。'}
+  validates :preparation_day, presence: { message: 'を選択してください。'}
+  validates :price, numericality: { message: 'は入力してください。'}
 
 end
