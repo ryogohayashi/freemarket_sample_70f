@@ -1,5 +1,6 @@
 %body
   .wrapper
+    = render 'top/header'
     .l-container.clearfix
       = render 'users/side'
       .mypage-content
@@ -46,5 +47,11 @@
           -#     = link_to '#', target: '_blank' do
           -#       %span 支払い方法について
           -#       = icon 'fas', 'chevron-right'
-
-                
+.banner
+  .banner__inner
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
+    .banner__inner__icon
+      = image_tag 'app-store.svg'
+      = image_tag 'google-play.svg'
+= render 'top/footer.htlm.haml'

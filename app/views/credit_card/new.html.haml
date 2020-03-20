@@ -1,5 +1,6 @@
 %body
   .wrapper
+    = render 'top/header'
     .l-container.clearfix
       = render 'users/side'
       .mypage-content
@@ -52,3 +53,11 @@
                     = text_field_tag "cvc", "", class: "signup-main__input-default", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4", id: "cvc"
                     #card_token
                     = submit_tag "追加する", id: "token_submit", class: 'signup-main__btn-default signup-main__btn-red'
+.banner
+  .banner__inner
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
+    .banner__inner__icon
+      = image_tag 'app-store.svg'
+      = image_tag 'google-play.svg'
+= render 'top/footer.htlm.haml'

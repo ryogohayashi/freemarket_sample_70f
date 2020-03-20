@@ -2,7 +2,16 @@
 -# =  link_to "ログアウト", destroy_user_session_path, method: :delete 
 %body
   .wrapper
+    = render 'top/header'
     .l-container.clearfix
       = render 'users/side'
       = render 'users/main'
+.banner
+  .banner__inner
+    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+    %p.banner__inner__text 今すぐ無料ダウンロード！
+    .banner__inner__icon
+      = image_tag 'app-store.svg'
+      = image_tag 'google-play.svg'
+= render 'top/footer.htlm.haml'
       
