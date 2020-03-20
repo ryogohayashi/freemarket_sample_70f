@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  
   def new
     @item = Item.new
     @item.images.new
@@ -33,9 +34,23 @@ class ItemsController < ApplicationController
       render :new
     end
   end
-  
+
+  def show
+    @item = Item.find(params[:id])
+    @image = @item.images.includes(:item)
+    @condition = Condition.find(@item.condition_id)
+    @postage_payer = PostagePayer.find(@item.postage_payer_id)
+    @size = Size.find(@item.size_id)
+    @preparation_day = PreparationDay.find(@item.preparation_day_id)
+    @category = Category.find(@item.category_id)
+    @seller = User.find(@item.seller_id)
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :introduction, :price, :brand_id, :condition_id, :postage_payer_id, :prefecture_code, :size_id, :preparation_day_id, :category_id, [images_attributes: [:image, :item_id, :created_at, :update_at]]).merge(user_id: current_user.id, seller_id: current_user.id, buyer_id: current_user.id)
   end
+
 end
+
+# @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
