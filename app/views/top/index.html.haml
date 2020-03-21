@@ -104,7 +104,7 @@
             -else
               .pickupbox__category__list
                 - if user_signed_in?
-                  = link_to user_item_path(item.user_id,item.id) do
+                  = link_to item_path(item.id) do
                     %figure.pickupbox__category__lists--image
                       = image_tag item.images[0].image.url
                     .pickupbox__category__list--text

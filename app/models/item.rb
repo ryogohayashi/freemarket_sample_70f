@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :postage_payer
   belongs_to_active_hash :preparation_day
   belongs_to :seller, class_name: "User"
-  belongs_to :buyer, class_name: "User"
+  # belongs_to :buyer, class_name: "User"
 
   accepts_nested_attributes_for :images
 

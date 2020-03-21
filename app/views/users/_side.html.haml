@@ -78,8 +78,8 @@
           発送元・お届け先住所変更
           = icon 'fas', 'chevron-right', class:'list--icon'
       %li
-        -# = link_to user_credit_card_index_path(current_user), data: {"turbolinks" => false}, class:"user_edit__side--list--list" do
-        -#   支払い方法
+        = link_to user_credit_card_index_path(current_user), data: {"turbolinks" => false}, class:"user_edit__side--list--list" do
+          支払い方法
           = icon 'fas', 'chevron-right', class:'list--icon'
       %li
         = link_to "#" , class:"user_edit__side--list--list" do
