@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :destroy]
+
   def new
     @item = Item.new
     @item.images.new
@@ -37,7 +39,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @image = @item.images.includes(:item)
     @condition = Condition.find(@item.condition_id)
     @postage_payer = PostagePayer.find(@item.postage_payer_id)
@@ -47,7 +48,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
       if @item.destroy
         redirect_to root_path
       else
@@ -59,5 +59,9 @@ class ItemsController < ApplicationController
   private
   def item_params
     params.require(:item).permit(:name, :introduction, :price, :condition_id, :postage_payer_id, :prefecture_code, :size_id, :preparation_day_id, :category_id, [images_attributes: [:image, :item_id, :created_at, :update_at]]).merge(user_id: current_user.id, seller_id: current_user.id, buyer_id: current_user.id, brand_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
