@@ -20,6 +20,8 @@
   .mainblock__second
     .item
       .item__box
+        %h2
+          = @item.name
         .item__box__main
           .item__box__main__image
             = image_tag @image[0].image.url
