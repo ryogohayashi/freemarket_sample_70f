@@ -108,7 +108,7 @@
           .item__affix__stop
             出品を停止する
           .item__affix__delete
-            この商品を削除する
+            = link_to '商品の削除', user_item_path(@item),method: :delete
       - else
         .item__affix2
           .item__affix2__buy
