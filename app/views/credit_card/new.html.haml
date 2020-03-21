@@ -5,6 +5,7 @@
       = render 'users/side'
       .mypage-content
         %section.mypage-content__chapter-container
+          -# = flash[:touroku]
           %h2.signup-main__chapter-head クレジットカード情報入力
           .signup-main__content
             = form_tag(pay_user_credit_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do

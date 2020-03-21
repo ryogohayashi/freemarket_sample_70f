@@ -43,6 +43,6 @@
 .buybtn
   %span.buybtn__text 出品する
   - if user_signed_in?
-    = link_to image_tag('icon_camera.png', class:"buybtn__icon" ), new_user_item_path(current_user), data: {"turbolinks" => false}
+    = link_to image_tag('icon_camera.png', class:"buybtn__icon" ), new_item_path(current_user), data: {"turbolinks" => false}
   - else
     = link_to image_tag('icon_camera.png', class:"buybtn__icon" ), new_user_registration_path

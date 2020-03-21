@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   #   @user = User.find_by(params[:user_id])
   # end
 
-  def show
-    @user = User.where(active: true)
-  end
+  # def show
+  #  @user = User.find(params[:id])
+  # end
 
   # private
   #   def user_params
