@@ -18,8 +18,8 @@
         = link_to "/categories" do
           カテゴリー
         %ul.topheader__inner__nav__left__ca__parents
-          = render partial:'categories/ca-header', collection: @parents.roots, as: "parent"
-          = link_to "カテゴリー一覧から探す", "/categories", class:"allcate"
+          -# = render partial:'categories/ca-header', collection: @parents.roots, as: "parent"
+          -# = link_to "カテゴリー一覧から探す", "/categories", class:"allcate"
           
       %li.boardleft__item
         = link_to url="#" do 

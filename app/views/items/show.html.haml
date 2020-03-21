@@ -1,49 +1,49 @@
-.showheader
-= render 'top/header.html.haml'  
-.kategori
-  .kategori__kategori2
-    .kategori__kategori2__1
-      FURIMA
-    .kategori__kategori2__ku
-      >
-    .kategori__kategori2__2
-      ベビー・キッズベビー服(男女兼用)
-    .kategori__kategori2__ku
-      >
-    .kategori__kategori2__3
-      〜95cmアウター
-    .kategori__kategori2__ku
-      >
-    .kategori__kategori2__4
-      product3
-.mainblock
-  .mainblock__second
-    .item
-      .item__box
-        .item__box__main
-          .item__box__main__image
-            = image_tag @image[0].image.url
-          - if @image[3].present?
-            .item__box__main__sub
-              .item__box__main__sub__test1
-                = image_tag @image[1].image.url
-              .item__box__main__sub__test2
-                = image_tag @image[2].image.url
-              .item__box__main__sub__test3
-                = image_tag @image[3].image.url
-          - elsif @image[2].present?
-            .item__box__main__sub
-              .item__box__main__sub__test1
-                = image_tag @image[1].image.url
-              .item__box__main__sub__test2
-                = image_tag @image[2].image.url
-          - elsif @image[1].present?
-            .item__box__main__sub
-              .item__box__main__sub__test1
-                = image_tag @image[1].image.url
-          - else 
-            .item__box__main__sub
-              .item__box__main__sub__test3
+-# .showheader
+-# = render 'top/header.html.haml'  
+-# .kategori
+-#   .kategori__kategori2
+-#     .kategori__kategori2__1
+-#       FURIMA
+-#     .kategori__kategori2__ku
+-#       >
+-#     .kategori__kategori2__2
+-#       ベビー・キッズベビー服(男女兼用)
+-#     .kategori__kategori2__ku
+-#       >
+-#     .kategori__kategori2__3
+-#       〜95cmアウター
+-#     .kategori__kategori2__ku
+-#       >
+-#     .kategori__kategori2__4
+-#       product3
+-# .mainblock
+-#   .mainblock__second
+-#     .item
+-#       .item__box
+-#         .item__box__main
+-#           .item__box__main__image
+-#             = image_tag @image[0].image.url
+-#           - if @image[3].present?
+-#             .item__box__main__sub
+-#               .item__box__main__sub__test1
+-#                 = image_tag @image[1].image.url
+-#               .item__box__main__sub__test2
+-#                 = image_tag @image[2].image.url
+-#               .item__box__main__sub__test3
+-#                 = image_tag @image[3].image.url
+-#           - elsif @image[2].present?
+-#             .item__box__main__sub
+-#               .item__box__main__sub__test1
+-#                 = image_tag @image[1].image.url
+-#               .item__box__main__sub__test2
+-#                 = image_tag @image[2].image.url
+-#           - elsif @image[1].present?
+-#             .item__box__main__sub
+-#               .item__box__main__sub__test1
+-#                 = image_tag @image[1].image.url
+-#           - else 
+-#             .item__box__main__sub
+-#               .item__box__main__sub__test3
                 
         
         .item__box__price
@@ -114,31 +114,32 @@
           .item__affix2__buy
             商品の購入
 
-      .item__comment__box
-        .item__comment__box__body
-          %input
-        .item__comment__box__rule
-          相手のことを考え丁寧なコメントを心がけましょう。
-          %br/
-          不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        .item__comment__box__submit
-          %btn.ccc
-            = link_to('コメントする')
 
-      .item__link
-        .item__link__a
-          < 前の商品
-        .item__link__b
-          後ろの商品 >
+-#       .item__comment__box
+-#         .item__comment__box__body
+-#           %input
+-#         .item__comment__box__rule
+-#           相手のことを考え丁寧なコメントを心がけましょう。
+-#           %br/
+-#           不快な言葉遣いなどは利用制限や退会処分となることがあります。
+-#         .item__comment__box__submit
+-#           %btn.ccc
+-#             = link_to('コメントする')
 
-      .item__more
-        ベビー・キッズをもっと見る
+-#       .item__link
+-#         .item__link__a
+-#           < 前の商品
+-#         .item__link__b
+-#           後ろの商品 >
 
-.banner
-  .banner__inner
-    %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
-    %p.banner__inner__text 今すぐ無料ダウンロード！
-    .banner__inner__icon
-      = image_tag "app-store.svg"
-      = image_tag "google-play.svg"
-= render 'top/footer.htlm.haml'
+-#       .item__more
+-#         ベビー・キッズをもっと見る
+
+-# .banner
+-#   .banner__inner
+-#     %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
+-#     %p.banner__inner__text 今すぐ無料ダウンロード！
+-#     .banner__inner__icon
+-#       = image_tag "app-store.svg"
+-#       = image_tag "google-play.svg"
+-# = render 'top/footer.htlm.haml'
