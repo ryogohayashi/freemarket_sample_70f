@@ -8,24 +8,29 @@ Rails.application.routes.draw do
   end
   root to: "top#index"
   resources :users, only: [:show] do
-    resources :items, only: [:new, :create, :show, :destroy] do
-      collection do
-        get 'get_category_children', defaults: { format: 'json' }
-        get 'get_category_grandchildren', defaults: { format: 'json' }
-      end
-    end
     get "logout" => "users#logout"
     resources :credit_card, only: [:new, :show, :index, :edit] do
       collection do
         post 'pay', to: 'credit_card#pay'
         post 'delete', to: 'credit_card#delete'
-        post 'buy/:id', to: 'credit_card#buy'
+        post 'buy', to: 'credit_card#buy'
       end
     end
   end
   resources :top, only: [:show]
 
 
+  resources :items, only: [:new, :create, :show, :destroy] do
+    collection do
+      get 'get_category_children', defaults: { format: 'json' }
+      get 'get_category_grandchildren', defaults: { format: 'json' }
+    end
+    member do
+      post 'purchase'
+      get 'purchased'
+      get 'buy'
+    end
+  end
 
   resources :tests, only: [:index, :new, :create,]
   resources :categories, only: [:new, :show, :index]
