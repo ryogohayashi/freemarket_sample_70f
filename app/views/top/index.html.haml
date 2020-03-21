@@ -88,7 +88,7 @@
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
-                  = image_tag ("#{item.images[0][:image]}")
+                  = image_tag item.images[0].image.url
                 .pickupbox__category__list--text
                   %h3.name 
                     = item.name
@@ -106,7 +106,7 @@
                 - if user_signed_in?
                   = link_to user_item_path(item.user_id,item.id) do
                     %figure.pickupbox__category__lists--image
-                      = image_tag ("#{item.images[0][:image]}")
+                      = image_tag item.images[0].image.url
                     .pickupbox__category__list--text
                       %h3.name 
                         = item.name
@@ -122,7 +122,7 @@
                 - else
                   = link_to top_path(item.id) do
                     %figure.pickupbox__category__lists--image
-                      = image_tag ("#{item.images[0][:image]}")
+                      = image_tag item.images[0].image.url
                     .pickupbox__category__list--text
                       %h3.name 
                         = item.name
