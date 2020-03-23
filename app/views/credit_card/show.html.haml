@@ -9,33 +9,15 @@
         .buy-content__inner
           .buy-item__box
             %h3.buy-item__box__main__image
-            -#   =image_tag @item.images[0].item_image.url,class:"buy-image"
-            -# - if @image[3].present?
-            -#   .buy-item__box__main__sub
-            -#     .buy-item__box__main__sub__test1
-            -#       = image_tag @image[1].image.url
-            -#     .buy-item__box__main__sub__test2
-            -#       = image_tag @image[2].image.url
-            -#     .buy-item__box__main__sub__test3
-            -#       = image_tag @image[3].image.url
-            -# - elsif @image[2].present?
-            -#   .buy-item__box__main__sub
-            -#     .buy-item__box__main__sub__test1
-            -#       = image_tag @image[1].image.url
-            -#     .buy-item__box__main__sub__test2
-            -#       = image_tag @image[2].image.url
-            -# - elsif @image[1].present?
-            -#   .buy-item__box__main__sub
-            -#     .buy-item__box__main__sub__test1
-            -#       = image_tag @image[1].image.url
-            -# - else 
-            -#   .buy-item__box__main__sub
-            -#     .buy-item__box__main__sub__test3
+              = image_tag @image[0].image.url
             .buy-item__detail
               %p.buy-item__name
-                -# =@item.name
+                = @item.name
               %p.buy-item__price 
-                %span ¥10,000（税込）
+                %span 
+                  ¥
+                  = @item.price.to_s(:currency)
+                  （税込）
                 %span.buy-item__send 送料込み
         %section.buy-content-item
           .buy-content__inner
@@ -44,15 +26,19 @@
                 %li.buy-price
                   .buy-price__label 支払い金額
                   .buy-price__label__sell
-                    %span.deta-by-pay ¥10,000
+                    %span.deta-by-pay 
+                      ¥
+                      = @item.price.to_s(:delimited)
         %section.buydetails-content__info{ id: 'buydetails-bottom' }
           .buydetails-content__inner
-            %h3 支払方法 (登録クレジットカード情報)
+            .buydetails-content__title
+              %h4 支払方法
+              %h4.changecredit 
+                = link_to '変更する', new_user_credit_card_path
             %h3.signup-main__chapter-sub-head
-              %br
-              カード番号 :  
+              クレジットカード
+              %br  
               = "**** **** **** " + @default_card_information.last4
-              %br
               %br
               有効期限 :  
               - exp_month = @default_card_information.exp_month.to_s
@@ -60,7 +46,10 @@
               = exp_month + " / " + exp_year
         %section.buydetails-content__info
           .buydetails-content__inner
-            %h3 配送先
+            .buydetails-content__title
+              %h3 配送先
+              %h4.changecredit 
+                = link_to '変更する', new_user_credit_card_path
             %destination.buy-user-info-text
               =@destination.post_code
               %br
@@ -74,16 +63,46 @@
               =@user.first_name
           .buydetails-content__text
             %button.buydetails-content__btn
-            = f.submit("購入する", class:"purchase")
-    .footer
-      .title
-        .title__a
-          プライバシーポリシー
-        .title__b
-          メルカリ利用規約
-        .title__c
-          特定商取引に関する表記
-      .item
-        = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
-      .logo
-        © FURIMA, Inc.
+              購入する
+.footer
+  %ul.nakamis
+    %li.nakami
+      %h2.nakami__head FURIMAについて
+      %ul
+        %li<
+          = link_to url="#" do
+            会社概要(運営会社)
+        %li<
+          = link_to url="#" do
+            プライバシーポリシー
+        %li<
+          = link_to url="#" do
+            FURIMA利用規約
+        %li<
+          = link_to url="#" do
+            ポイントに関する特約
+    %li.nakami
+      %h2.nakami__head FURIMAを見る
+      %ul
+        %li<
+          = link_to url="#" do 
+            カテゴリー一覧
+        %li<
+          = link_to url="#" do 
+            ブランド一覧
+    %li.nakami
+      %h2.nakami__head ヘルプ&ガイド
+      %ul
+        %li<
+          = link_to url="#" do 
+            FURIMAガイド
+        %li<
+          = link_to url="#" do 
+            FURIMAロゴ利用ガイドライン
+        %li<
+          = link_to url="#" do 
+            お知らせ
+  .footer__lg
+    = link_to url="#" do
+      = image_tag "logo-white.png"
+    %p ©︎FURIMA

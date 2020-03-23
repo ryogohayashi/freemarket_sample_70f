@@ -55,6 +55,14 @@ class CreditCardController < ApplicationController
       # @item = Item.where(active: true)
       # @item = Item.find(params[:id])
       # @name = @item.name
+      @item = Item.find(params[:id])
+      @image = @item.images.includes(:item)
+      @condition = Condition.find(@item.condition_id)
+      @postage_payer = PostagePayer.find(@item.postage_payer_id)
+      # @size = Size.find(@item.size_id)
+      @preparation_day = PreparationDay.find(@item.preparation_day_id)
+      @category = Category.find(@item.category_id)
+      @seller = User.find(@item.seller_id)
       
     end
   end

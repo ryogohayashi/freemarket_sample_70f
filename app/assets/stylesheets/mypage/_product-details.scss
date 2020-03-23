@@ -46,7 +46,7 @@
       background-color: #fff;
       padding: 40px;
       margin: 0 auto;
-      height: 1300px;
+      height: 1200px;
       width: 700px;
       display: block;
       h2{
@@ -250,16 +250,9 @@
       font-size: 18px;
       border-radius: 100px;
       margin: 20px auto 5px;
-    }
-    &__stop{
-      line-height: 48px;
-      background: #3CCACE;
-      border: 1px solid #3CCACE;
-      color: #fff;
-      width: 60%;
-      font-size: 18px;
-      border-radius: 100px;
-      margin: 20px auto 5px;
+      a{
+        color: #fff;
+      }
     }
     &__delete{
       line-height: 48px;
@@ -269,7 +262,10 @@
       width: 60%;
       font-size: 18px;
       border-radius: 100px;
-      margin: 20px auto 5px;  
+      margin: 20px auto 5px;
+      a{
+        color: #fff;
+      }
     }
   }
   &__affix2{
@@ -287,12 +283,20 @@
       font-size: 18px;
       border-radius: 100px;
       margin: 20px auto 5px;
+      a{
+        color: #fff;
+      }
     }
   }
 }
 ​
 a{
   text-decoration: none;
+}
+btn.ccc{
+  a{
+    color: #fff;
+  }
 }
 
 .banner{
