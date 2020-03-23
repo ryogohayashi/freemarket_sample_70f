@@ -1,21 +1,11 @@
 .login4{
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background-color: #f5f5f5;
-  .header4{
-    height: 128px;
-    width: 500px;
-    margin-left: 450px;
-    justify-content: center;
-    display: flex;
-    &__logo4{
-      margin-top: 40px;
-    }
-    // &__progress-bar4{
-    //   font-size: 8px;
-    //   margin-top: 45px;
-    //   margin-left: 100px;
-    // }
+  .header51{
+    width: 200px;
+    margin: 0 auto;
+    padding: 30px 0 30px 0;
   }
 
   .main{
@@ -23,27 +13,13 @@
     width: 700px;
     margin: 0 auto;
     background-color: white;
-    // .mozi{
-    //   font-size: 13px;
-    //   padding-left: 250px;
-    //   padding-top: 20px;
-    // }
-    // .sign-up{
-    //   height: 40px;
-    //   width: 280px;
-    //   font-size: 18px;
-    //   padding-left: 150px;
-    //   padding-top: 10px;
-    //   margin-left: 150px;
-    // }
-    .address{
+    .address51{
       font-size: 15px;
       padding-top: 40px;
       margin-left: 250px;
-      &__a1{
+      &__a51{
         color: #cccccc;
         font-size: 15px;
-        font-weight: 600;
       }
     }
     .password{
@@ -53,25 +29,27 @@
       &__a2{
         color: #cccccc;
         font-size: 15px;
-        font-weight: 600;
       }
     }
     .path{
       display: flex;
       margin-left: 250px;
       margin-top: 30px;
-      // &__a3{
-      // }
       &__a4{
         padding-left: 10px;
       }
     }
     .login5{
-      margin-top: 30px;
-      font-size: 15px;
-      padding-left: 100px;
-      margin-left: 250px;
-      // padding-top: 20px;
+      width: 300px;
+      padding-top: 30px;
+      margin: 0 auto;
+      input#submit_button{
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        color: #f5f5f5;
+        background-color: red;
+      }
     }
     .notes{
       font-size: 15px;
@@ -80,33 +58,34 @@
     }
   }
 
-  .footer4{
+  .footer51{
     height: 200px;
-    width: 100vw;
-    margin-top: 25px;
+    width: 550px;
+    margin: 0 auto;
+    padding-top: 25px;
     .title{
-      justify-content: center;
+      height: 20px;
       display: flex;
       font-size: 15px;
-      margin-top: 25px;
-      &__a{
+      margin-bottom: 25px;
+      &__one{
         padding-left: 15px;
       }
-      &__b{
+      &__tow{
         padding-left: 15px;
       }
-      &__c{
+      &__three{
         padding-left: 15px;
       }
     }
-    .item{
-      margin-top: 25px;
-      padding-left: 630px;
+    .item51{
+      width: 200px;
+      margin: 0 auto;
     }
-    .logo{
+    .logo51{
+      width: 80px;
       font-size: 10px;
-      margin-top: 5px;
-      padding-left: 680px;
+      margin: 0 auto;
     }
   }
 }

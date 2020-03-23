@@ -1,7 +1,6 @@
 .exhibition
-  .header
-    .header__logo
-      = image_tag asset_path("logo.png"), size: "200x50"
+  .header51
+    = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
   .main
     %section.main__block
     = form_with model:@item, url:items_path , local:true do |f|
@@ -127,21 +126,22 @@
           .price__profit__display2
             ー
         .price__red-mozi
-          = f.submit "出品する"
+          %input#submit_button5{:name => "submit", :type => "submit", :value => "出品する"}/
+        -# 追加実装のためコメントアウト
         -# .price__return
         -#   = f.submit "もどる"
         .price__notes
           禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
 
-  .footer8
-    .title8
-      .title8__a
+  .footer51
+    .title
+      .title__one
         プライバシーポリシー
-      .title8__b
+      .title__tow
         メルカリ利用規約
-      .title8__c
+      .title__three
         特定商取引に関する表記
-    .item8
-      = image_tag "logo-white.png", size: "200x60"
-    .logo8
+    .item51
+      = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
+    .logo51
       © FURIMA, Inc.

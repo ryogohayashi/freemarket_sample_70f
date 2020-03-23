@@ -1,9 +1,6 @@
 .user-register
-  .header
-    .header__logo
-      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
-    -# .header__progress-bar
-    -#   会員情報
+  .header51
+    = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
 
   .main
     .title
@@ -124,22 +121,22 @@
           「次へ進む」のボタンを押すことにより、利用規約に
           　　　　　　同意したものとみなします
         .terms-of-service__btm
-          = f.submit "次へ進む"
+          %input#submit_button1{:name => "submit", :type => "submit", :value => "次へ進む"}/
         .terms-of-service__register
           本人情報の登録について>
         .terms-of-service__english
           This site is protected by reCAPTCHA and the Google PrivacyPolicy and Terms of Service apply.
 
-  .footer
+  .footer51
     .title
-      .title__a
+      .title__one
         プライバシーポリシー
-      .title__b
+      .title__tow
         メルカリ利用規約
-      .title__c
+      .title__three
         特定商取引に関する表記
-    .item
+    .item51
       = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
-    .logo
+    .logo51
       © FURIMA, Inc.
       
