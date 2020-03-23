@@ -84,7 +84,7 @@
     margin: 40px 0 0;
     text-align: start;
     &:first-child {
-      margin: 0;
+      margin-top: 10px;
     }
     label {
       font-weight: 600;
@@ -211,7 +211,7 @@
     }
   }
   &__chapter-head {
-    padding: 40px 40px 64px;
+    padding: 30px;
     border-bottom: 1px solid #f5f5f5;
     text-align: center;
     font-size: 18px;
