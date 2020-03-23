@@ -208,6 +208,9 @@
       border: 1px solid #3CCACE;
       border-radius: 100px;
       color: #fff;
+      a{
+        color: #fff;
+      }
     }
     &__info{
       // margin: 40px 0 0;
@@ -237,9 +240,6 @@
       line-height: 1.4;
       width: 100%;
       display: block;
-    }
-    &__bt {
-      text-decoration: none;
     }
   }
   #buydetails-bottom{

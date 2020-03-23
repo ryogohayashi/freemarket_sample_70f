@@ -1,10 +1,7 @@
 *{
   margin: 0px;
 }
-a {
-  text-decoration: none;
-  color: #fff
-}
+
 
 .topheader{
   padding: 0 60px;
@@ -23,6 +20,10 @@ a {
         &__ca{
           line-height: 33.5px;
           position: relative;
+          a {
+            text-decoration: none;
+            color: black;
+          }
           &:hover {
             color: blue;
             .topheader__inner__nav__left__ca__parents {
