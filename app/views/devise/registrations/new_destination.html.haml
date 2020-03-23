@@ -1,9 +1,6 @@
 .top
-  .header2
-    .header2__logo2
-      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
-    -# .header2__progress-bar2
-    -#   会員情報
+  .header51
+    = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
 
   .main
     .identity-information
@@ -58,7 +55,7 @@
             .postal-code__a__a2
               必須
           .postal-code__b
-            = f.text_field :post_code,size:30, maxlength:7
+            = f.text_field :post_code,size:37, maxlength:7
 
         .prefectures
           .prefectures__c
@@ -67,7 +64,7 @@
             .prefectures__c__c2
               必須
           .prefectures__d
-            = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, include_blank: true
+            = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, {prompt:'--'}, {class: "shipping__area-input-1"}
 
         .municipality
           .municipality__e
@@ -76,7 +73,7 @@
             .municipality__e__e2
               必須
           .municipality__f
-            = f.text_field :city,size:30
+            = f.text_field :city,size:37
 
         .address
           .address__g
@@ -85,7 +82,7 @@
             .address__g__g2
               必須
           .address__h
-            = f.text_field :house_number,size:30
+            = f.text_field :house_number,size:37
 
         .building
           .building__i
@@ -94,7 +91,7 @@
             .building__i__i2
               任意
           .building__j
-            = f.text_field :building,size:30
+            = f.text_field :building,size:37
 
         .phone
           .phone__number1
@@ -103,24 +100,24 @@
             .phone__number1__yy
               任意
           .phone__number2
-            = f.text_field :phone_number,size:30,maxlength:11
+            = f.text_field :phone_number,size:37,maxlength:11
 
         .register
-          = f.submit "登録する"
+          %input#submit_button2{:name => "submit", :type => "submit", :value => "登録する"}/
 
         .personal-information-registration
           本人情報の登録について＞
 
-  .footer2
+  .footer51
     .title
-      .title__a
+      .title__one
         プライバシーポリシー
-      .title__b
+      .title__tow
         メルカリ利用規約
-      .title__c
+      .title__three
         特定商取引に関する表記
-    .item
+    .item51
       = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
-    .logo
+    .logo51
       © FURIMA, Inc.
       

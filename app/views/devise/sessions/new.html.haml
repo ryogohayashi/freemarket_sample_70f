@@ -1,19 +1,12 @@
 .login4
-  .header4
-    .header4__logo4
-      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
-    -# .header4__progress-bar4
-    -#   会員情報
+  .header51
+    = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
 
   .main
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      -# .mozi
-      -#   アカウントをお持ちでない方はこちら
-      -# .sign-up
-      -#   新規会員登録
-      .address
+      .address51
         = f.label :email,"メールアドレス"
-        .address__a1
+        .address__51
           .address__a1__777
             = f.email_field :email, autofocus: true, autocomplete: "email"
       .password
@@ -28,19 +21,19 @@
         .path__a4
           = f.label :remember_me
       .login5
-        = f.submit "ログイン"
+        %input#submit_button{:name => "submit", :type => "submit", :value => "ログイン"}/
       .notes
         = render "devise/shared/links"
 
-  .footer4
+  .footer51
     .title
-      .title__a
+      .title__one
         プライバシーポリシー
-      .title__b
+      .title__tow
         メルカリ利用規約
-      .title__c
+      .title__three
         特定商取引に関する表記
-    .item
+    .item51
       = image_tag asset_path("logo-white.png"), size: "200x60", alt: "test"
-    .logo
+    .logo51
       © FURIMA, Inc.
