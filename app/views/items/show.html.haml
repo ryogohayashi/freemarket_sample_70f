@@ -7,15 +7,15 @@
     .kategori__kategori2__ku
       >
     .kategori__kategori2__2
-      ベビー・キッズベビー服(男女兼用)
+      = @category.root.name
     .kategori__kategori2__ku
       >
     .kategori__kategori2__3
-      〜95cmアウター
+      = @category.parent.name
     .kategori__kategori2__ku
       >
     .kategori__kategori2__4
-      product3
+      = @category.name
 .mainblock
   .mainblock__second
     .item
@@ -50,7 +50,8 @@
         
         .item__box__price
           .item__box__price__include
-            = "¥20000"
+            
+            = @item.price.to_s(:delimited) 
           .item__box__price__fee
             .item__box__price__fee__tax
               (税込)
@@ -58,7 +59,7 @@
               送料込み
         .item__box__method
           .item__box__method__introduction
-            親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰
+            = @item.introduction
         .item__box__information
           .item__box__information__table
             %table
@@ -111,10 +112,8 @@
         .item__affix
           .item__affix__edit
             商品の編集
-          .item__affix__stop
-            出品を停止する
           .item__affix__delete
-          = link_to '商品の削除', user_item_path(@item),method: :delete
+            = link_to '商品の削除', new_item_path,method: :delete
       - else
         .item__affix2
           .item__affix2__buy
@@ -149,3 +148,4 @@
       = image_tag "app-store.svg"
       = image_tag "google-play.svg"
 = render 'top/footer.htlm.haml'
+
