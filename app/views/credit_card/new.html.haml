@@ -5,7 +5,8 @@
       = render 'users/side'
       .mypage-content
         %section.mypage-content__chapter-container
-          -# = flash[:touroku]
+          .touroku
+            = flash[:touroku]
           %h2.signup-main__chapter-head クレジットカード情報入力
           .signup-main__content
             = form_tag(pay_user_credit_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
@@ -36,9 +37,9 @@
                   %span.signup-main__form-require 必須
                   %br
                   .field-input
-                    = select_tag 'exp_month', options_for_select([["--",""],["01","1"], ["02","2"], ["03","3"], ["04","4"], ["05","5"], ["06","6"], ["07","7"], ["08","8"], ["09","9"], ["10","10"], ["11","11"], ["12","12"]],:selected=>"--")
+                    = select_tag 'exp_month', options_for_select([["--",""],["01","1"], ["02","2"], ["03","3"], ["04","4"], ["05","5"], ["06","6"], ["07","7"], ["08","8"], ["09","9"], ["10","10"], ["11","11"], ["12","12"]],:selected=>"--"), class: "select"
                     %span 月／
-                    = select_tag 'exp_year', options_for_select([["--",""],["20","2020"], ["21","2021"], ["22","2022"], ["23","2023"], ["24","2024"], ["25","2025"], ["26","2026"], ["27","2027"], ["28","2028"], ["29","2029"], ["30","2030"]],:selected=>"--")
+                    = select_tag 'exp_year', options_for_select([["--",""],["20","2020"], ["21","2021"], ["22","2022"], ["23","2023"], ["24","2024"], ["25","2025"], ["26","2026"], ["27","2027"], ["28","2028"], ["29","2029"], ["30","2030"]],:selected=>"--"), class:"select"
                     %span 年
               .field
                 .signup-main__form-group
