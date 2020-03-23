@@ -3,7 +3,7 @@
     .header__logo
       = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
   .buydetails-mein.clearfix
-    = form_with model:@item, url:purchase_item_path, local:true do |f|
+    = form_with model:@item, url:purchased_item_path, method: :get,local:true do |f|
       %section.buydetails-content
         %h2.buydetails-content__head 購入内容の確認
         .buy-content__inner
