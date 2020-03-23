@@ -62,9 +62,13 @@ class ItemsController < ApplicationController
       customer: Payjp::Customer.retrieve(@credit_card.customer_id),
       currency: 'jpy'
     )
+    redirect_to purchased_item_path
+  end
+
+  def purchased
     @item_buyer= Item.find(params[:id])
     @item_buyer.update(buyer_id: current_user.id)
-    redirect_to purchased_item_path
+    redirect_to root_path
   end
 
   def destroy
