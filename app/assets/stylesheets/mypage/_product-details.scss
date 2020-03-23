@@ -299,35 +299,35 @@ btn.ccc{
   }
 }
 
-.banner{
-  background-image: url(/assets/bg-appBanner-pict.jpg);
-  padding: 100px 40px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  &__inner{
-    color: #fff;
-    text-align: center;
-    &__title{
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 1.4;
-    }
-    &__text{
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 1.4;
-    }
-    &__icon{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 20px auto 0;
-    }
-  }
-}
+// .banner{
+//   background-image: image-url('bg-appBanner-pict.jpg');
+//   padding: 100px 40px;
+//   position: relative;
+//   background-size: cover;
+//   background-position: center;
+//   &__inner{
+//     color: #fff;
+//     text-align: center;
+//     &__title{
+//       text-shadow: 0 0 5px rgba(0,0,0,0.4);
+//       font-size: 24px;
+//       font-weight: bold;
+//       line-height: 1.4;
+//     }
+//     &__text{
+//       text-shadow: 0 0 5px rgba(0,0,0,0.4);
+//       font-size: 24px;
+//       font-weight: bold;
+//       line-height: 1.4;
+//     }
+//     &__icon{
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       margin: 20px auto 0;
+//     }
+//   }
+// }
 
 .footer{
   padding: 60px 0;
