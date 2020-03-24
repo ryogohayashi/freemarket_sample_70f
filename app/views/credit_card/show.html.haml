@@ -59,8 +59,8 @@
               =@destination.building
               =@destination.house_number
               %br
-              =@user.family_name
-              =@user.first_name
+              =@current_user.family_name
+              =@current_user.first_name
           .buydetails-content__text
             %button.buydetails-content__btn
               = link_to '購入する', purchased_item_path 

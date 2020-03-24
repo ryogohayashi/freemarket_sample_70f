@@ -51,7 +51,6 @@ class CreditCardController < ApplicationController
       customer = Payjp::Customer.retrieve(@credit_card.customer_id)
       @default_card_information = customer.cards.retrieve(@credit_card.card_id)
       @destination = Destination.where(user_id: current_user.id).first
-      @user = current_user
       @item = Item.find(params[:id])
       @image = @item.images.includes(:item)
     end
