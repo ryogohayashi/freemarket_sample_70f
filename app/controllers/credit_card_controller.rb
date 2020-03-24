@@ -1,5 +1,6 @@
 class CreditCardController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_buy, only: [:buy]
   require "payjp"
 
   def index
@@ -39,47 +40,27 @@ class CreditCardController < ApplicationController
     end
   end
 
-  # def show
-  #   @credit_card = CreditCard.where(user_id: current_user.id)
-  #   if @credit_card.blank?
-  #     redirect_to action: "new" 
-  #     flash[:touroku] = '商品の購入には、クレジットカードの登録が必要となります。'
-  #   else
-  #     @credit_card = CreditCard.where(user_id: current_user.id).first
-  #     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-  #     customer = Payjp::Customer.retrieve(@credit_card.customer_id)
-  #     @default_card_information = customer.cards.retrieve(@credit_card.card_id)
-  #     # @customer_card = customer.cards.retrieve(@credit_card.card_id)
-  #     @destination = Destination.where(user_id: current_user.id).first
-  #     @user = current_user
-  #     # @item = Item.where(active: true)
-  #     # @item = Item.find(params[:id])
-  #     # @name = @item.name
-  #     @item = Item.find(params[:id])
-  #     @image = @item.images.includes(:item)
-  #     @condition = Condition.find(@item.condition_id)
-  #     @postage_payer = PostagePayer.find(@item.postage_payer_id)
-  #     # @size = Size.find(@item.size_id)
-  #     @preparation_day = PreparationDay.find(@item.preparation_day_id)
-  #     @category = Category.find(@item.category_id)
-  #     @seller = User.find(@item.seller_id)
-      
-  #   end
-  # end
+  def show
+    @credit_card = CreditCard.where(user_id: current_user.id)
+    if @credit_card.blank?
+      redirect_to action: "new" 
+      flash[:touroku] = '商品の購入には、クレジットカードの登録が必要となります。'
+    else
+      @credit_card = CreditCard.where(user_id: current_user.id).first
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      customer = Payjp::Customer.retrieve(@credit_card.customer_id)
+      @default_card_information = customer.cards.retrieve(@credit_card.card_id)
+      @destination = Destination.where(user_id: current_user.id).first
+      @item = Item.find(params[:id])
+      @image = @item.images.includes(:item)
+    end
+  end
 
-  # def buy
-  #   @user = current_user
-  #   @image = @item.images.includes(:item)
-  #   @creditcard = Creditcard.where(user_id: current_user.id).first
-  #   @address = Address.where(user_id: current_user.id).first
-  #   @item = item.find(params[:id])
-  #   #Payjpの秘密鍵を取得
-  #   Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-  #   #Payjpから顧客情報を取得し、表示
-  #   customer = Payjp::Customer.retrieve(@creditcard.customer_id)
-  #   @creditcard_information = customer.cards.retrieve(@creditcard.card_id)
-
-  # end
+  def buy
+    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+    customer = Payjp::Customer.retrieve(@creditcard.customer_id)
+    @creditcard_information = customer.cards.retrieve(@creditcard.card_id)
+  end
 
 
   def delete #PayjpとCreditCardデータベースを削除
@@ -92,5 +73,15 @@ class CreditCardController < ApplicationController
       @credit_card.delete
     end
       redirect_to action: "new"
+  end
+
+
+  private
+
+  def set_buy
+    @images = @item.images.includes(:item)
+    @credit_card = CreditCard.find_by(user_id: current_user.id)
+    @adress = Address.find_by(user_id: current_user.id)
+    @item = item.find(params[:id])
   end
 end
