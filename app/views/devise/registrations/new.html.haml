@@ -99,15 +99,16 @@
             必須
         .Birthday__box2
           .Birthday__box2__a
-            = f.select :birth_year,["--"], {},{class: "select_year", id:"select_birth_year"}
-            %label
+            %select#year
+              %option{:value => "0"} ----
             年
-            = f.select :birth_month, ["--"], {},{class: "select_month", id:"select_birth_month"}
-            %label
+            %select#month
+              %option{:value => "0"} --
             月
-            = f.select :birth_day, ["--"], {},{class: "select_day", id:"select_birth_day"}
-            %label
+            %select#date
+              %option{:value => "0"} --
             日
+
 
         .Birthday__box3
           ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。

@@ -264,15 +264,15 @@
       }
       &__box2{
         margin-top: 10px;
-        .select_year{
+        select#year{
           width: 20%;
           height: 30px;
         }
-        .select_month{
+        select#month{
           width: 10%;
           height: 30px;
         }
-        .select_day{
+        select#date{
           width: 10%;
           height: 30px;
         }
