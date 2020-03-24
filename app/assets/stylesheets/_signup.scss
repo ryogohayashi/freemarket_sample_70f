@@ -264,33 +264,17 @@
       }
       &__box2{
         margin-top: 10px;
-        display: flex;
-        &__a{
-          display: flex;
-          &__1{
-            &__a5{
-              height: 500px;
-              width: 500px;
-            }
-          }
-          &__year{
-            font-size: 16px;
-            margin-left: 10px;
-          }
+        .select_year{
+          width: 20%;
+          height: 30px;
         }
-        &__b{
-          display: flex;
-          &__month{
-            font-size: 16px;
-            margin-left: 10px;
-          }
+        .select_month{
+          width: 10%;
+          height: 30px;
         }
-        &__c{
-          display: flex;
-          &__day{
-            font-size: 16px;
-            margin-left: 10px;
-          }
+        .select_day{
+          width: 10%;
+          height: 30px;
         }
       }
       &__box3{
