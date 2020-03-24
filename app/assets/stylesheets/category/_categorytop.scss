@@ -8,11 +8,9 @@
   display: block;
   box-shadow:0 2px 2px 0 rgba(0,0,0,0.16);
   &__inner{
-    max-width: 1040px;
-    width: 100%;
-    min-height: 82px;
-    margin: 0px auto;
-    padding: 15px 0 0;
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 10px;
     &__nav{
       font-size: 14px;
       &__left{

@@ -12,27 +12,27 @@
             .kensakubox__icon
               = image_tag "icon-search.png"
         %ul.outcome
-  .topheader__inner__nav
-    .topheader__inner__nav__left
-      .topheader__inner__nav__left__ca
-        = link_to "/categories" do
-          カテゴリー
-        %ul.topheader__inner__nav__left__ca__parents
-          -# = render partial:'categories/ca-header', collection: @parents.roots, as: "parent"
-          -# = link_to "カテゴリー一覧から探す", "/categories", class:"allcate"
-          
-      %li.boardleft__item
-        = link_to url="#" do 
-          ブランド
-          %ul.branddiplaynote
-      %ul.boardright
-        - if user_signed_in?
-          %li.boardright__item--first
-            -# = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
-          %li.boardright__item
-            = link_to "マイページ", "/users/#{current_user.id}", method: :get
-        - else
-          %li.boardright__item--first
-            = link_to "新規登録", new_user_registration_path
-          %li.boardright__item
-            = link_to "ログイン", new_user_session_path
+    .topheader__inner__nav
+      .topheader__inner__nav__left
+        .topheader__inner__nav__left__ca
+          = link_to "/categories" do
+            カテゴリー
+          %ul.topheader__inner__nav__left__ca__parents
+            -# = render partial:'categories/ca-header', collection: @parents.roots, as: "parent"
+            -# = link_to "カテゴリー一覧から探す", "/categories", class:"allcate"
+            
+        %li.boardleft__item
+          = link_to url="#" do 
+            ブランド
+            %ul.branddiplaynote
+        %ul.boardright
+          - if user_signed_in?
+            %li.boardright__item--first
+              -# = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
+            %li.boardright__item
+              = link_to "マイページ", "/users/#{current_user.id}", method: :get
+          - else
+            %li.boardright__item--first
+              = link_to "新規登録", new_user_registration_path
+            %li.boardright__item
+              = link_to "ログイン", new_user_session_path
