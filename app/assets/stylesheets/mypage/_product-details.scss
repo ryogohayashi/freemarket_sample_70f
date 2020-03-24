@@ -252,6 +252,7 @@
       margin: 20px auto 5px;
       a{
         color: #fff;
+        text-decoration: none;
       }
     }
     &__delete{
@@ -265,6 +266,7 @@
       margin: 20px auto 5px;
       a{
         color: #fff;
+        text-decoration: none;
       }
     }
   }
@@ -285,6 +287,7 @@
       margin: 20px auto 5px;
       a{
         color: #fff;
+        text-decoration: none;
       }
     }
   }
@@ -293,9 +296,10 @@
 a{
   text-decoration: none;
 }
-btn.ccc{
+btn{
   a{
     color: #fff;
+    text-decoration: none;
   }
 }
 
