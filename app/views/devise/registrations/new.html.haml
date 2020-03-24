@@ -99,20 +99,16 @@
             必須
         .Birthday__box2
           .Birthday__box2__a
-            .Birthday__box2__a__1
-              = f.text_field :birth_year, size:8, maxlength:4
-            .Birthday__box2__a__year
-              = f.label :birth_year,"年"
-          .Birthday__box2__b
-            .Birthday__box2__b__2
-              = f.text_field :birth_month, size:7, maxlength:2
-            .Birthday__box2__b__month
-              = f.label :birth_month,"月"
-          .Birthday__box2__c
-            .Birthday__box2__c__3
-              = f.text_field :birth_day, size:7, maxlength:2
-            .Birthday__box2__c__day
-              = f.label :birth_day,"日"
+            = f.select :birth_year,["--"], {},{class: "select_year", id:"select_birth_year"}
+            %label
+            年
+            = f.select :birth_month, ["--"], {},{class: "select_month", id:"select_birth_month"}
+            %label
+            月
+            = f.select :birth_day, ["--"], {},{class: "select_day", id:"select_birth_day"}
+            %label
+            日
+
         .Birthday__box3
           ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
 
