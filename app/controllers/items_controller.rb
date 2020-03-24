@@ -48,28 +48,25 @@ class ItemsController < ApplicationController
   end
 
 
+  def purchase
+    @item_buyer= Item.find(params[:id])
+    @item_buyer.update(buyer_id: current_user.id)
+    redirect_to purchased_item_path
+  end
 
-
-  # def purchase
-  #   #クレジットカードと製品の変数を設定
-  #   @credit_card = CreditCard.where(user_id: current_user.id).first
-  #   @item = Item.find(params[:id])
-  #   #Payjpの秘密鍵を取得
-  #   Payjp.api_key= ENV["PAYJP_PRIVATE_KEY"]
-  #   #payjp経由で支払いを実行
-  #   charge = Payjp::Charge.create(
-  #     amount: @item.price,
-  #     customer: Payjp::Customer.retrieve(@credit_card.customer_id),
-  #     currency: 'jpy'
-  #   )
-  #   redirect_to purchased_item_path
-  # end
-
-  # def purchased
-  #   @item_buyer= Item.find(params[:id])
-  #   @item_buyer.update(buyer_id: current_user.id)
-  #   redirect_to root_path
-  # end
+  def purchased
+    @credit_card = CreditCard.where(user_id: current_user.id).first
+    @item = Item.find(params[:id])
+    Payjp.api_key= ENV["PAYJP_PRIVATE_KEY"]
+    charge = Payjp::Charge.create(
+      amount: @item.price,
+      customer: Payjp::Customer.retrieve(@credit_card.customer_id),
+      currency: 'jpy'
+    )
+    @item_buyer= Item.find(params[:id])
+    @item_buyer.update(buyer_id: current_user.id)
+    redirect_to root_path
+  end
 
   def destroy
       if @item.destroy

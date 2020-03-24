@@ -1,108 +1,108 @@
--# .user-register
--#   .header
--#     .header__logo
--#       = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
--#   .buydetails-mein.clearfix
--#     = form_with model:@item, url:purchased_item_path, method: :get,local:true do |f|
--#       %section.buydetails-content
--#         %h2.buydetails-content__head 購入内容の確認
--#         .buy-content__inner
--#           .buy-item__box
--#             %h3.buy-item__box__main__image
--#               = image_tag @image[0].image.url
--#             .buy-item__detail
--#               %p.buy-item__name
--#                 = @item.name
--#               %p.buy-item__price 
--#                 %span 
--#                   ¥
--#                   = @item.price.to_s(:currency)
--#                   （税込）
--#                 %span.buy-item__send 送料込み
--#         %section.buy-content-item
--#           .buy-content__inner
--#             .buy-form
--#               %ul.buy-price__table
--#                 %li.buy-price
--#                   .buy-price__label 支払い金額
--#                   .buy-price__label__sell
--#                     %span.deta-by-pay 
--#                       ¥
--#                       = @item.price.to_s(:delimited)
--#         %section.buydetails-content__info{ id: 'buydetails-bottom' }
--#           .buydetails-content__inner
--#             .buydetails-content__title
--#               %h4 支払方法
--#               %h4.changecredit 
--#                 = link_to '変更する', new_user_credit_card_path
--#             %h3.signup-main__chapter-sub-head
--#               クレジットカード
--#               %br  
--#               = "**** **** **** " + @default_card_information.last4
--#               %br
--#               有効期限 :  
--#               - exp_month = @default_card_information.exp_month.to_s
--#               - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
--#               = exp_month + " / " + exp_year
--#         %section.buydetails-content__info
--#           .buydetails-content__inner
--#             .buydetails-content__title
--#               %h3 配送先
--#               %h4.changecredit 
--#                 = link_to '変更する', new_user_credit_card_path
--#             %destination.buy-user-info-text
--#               =@destination.post_code
--#               %br
--#               =@destination.prefecture_code
--#               %br
--#               =@destination.city
--#               =@destination.building
--#               =@destination.house_number
--#               %br
--#               =@user.family_name
--#               =@user.first_name
--#           .buydetails-content__text
--#             %button.buydetails-content__btn
--#               = link_to '購入する', purchased_item_path 
--# .footer
--#   %ul.nakamis
--#     %li.nakami
--#       %h2.nakami__head FURIMAについて
--#       %ul
--#         %li<
--#           = link_to url="#" do
--#             会社概要(運営会社)
--#         %li<
--#           = link_to url="#" do
--#             プライバシーポリシー
--#         %li<
--#           = link_to url="#" do
--#             FURIMA利用規約
--#         %li<
--#           = link_to url="#" do
--#             ポイントに関する特約
--#     %li.nakami
--#       %h2.nakami__head FURIMAを見る
--#       %ul
--#         %li<
--#           = link_to url="#" do 
--#             カテゴリー一覧
--#         %li<
--#           = link_to url="#" do 
--#             ブランド一覧
--#     %li.nakami
--#       %h2.nakami__head ヘルプ&ガイド
--#       %ul
--#         %li<
--#           = link_to url="#" do 
--#             FURIMAガイド
--#         %li<
--#           = link_to url="#" do 
--#             FURIMAロゴ利用ガイドライン
--#         %li<
--#           = link_to url="#" do 
--#             お知らせ
--#   .footer__lg
--#     = link_to url="#" do
--#       = image_tag "logo-white.png"
--#     %p ©︎FURIMA
+.user-register
+  .header
+    .header__logo
+      = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
+  .buydetails-mein.clearfix
+    = form_with model:@item, url:purchased_item_path, method: :get,local:true do |f|
+      %section.buydetails-content
+        %h2.buydetails-content__head 購入内容の確認
+        .buy-content__inner
+          .buy-item__box
+            %h3.buy-item__box__main__image
+              = image_tag @image[0].image.url
+            .buy-item__detail
+              %p.buy-item__name
+                = @item.name
+              %p.buy-item__price 
+                %span 
+                  ¥
+                  = @item.price.to_s(:currency)
+                  （税込）
+                %span.buy-item__send 送料込み
+        %section.buy-content-item
+          .buy-content__inner
+            .buy-form
+              %ul.buy-price__table
+                %li.buy-price
+                  .buy-price__label 支払い金額
+                  .buy-price__label__sell
+                    %span.deta-by-pay 
+                      ¥
+                      = @item.price.to_s(:delimited)
+        %section.buydetails-content__info{ id: 'buydetails-bottom' }
+          .buydetails-content__inner
+            .buydetails-content__title
+              %h4 支払方法
+              %h4.changecredit 
+                = link_to '変更する', new_user_credit_card_path
+            %h3.signup-main__chapter-sub-head
+              クレジットカード
+              %br  
+              = "**** **** **** " + @default_card_information.last4
+              %br
+              有効期限 :  
+              - exp_month = @default_card_information.exp_month.to_s
+              - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+              = exp_month + " / " + exp_year
+        %section.buydetails-content__info
+          .buydetails-content__inner
+            .buydetails-content__title
+              %h3 配送先
+              %h4.changecredit 
+                = link_to '変更する', new_user_credit_card_path
+            %destination.buy-user-info-text
+              =@destination.post_code
+              %br
+              =@destination.prefecture_code
+              %br
+              =@destination.city
+              =@destination.building
+              =@destination.house_number
+              %br
+              =@user.family_name
+              =@user.first_name
+          .buydetails-content__text
+            %button.buydetails-content__btn
+              = link_to '購入する', purchased_item_path 
+.footer
+  %ul.nakamis
+    %li.nakami
+      %h2.nakami__head FURIMAについて
+      %ul
+        %li<
+          = link_to url="#" do
+            会社概要(運営会社)
+        %li<
+          = link_to url="#" do
+            プライバシーポリシー
+        %li<
+          = link_to url="#" do
+            FURIMA利用規約
+        %li<
+          = link_to url="#" do
+            ポイントに関する特約
+    %li.nakami
+      %h2.nakami__head FURIMAを見る
+      %ul
+        %li<
+          = link_to url="#" do 
+            カテゴリー一覧
+        %li<
+          = link_to url="#" do 
+            ブランド一覧
+    %li.nakami
+      %h2.nakami__head ヘルプ&ガイド
+      %ul
+        %li<
+          = link_to url="#" do 
+            FURIMAガイド
+        %li<
+          = link_to url="#" do 
+            FURIMAロゴ利用ガイドライン
+        %li<
+          = link_to url="#" do 
+            お知らせ
+  .footer__lg
+    = link_to url="#" do
+      = image_tag "logo-white.png"
+    %p ©︎FURIMA
