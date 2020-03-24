@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy]
+  before_action :set_purchased, only: [:purchased]
 
   def new
     @item = Item.new
@@ -49,8 +50,6 @@ class ItemsController < ApplicationController
 
 
   def purchased
-    @credit_card = CreditCard.find_by(user_id: current_user.id)
-    @item = Item.find(params[:id])
     Payjp.api_key= ENV["PAYJP_PRIVATE_KEY"]
     charge = Payjp::Charge.create(
       amount: @item.price,
@@ -77,6 +76,11 @@ class ItemsController < ApplicationController
   end
 
   def set_item
+    @item = Item.find(params[:id])
+  end
+
+  def set_purchased
+    @credit_card = CreditCard.find_by(user_id: current_user.id)
     @item = Item.find(params[:id])
   end
 end

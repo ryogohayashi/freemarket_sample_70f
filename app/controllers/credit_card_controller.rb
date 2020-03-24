@@ -1,5 +1,6 @@
 class CreditCardController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_buy, only: [:buy]
   require "payjp"
 
   def index
@@ -63,11 +64,6 @@ class CreditCardController < ApplicationController
   end
 
   def buy
-    @user = current_user
-    @image = @item.images.includes(:item)
-    @creditcard = Creditcard.where(user_id: current_user.id).first
-    @address = Address.where(user_id: current_user.id).first
-    @item = item.find(params[:id])
     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     customer = Payjp::Customer.retrieve(@creditcard.customer_id)
     @creditcard_information = customer.cards.retrieve(@creditcard.card_id)
@@ -84,5 +80,15 @@ class CreditCardController < ApplicationController
       @credit_card.delete
     end
       redirect_to action: "new"
+  end
+
+
+  private
+
+  def set_buy
+    @images = @item.images.includes(:item)
+    @credit_card = CreditCard.find_by(user_id: current_user.id)
+    @adress = Address.find_by(user_id: current_user.id)
+    @item = item.find(params[:id])
   end
 end
