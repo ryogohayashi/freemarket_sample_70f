@@ -48,12 +48,6 @@ class ItemsController < ApplicationController
   end
 
 
-  def purchase
-    @item_buyer= Item.find(params[:id])
-    @item_buyer.update(buyer_id: current_user.id)
-    redirect_to purchased_item_path
-  end
-
   def purchased
     @credit_card = CreditCard.find_by(user_id: current_user.id)
     @item = Item.find(params[:id])
@@ -63,8 +57,8 @@ class ItemsController < ApplicationController
       customer: Payjp::Customer.retrieve(@credit_card.customer_id),
       currency: 'jpy'
     )
-    @item_buyer= Item.find(params[:id])
-    @item_buyer.update(buyer_id: current_user.id)
+    @buyer_id= Item.find(params[:id])
+    @buyer_id.update(buyer_id: current_user.id)
     redirect_to root_path
   end
 
