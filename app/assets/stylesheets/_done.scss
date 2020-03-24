@@ -31,9 +31,22 @@
       font-size: 20px;
       margin: 0 auto;
       padding: 5px;
+      text-align: center;
+      a{
+        color: white;
+        text-decoration: none;
+
+      }
     }
     .az{
-      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      img{
+        // margin-top: 30px;
+        width: 400px;
+        height: 298px;
+        padding: 20px;
+      }
     }
   }
 
