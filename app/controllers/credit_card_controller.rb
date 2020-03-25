@@ -10,6 +10,21 @@ class CreditCardController < ApplicationController
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       customer = Payjp::Customer.retrieve(@credit_card.customer_id)
       @default_card_information = customer.cards.retrieve(@credit_card.card_id)
+      @card_brand = @default_card_information.brand 
+      case @card_brand
+        when "Visa"
+          @card_src = "visa.png"
+        when "JCB"
+          @card_src = "jcb.png"
+        when "MasterCard"
+          @card_src = "master.png"
+        when "American Express"
+          @card_src = "american.png"
+        when "Diners Club"
+          @card_src = "diners.png"
+        when "Discover"
+          @card_src = "discover.png"
+      end
     else
       redirect_to action: "new" 
     end
@@ -53,6 +68,21 @@ class CreditCardController < ApplicationController
       @destination = Destination.where(user_id: current_user.id).first
       @item = Item.find(params[:id])
       @image = @item.images.includes(:item)
+      @card_brand = @default_card_information.brand 
+      case @card_brand
+        when "Visa"
+          @card_src = "visa.png"
+        when "JCB"
+          @card_src = "jcb.png"
+        when "MasterCard"
+          @card_src = "master.png"
+        when "American Express"
+          @card_src = "american.png"
+        when "Diners Club"
+          @card_src = "diners.png"
+        when "Discover"
+          @card_src = "discover.png"
+      end
     end
   end
 

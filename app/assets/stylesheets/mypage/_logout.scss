@@ -42,6 +42,9 @@
   &__content {
     max-width: 320px;
     margin: 0 auto;
+    a{
+      text-decoration: none;
+    }
     p{
       margin-top: 8px;
       line-height: 1.5;
@@ -339,5 +342,25 @@
       color: #fff;
       line-height: 40px;
     }
+  }
+}
+
+.creditcardimage{
+  font: 66.66667% sans-serif;
+  cursor: auto;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  color: rgb(51, 51, 51);
+  list-style: none;
+  box-sizing: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-style: solid;
+  border-width: 0;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  img{
+    width: 49px;
+    height: 15px;
   }
 }

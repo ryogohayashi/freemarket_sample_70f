@@ -13,6 +13,8 @@
             .signup-main__content
               %h3.signup-main__chapter-sub-head
                 登録クレジットカード情報
+                .creditcardimage
+                  =image_tag @card_src
                 %br
                 = "**** **** **** " + @default_card_information.last4
                 %br
