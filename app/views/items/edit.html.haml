@@ -3,11 +3,9 @@
     = image_tag asset_path("logo.png"), size: "200x50", alt: "test"
   .main
     %section.main__block
-    = form_with model:@item, url:items_path , local:true do |f|
-      - if flash[:error].present?
-        %ul.errors
-          - flash[:error].each do |e|
-            %li= e
+    = form_with model:@item, local:true do |f|
+      .touroku
+        = flash[:edit]
       .sell__block__form
         .sell__block__form__upload
           %h3.sell__block__form__upload__head
@@ -17,18 +15,25 @@
               最大5枚までアップロードできます
           .post__drop__box__container
             .prev-content
+              - @item.images.each do |image|
+                .preview-box
+                  .upper-box
+                    = image_tag image.image.url, width: "112", height: "112", alt: "preview"
+                  .lower-box
+                    .delete-box
+                      .delete-btn
+                        %span 削除
+
             .label-content
-              %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
+              = f.label :"images_attributes_#{@item.images.length}_image", class: "label-box", id: "label-box--#{@item.images.length}" do
                 %pre.label-box__text-visible クリックしてファイルをアップロード
             .hidden-content
               = f.fields_for :images do |i|
                 = i.file_field :image, class: "hidden-field"
-                %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
-                %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
-                %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
-                %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
+                = i.check_box:_destroy, class: "hidden-checkbox"
+              - @item.images.length.upto(4) do |i|
+                %input{name: "item[images_attributes][#{i}][image]", id: "item_images_attributes_#{i}_image", class:"hidden-field", type:"file"}
       .border
-      
       .details
         .details__title2
           .details__title2__mozi2
@@ -56,7 +61,11 @@
           .product-details__categories__hissu4
             必須
         .product-details__categories-input
-          = f.select :category, Category.where(ancestry: nil).pluck(:name), {prompt:'---'}, {class: 'product-details__categories-input--select', id: 'parent_category'}
+          = f.select :parent_name, @category_parent_array, {selected:@item.category.parent.parent.name}, { class: 'product-details__categories-input--select', id: 'parent_category'}
+        .product-details__categories-input#children_wrapper
+          = f.select :child_id, options_for_select(@category_children_array.map{|b| [b.name, b.id, {data:{category: b.id}}]}, {prompt: "指定なし", selected: @item.category.parent.id}),{}, {class: 'product-details__categories-input--select', id: 'child_category'}
+        .product-details__categories-input#grandchildren_wrapper
+          = f.select :category_id, options_for_select(@category_grandchildren_array.map{|b| [b.name, b.id, {data:{category: b.id}}]}, {prompt: "指定なし", selected: @item.category.id}),{}, {class: 'product-details__categories-input--select', id: 'grandchild_category'}
         .product-details__brand
           .product-details__brand__mozi6
             ブランド

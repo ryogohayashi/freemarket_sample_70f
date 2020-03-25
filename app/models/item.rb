@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :images, dependent: :destroy
-  belongs_to :category
+  belongs_to :category, optional: true
   # 追加実装の為コメントアウト
   belongs_to :brand, optional: true
   belongs_to_active_hash :condition
@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   belongs_to :seller, class_name: "User"
   # belongs_to :buyer, class_name: "User"
 
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :images, allow_destroy: true
 
   validates :images, presence: { message: 'は投稿してください。'}
   validates :name, presence: { message: 'は入力してください。'}

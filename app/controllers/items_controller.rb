@@ -1,11 +1,10 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
   before_action :set_purchased, only: [:purchased]
 
   def new
     @item = Item.new
     @item.images.new
-    @category = Category.all.order("id ASC").limit(13)
     @category_parent_array = Category.where(ancestry: nil).pluck(:name)
   end
 
@@ -48,7 +47,6 @@ class ItemsController < ApplicationController
     @seller = User.find(@item.seller_id)
   end
 
-
   def purchased
     Payjp.api_key= ENV["PAYJP_PRIVATE_KEY"]
     charge = Payjp::Charge.create(
@@ -69,10 +67,34 @@ class ItemsController < ApplicationController
       end
   end
 
+  def edit
+    grandchild_category = @item.category
+    child_category = grandchild_category.parent
+
+    @category_parent_array = Category.where(ancestry: nil).pluck(:name)
+
+    @category_children_array = Category.where(ancestry: child_category.ancestry)
+
+    @category_grandchildren_array = Category.where(ancestry: grandchild_category.ancestry)
+  end
+
+  def update
+    if @item.update(item_update_params)
+      redirect_to item_path(@item)
+    else
+      flash[:edit] = "編集に失敗しました。必須項目は必要となりますので、ご注意ください。"
+      redirect_to edit_item_path(@item)
+    end
+  end
+
 
   private
   def item_params
-    params.require(:item).permit(:name, :introduction, :price, :condition_id, :postage_payer_id, :prefecture_code, :size_id, :preparation_day_id, :buyer_id ,:category_id, :brand_id, [images_attributes: [:image, :item_id, :created_at, :update_at]]).merge(user_id: current_user.id, seller_id: current_user.id)
+    params.require(:item).permit(:name, :introduction, :price, :condition_id, :postage_payer_id, :prefecture_code, :size_id, :preparation_day_id, :buyer_id ,:category_id, :brand_id, images_attributes: [:item_id, :id, :image]).merge(user_id: current_user.id, seller_id: current_user.id)
+  end
+
+  def item_update_params
+    params.require(:item).permit(:name, :introduction, :price, :condition_id, :postage_payer_id, :prefecture_code, :size_id, :preparation_day_id, :buyer_id ,:category_id,  :brand_id, images_attributes: [:_destroy, :item_id, :id, :image]).merge(user_id: current_user.id, seller_id: current_user.id)
   end
 
   def set_item
@@ -83,4 +105,5 @@ class ItemsController < ApplicationController
     @credit_card = CreditCard.find_by(user_id: current_user.id)
     @item = Item.find(params[:id])
   end
+
 end
