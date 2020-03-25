@@ -264,39 +264,43 @@
       }
       &__box2{
         margin-top: 10px;
-        .select_year{
-          width: 20%;
-          height: 30px;
+        // 生年月日入力バージョン
+        display: flex;
+        &__a{
+          display: flex;
+          &__1po{
+            margin-right: 3px;
+          }
+          &__year{
+            margin-right: 5px;
+          }
         }
-        .select_month{
-          width: 10%;
-          height: 30px;
+        &__b{
+          display: flex;
+          &__2po{
+            margin-right: 3px;
+          }
+          &__month{
+            margin-right: 5px;
+          }
         }
-        .select_day{
-          width: 10%;
-          height: 30px;
+        &__c{
+          display: flex;
+          &__3po{
+            margin-right: 3px;
+          }
         }
-        // display: flex;
-        // &__a{
-        //   display: flex;
-        // }
-        // &__b{
-        //   display: flex;
-        // }
-        // &__c{
-        //   display: flex;
-        // }
 
-        // select#year{
+        // select#birth_year{
         //   width: 20%;
         //   height: 30px;
         // }
-        // select#month{
-        //   width: 10%;
+        // select#birth_month{
+        //   width: 13%;
         //   height: 30px;
         // }
-        // select#date{
-        //   width: 10%;
+        // select#birth_day{
+        //   width: 13%;
         //   height: 30px;
         // }
       }
