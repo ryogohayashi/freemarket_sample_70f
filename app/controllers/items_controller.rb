@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy, :edit, :update]
+  before_action :set_purchased, only: [:purchased]
 
   def new
     @item = Item.new
@@ -46,23 +47,16 @@ class ItemsController < ApplicationController
     @seller = User.find(@item.seller_id)
   end
 
-
-
-  def purchase
-    #クレジットカードと製品の変数を設定
-    @credit_card = CreditCard.where(user_id: current_user.id).first
-    @item = Item.find(params[:id])
-    #Payjpの秘密鍵を取得
+  def purchased
     Payjp.api_key= ENV["PAYJP_PRIVATE_KEY"]
-    #payjp経由で支払いを実行
     charge = Payjp::Charge.create(
       amount: @item.price,
       customer: Payjp::Customer.retrieve(@credit_card.customer_id),
       currency: 'jpy'
     )
-    @item_buyer= Item.find(params[:id])
-    @item_buyer.update(buyer_id: current_user.id)
-    redirect_to purchased_item_path
+    @buyer_id= Item.find(params[:id])
+    @buyer_id.update(buyer_id: current_user.id)
+    redirect_to root_path
   end
 
   def destroy
@@ -106,4 +100,10 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+
+  def set_purchased
+    @credit_card = CreditCard.find_by(user_id: current_user.id)
+    @item = Item.find(params[:id])
+  end
+
 end
