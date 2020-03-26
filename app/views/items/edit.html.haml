@@ -121,18 +121,22 @@
           .price__selling-price__circle
             ￥
           .price__selling-price__price-input
-            = f.text_field :price, placeholder:"                                     0",size:23
+            -# = f.text_field :price, placeholder:"                                     0",size:23
+            %input#price_calc.price-pulldown-blue{placeholder: "例) 300", type: "number", size:23}/
+            = f.number_field :price, style: "display: none", id: "price"
         .price__commission
           .price__commission__mozi14
             販売手数料（10%）
           .price__commission__display
-            ー
+            = f.number_field :commission, style: "display: none", id: "commission"
+            .right_bar
         .price__border
         .price__profit
           .price__profit__mozi15
             販売利益
           .price__profit__display2
-            ー
+            = f.number_field :profit, style: "display: none", id: "profit"
+            .right_bar_2
         .price__red-mozi
           %input#submit_button5{:name => "submit", :type => "submit", :value => "出品する"}/
         -# 追加実装のためコメントアウト
