@@ -8,7 +8,11 @@
         会員情報入力
 
     = form_for(@user, url: user_registration_path) do |f|
-      = render "devise/shared/error_messages", resource: @user
+      -# = render "devise/shared/error_messages", resource: @user
+      -# - if @user.errors.any?
+      -#   %ul
+      -#     - @user.errors.full_messages.each do |message|
+      -#       %li= message
 
       .name-information
         .name-information__item
@@ -16,6 +20,9 @@
             = f.label :nickname,"ニックネーム"
           .name-information__item__required
             必須
+        - @user.errors.full_messages_for(:nickname).each do |message|
+          .errormessage007
+            = message
         .name-information__name
           = f.text_field :nickname,size:26
       .email
@@ -24,6 +31,9 @@
             = f.label :email,"メールアドレス"
           .email__information__required
             必須
+        - @user.errors.full_messages_for(:email).each do |message|
+          .errormessage007
+            = message
         .email__information
           = f.email_field :email, autofocus: true, autocomplete: "email",size:26
 
@@ -36,6 +46,9 @@
               (#{@minimum_password_length} 文字以上必要です)
           .password__item__required
             必須
+        - @user.errors.full_messages_for(:password).each do |message|
+          .errormessage008
+            = message
         .password__input
         .password__description
           = f.password_field :password, autocomplete: "new-password", size:26
@@ -46,6 +59,9 @@
             = f.label :password_confirmation,"確認用パスワード "
           .re-enter__item__repuired
             必須
+        - @user.errors.full_messages_for(:password_confirmation).each do |message|
+          .errormessage008
+            = message
         .re-enter__itempass
           = f.password_field :password_confirmation, autocomplete: "new-password",size:26
 
@@ -62,6 +78,9 @@
               = f.label :family_name,"お名前（姓）"
             .Identification-name__box__mozi__tt
               必須
+          - @user.errors.full_messages_for(:family_name).each do |message|
+            .errormessage009
+              = message
           .Identification-name__box__nameinput
             = f.text_field :family_name, size:15
         .Identification-name__boxs
@@ -70,6 +89,9 @@
               = f.label :first_name,"お名前（名）"
             .Identification-name__boxs__a1__mm
               必須
+          - @user.errors.full_messages_for(:first_name).each do |message|
+            .errormessage009
+              = message
           .Identification-name__boxs__a2
             = f.text_field :first_name, size:15
 
@@ -80,6 +102,9 @@
               = f.label :family_name_kana,"お名前（セイ）"
             .Identification-name-kana__box__mozi__pen
               必須
+          - @user.errors.full_messages_for(:family_name_kana).each do |message|
+            .errormessage009
+              = message
           .Identification-name-kana__box__hissu
             = f.text_field :family_name_kana, size:15
         .Identification-name-kana__boxs
@@ -88,6 +113,9 @@
               = f.label :first_name_kana,"お名前（メイ）"
             .Identification-name-kana__boxs__b1__ice
               必須
+          - @user.errors.full_messages_for(:first_name_kana).each do |message|
+            .errormessage009
+              = message
           .Identification-name-kana__boxs__b2
             = f.text_field :first_name_kana, size:15
 
@@ -97,6 +125,15 @@
             生年月日
           .Birthday__box1__hissu
             必須
+        - @user.errors.full_messages_for(:birth_year).each do |message|
+          .errormessage009
+            = message
+        - @user.errors.full_messages_for(:birth_month).each do |message|
+          .errormessage009
+            = message
+        - @user.errors.full_messages_for(:birth_day).each do |message|
+          .errormessage009
+            = message
         .Birthday__box2
           .Birthday__box2__a
             -# %label{:for => "birth"}

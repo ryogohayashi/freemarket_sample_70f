@@ -47,13 +47,15 @@
 
     .opi
       = form_for @destination do |f|
-        = render "devise/shared/error_messages", resource: @destination
         .postal-code
           .postal-code__a
             .postal-code__a__a1
               = f.label :post_code,"郵便番号"
             .postal-code__a__a2
               必須
+          - @destination.errors.full_messages_for(:post_code).each do |message|
+            .errormessage007
+              = message
           .postal-code__b
             = f.text_field :post_code,size:37, maxlength:7
 
@@ -63,6 +65,9 @@
               = f.label :prefecture_code_name,"都道府県"
             .prefectures__c__c2
               必須
+          - @destination.errors.full_messages_for(:prefecture_code).each do |message|
+            .errormessage007
+              = message
           .prefectures__d
             = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, {prompt:'--'}, {class: "shipping__area-input-1"}
 
@@ -72,6 +77,9 @@
               = f.label :city,"市区町村"
             .municipality__e__e2
               必須
+          - @destination.errors.full_messages_for(:city).each do |message|
+            .errormessage007
+              = message
           .municipality__f
             = f.text_field :city,size:37
 
@@ -81,6 +89,9 @@
               = f.label :house_number,"番地"
             .address__g__g2
               必須
+          - @destination.errors.full_messages_for(:house_number).each do |message|
+            .errormessage007
+              = message
           .address__h
             = f.text_field :house_number,size:37
 
