@@ -1,4 +1,9 @@
-# freemarket_sample_70f
+# はじめに
+未経験からエンジニアを目指しております。
+チームで開発を行いました。お手数ですが、ご覧頂けますと幸いです。
+
+# FURIMA(フリーマーケットアプリとなります。)
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -56,7 +61,6 @@
 |brand_id|inteder|null: false, foreign_key: ture|
 |condition_id|integer|null: false, foreign_key: ture|
 |postage_payer_id|integer|null: false, foreign_key: true|
-<!-- |postage_type_id|integer|null: false, foreign_key: true| -->
 |prefecture_code|integer| null: false|
 |preparation_day_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
@@ -64,7 +68,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |seller_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|foreign_key: true) 
-<!-- |deal_closed_date|timestamp|| -->
+
 
 
 ### Association
@@ -73,7 +77,6 @@
 - belongs_to :brand
 - belongs_to :active_hash :condition
 - belongs_to :active_hash :postage_payer
-<!-- - belongs_to :active_hash :postage_type -->
 - belongs_to :active_hash :preparation_day
 - belongs_to :seller, class_name: "User"
 - belongs_to :buyer, class_name: "User"
@@ -139,8 +142,8 @@
 ### Association
 - has_many :items
 
-## S3画像アップロード・条件分岐の現状
-⇨https://master.tech-camp.in/curriculums/3967
- 進捗は上記のカリキュラムの「正しくアップロードできるか確認しよう」の前までは一応完了
-⇨https://qiita.com/15grmr/items/71859caea0414f2e245d
- 上記は参考記事
+### さいごに
+ご覧頂きありがとうございました。
+ご助言等頂けますと幸いです。
+
+
