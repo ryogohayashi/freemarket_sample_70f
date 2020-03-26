@@ -19,19 +19,12 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    # unless @item.save
-    #   flash[:alert] = @item.errors.full_messages
-    #   flash[:data] = Item.new(item_params)
-    #   render :new
-      # redirect_to new_user_item_path(current_user)
     if @item.save
       redirect_to :root
     else
       @category = Category.all.order("id ASC").limit(13)
       @category_parent_array = Category.where(ancestry: nil).pluck(:name)
       @item.images.new
-      # render :new
-      # render action: :new
       redirect_to new_item_path(current_user), flash: { error: @item.errors.full_messages }
     end
   end

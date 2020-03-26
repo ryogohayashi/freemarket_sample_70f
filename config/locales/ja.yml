@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       destination: 送付先住所
+      item: 商品
     attributes:
       user:
         nickname: ニックネーム
@@ -23,4 +24,15 @@ ja:
         house_number: 番地
         building: 建物名
         phone_number: 電話
+      item:
+        images: 出品画像
+        name: 商品名
+        introduction: 商品の説明
+        category_id: カテゴリー
+        condition: 商品の状態
+        postage_payer: 配送料の負担
+        prefecture_code: 発送元の地域
+        preparation_day: 発送までの日数
+        price: 販売価格
+
         
