@@ -163,6 +163,9 @@
     &__title{
       display: flex;
       justify-content: space-between;
+      a{
+        text-decoration: none;
+      }
     }
     &__item-name{
       width: calc(100% - 80px);
