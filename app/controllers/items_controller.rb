@@ -25,7 +25,16 @@ class ItemsController < ApplicationController
       @category = Category.all.order("id ASC").limit(13)
       @category_parent_array = Category.where(ancestry: nil).pluck(:name)
       @item.images.new
-      redirect_to new_item_path(current_user), flash: { error: @item.errors.full_messages }
+      flash[:a] = @item.errors.full_messages_for(:images)
+      flash[:b] = @item.errors.full_messages_for(:name)
+      flash[:c] = @item.errors.full_messages_for(:introduction)
+      flash[:d] = @item.errors.full_messages_for(:category_id)
+      flash[:e] = @item.errors.full_messages_for(:condition)
+      flash[:f] = @item.errors.full_messages_for(:postage_payer)
+      flash[:g] = @item.errors.full_messages_for(:prefecture_code)
+      flash[:h] = @item.errors.full_messages_for(:preparation_day)
+      flash[:i] = @item.errors.full_messages_for(:price)
+      redirect_to new_item_path(current_user)
     end
   end
 
