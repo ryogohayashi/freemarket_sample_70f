@@ -89,6 +89,11 @@
       padding: 24px 12.5% 0;
       border-top: 1px solid #f5f5f5;
     }
+    &__btn{
+      a{
+        text-decoration: none;
+      }
+    }
     &__inner{
       max-width: 343px;
       margin: 0 auto;
