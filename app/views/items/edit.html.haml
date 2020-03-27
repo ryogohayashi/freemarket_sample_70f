@@ -115,15 +115,21 @@
           価格（¥300〜9,999,999）
         .price__selling-price
           .price__selling-price__mozi13
-            販売価格
-          .price__selling-price__hissu9
-            必須
+            現在の販売価格
           .price__selling-price__circle
             ￥
           .price__selling-price__price-input
-            -# = f.text_field :price, placeholder:"                                     0",size:23
-            %input#price_calc.price-pulldown-blue{placeholder: "例) 300", type: "number", size:23}/
-            = f.number_field :price, style: "display: none", id: "price"
+            = f.text_field :price, placeholder:"                                     0",size:23, readonly: true
+        .price__selling-price
+          .price__selling-price__mozi13
+            変更価格
+          .price__selling-price__up2u
+            任意
+          .price__selling-price__circle
+            ￥
+          .price__selling-price__price-input
+            %input#price_calc.price-pulldown-blue{placeholder: "例) 300", size:23}
+            = f.number_field :price, style: "display: none", id: "price"    
         .price__commission
           .price__commission__mozi14
             販売手数料（10%）
@@ -138,7 +144,7 @@
             = f.number_field :profit, style: "display: none", id: "profit"
             .right_bar_2
         .price__red-mozi
-          %input#submit_button5{:name => "submit", :type => "submit", :value => "出品する"}/
+          %input#submit_button5{:name => "submit", :type => "submit", :value => "編集する"}/
         -# 追加実装のためコメントアウト
         -# .price__return
         -#   = f.submit "もどる"

@@ -11,9 +11,9 @@
             %span.require 必須
             .kai
               最大5枚までアップロードできます
-          - if flash[:error].present?
+          - if flash[:a].present?
             .errormessage008
-              = flash[:error][0]
+              = flash[:a][0]
           .post__drop__box__container
             .prev-content
             .label-content
@@ -34,9 +34,9 @@
             商品名
           .details__title2__hissu2
             必須
-        - if flash[:error].present?
+        - if flash[:b].present?
           .errormessage007
-            = flash[:error][1]
+            = flash[:b][0]
         .details__type
           = f.text_field :name, placeholder:"商品名（必須 40文字まで)",size:67,maxlength:40
         .details__description
@@ -44,9 +44,9 @@
             商品の説明
           .details__description__hissu3
             必須
-        - if flash[:error].present?
+        - if flash[:c].present?
           .errormessage007
-            = flash[:error][2]
+            = flash[:c][0]
         .details__description-input
           = f.text_field :introduction, placeholder:"商品の説明（必須 1000文字まで)",size:67,maxlength:1000
 
@@ -60,9 +60,9 @@
             カテゴリー
           .product-details__categories__hissu4
             必須
-        - if flash[:error].present?
+        - if flash[:d].present?
           .errormessage007
-            = flash[:error][3]
+            = flash[:d][0]
         .product-details__categories-input
           = f.select :category, Category.where(ancestry: nil).pluck(:name), {prompt:'---'}, {class: 'product-details__categories-input--select', id: 'parent_category'}
         .product-details__brand
@@ -77,9 +77,9 @@
             商品の状態
           .product-details__status__hissu5
             必須
-        - if flash[:error].present?
+        - if flash[:e].present?
           .errormessage007
-            = flash[:error][4]
+            = flash[:e][0]
         .product-details__status-input
           = f.collection_select :condition_id, Condition.all, :id, :value, {prompt:'--'}, class: 'product-details__status-input-1'
       .border
@@ -92,9 +92,9 @@
             配送料の負担
           .shipping__burden__hissu6
             必須
-        - if flash[:error].present?
+        - if flash[:f].present?
           .errormessage007
-            = flash[:error][5]
+            = flash[:f][0]
         .shipping__burden-input
           = f.collection_select :postage_payer_id, PostagePayer.all, :id, :value, {prompt:'--'}, class: 'shipping__burden-input-1'
         .shipping__area
@@ -102,9 +102,9 @@
             発送元の地域
           .shipping__area__hissu7
             必須
-        - if flash[:error].present?
+        - if flash[:g].present?
           .errormessage007
-            = flash[:error][6]
+            = flash[:g][0]
         .shipping__area-input
           = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, {prompt:'--'}, {class: "shipping__area-input-1"}
           
@@ -113,9 +113,9 @@
             発送までの日数
           .shipping__days__hissu8
             必須
-        - if flash[:error].present?
+        - if flash[:h].present?
           .errormessage007
-            = flash[:error][7]
+            = flash[:h][0]
         .shipping__days-input
           = f.collection_select :preparation_day_id, PreparationDay.all, :id, :value, {prompt:'--'}, class: 'shipping__days-input-1'
 
@@ -124,9 +124,9 @@
       .price
         .price__mozi12
           価格（¥300〜9,999,999）
-        - if flash[:error].present?
+        - if flash[:i].present?
           .errormessage007
-            = flash[:error][8]
+            = flash[:i][0]
         .price__selling-price
           .price__selling-price__mozi13
             販売価格
