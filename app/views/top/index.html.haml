@@ -135,6 +135,123 @@
                             %i.fa  
                             ★0
                         %p.zeikomi (税込)
+        .pickupbox__category__lists
+          - @items1.each do |item|
+            -if item.buyer_id.present?
+              .pickupbox__category__list
+                %figure.pickupbox__category__lists--image
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
+                  = image_tag item.images[0].image.url
+                .pickupbox__category__list--text
+                  %h3.name 
+                    = item.name
+                  .syosai
+                    %ul
+                      %li<> 
+                        = item.price 
+                        円
+                      %li
+                        %i.fa  
+                        ★0
+                    %p.zeikomi (税込)
+            -else
+              .pickupbox__category__list
+                - if user_signed_in?
+                  = link_to item_path(item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag item.images[0].image.url
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
+                - else
+                  = link_to top_path(item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag item.images[0].image.url
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
+        .pickupbox__category__lists
+          - @items2.each do |item|
+            -if item.buyer_id.present?
+              .pickupbox__category__list
+                %figure.pickupbox__category__lists--image
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
+                  = image_tag item.images[0].image.url
+                .pickupbox__category__list--text
+                  %h3.name 
+                    = item.name
+                  .syosai
+                    %ul
+                      %li<> 
+                        = item.price 
+                        円
+                      %li
+                        %i.fa  
+                        ★0
+                    %p.zeikomi (税込)
+            -else
+              .pickupbox__category__list
+                - if user_signed_in?
+                  = link_to item_path(item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag item.images[0].image.url
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
+                - else
+                  = link_to top_path(item.id) do
+                    %figure.pickupbox__category__lists--image
+                      = image_tag item.images[0].image.url
+                    .pickupbox__category__list--text
+                      %h3.name 
+                        = item.name
+                      .syosai
+                        %ul
+                          %li<> 
+                            = item.price 
+                            円
+                          %li
+                            %i.fa  
+                            ★0
+                        %p.zeikomi (税込)
+
+
+
+
+
+
+
 .banner
   .banner__inner
     %h2.banner__inner__title だれでもかんたん、人生を変えるフリマアプリ
